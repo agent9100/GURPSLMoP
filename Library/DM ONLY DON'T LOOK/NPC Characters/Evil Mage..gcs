@@ -1,0 +1,3702 @@
+{
+	"version": 5,
+	"id": "AMvjaN-8Hcd2GiNcf",
+	"total_points": 150,
+	"points_record": [
+		{
+			"when": "2026-02-25T23:25:20Z",
+			"points": 150,
+			"reason": "Initial points"
+		}
+	],
+	"profile": {
+		"name": "Evil Mage",
+		"handedness": "Right",
+		"player_name": "William Armes",
+		"tech_level": "3"
+	},
+	"settings": {
+		"page": {
+			"paper_size": "letter",
+			"orientation": "portrait",
+			"top_margin": "0.25 in",
+			"left_margin": "0.25 in",
+			"bottom_margin": "0.25 in",
+			"right_margin": "0.25 in"
+		},
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"traits skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		],
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Strength",
+				"base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Dexterity",
+				"base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Intelligence",
+				"base": "10",
+				"cost_per_point": 20
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Health",
+				"base": "10",
+				"cost_per_point": 10
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Will",
+				"base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Fright Check",
+				"base": "$will",
+				"cost_per_point": 2
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Per",
+				"full_name": "Perception",
+				"base": "$iq",
+				"cost_per_point": 5
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Vision",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Hearing",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Taste \u0026 Smell",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Touch",
+				"base": "$per",
+				"cost_per_point": 2
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Basic Speed",
+				"base": "($dx + $ht) / 4",
+				"cost_per_point": 20
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Basic Move",
+				"base": "Math.floor($basic_speed)",
+				"cost_per_point": 5
+			},
+			{
+				"id": "fp",
+				"type": "pool",
+				"name": "FP",
+				"full_name": "Fatigue Points",
+				"base": "$ht",
+				"cost_per_point": 3,
+				"thresholds": [
+					{
+						"state": "Unconscious",
+						"value": "-$fp",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Collapse",
+						"value": "0",
+						"explanation": "Roll vs. Will to do anything besides talk or rest; failure causes unconsciousness\nEach FP you lose below 0 also causes 1 HP of injury\nMove, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tired",
+						"value": "Math.ceil($fp / 3) - 1",
+						"explanation": "Move, Dodge and ST are halved (B426)",
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tiring",
+						"value": "$fp - 1"
+					},
+					{
+						"state": "Rested",
+						"value": "$fp"
+					}
+				]
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "HP",
+				"full_name": "Hit Points",
+				"base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Dead",
+						"value": "Math.round(-$hp * 5)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #4",
+						"value": "Math.round(-$hp * 4)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-4 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #3",
+						"value": "Math.round(-$hp * 3)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-3 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #2",
+						"value": "Math.round(-$hp * 2)",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-2 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #1",
+						"value": "-$hp",
+						"explanation": "Roll vs. HT to avoid death\nRoll vs. HT-1 every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Collapse",
+						"value": "0",
+						"explanation": "Roll vs. HT every second to avoid falling unconscious\nMove and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Reeling",
+						"value": "Math.ceil($hp / 3) - 1",
+						"explanation": "Move and Dodge are halved (B419)",
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Wounded",
+						"value": "$hp - 1"
+					},
+					{
+						"state": "Healthy",
+						"value": "$hp"
+					}
+				]
+			}
+		],
+		"body_type": {
+			"name": "Humanoid",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Eyes",
+					"table_name": "Eyes",
+					"hit_penalty": -9,
+					"description": "An attack that misses by 1 hits the torso instead. Only\nimpaling (imp), piercing (pi-, pi, pi+, pi++), and\ntight-beam burning (burn) attacks can target the eye – and\nonly from the front or sides. Injury over HP÷10 blinds the\neye. Otherwise, treat as skull, but without the extra DR!",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Skull",
+					"table_name": "Skull",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"description": "An attack that misses by 1 hits the torso instead. Wounding\nmodifier is x4. Knockdown rolls are at -10. Critical hits\nuse the Critical Head Blow Table (B556). Exception: These\nspecial effects do not apply to toxic (tox) damage.",
+					"calc": {
+						"roll_range": "3-4",
+						"dr": {
+							"all": 2
+						}
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Face",
+					"table_name": "Face",
+					"slots": 1,
+					"hit_penalty": -5,
+					"description": "An attack that misses by 1 hits the torso instead. Jaw,\ncheeks, nose, ears, etc. If the target has an open-faced\nhelmet, ignore its DR. Knockdown rolls are at -5. Critical\nhits use the Critical Head Blow Table (B556). Corrosion\n(cor) damage gets a x1½ wounding modifier, and if it\ninflicts a major wound, it also blinds one eye (both eyes on\ndamage over full HP). Random attacks from behind hit the\nskull instead.",
+					"calc": {
+						"roll_range": "5",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Right Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge\npiercing (pi++), and impaling (imp) damage to x1. Any major\nwound (loss of over ½ HP from one blow) cripples the limb.\nDamage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "6-7",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Right Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge\npiercing (pi++), and impaling (imp) damage to x1. Any major\nwound (loss of over ½ HP from one blow) cripples the limb.\nDamage beyond that threshold is lost. If holding a shield,\ndouble the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "8",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Torso",
+					"table_name": "Torso",
+					"slots": 2,
+					"calc": {
+						"roll_range": "9-10",
+						"dr": {
+							"all": 1
+						}
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Groin",
+					"table_name": "Groin",
+					"slots": 1,
+					"hit_penalty": -3,
+					"description": "An attack that misses by 1 hits the torso instead. Human\nmales and the males of similar species suffer double shock\nfrom crushing (cr) damage, and get -5 to knockdown rolls.\nOtherwise, treat as a torso hit.",
+					"calc": {
+						"roll_range": "11",
+						"dr": {
+							"all": 1
+						}
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Left Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge\npiercing (pi++), and impaling (imp) damage to x1. Any major\nwound (loss of over ½ HP from one blow) cripples the limb.\nDamage beyond that threshold is lost. If holding a shield,\ndouble the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "12",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Left Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge\npiercing (pi++), and impaling (imp) damage to x1. Any major\nwound (loss of over ½ HP from one blow) cripples the limb.\nDamage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "13-14",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Hand",
+					"table_name": "Hand",
+					"slots": 1,
+					"hit_penalty": -4,
+					"description": "If holding a shield, double the penalty to hit: -8 for\nshield hand instead of -4. Reduce the wounding multiplier of\nlarge piercing (pi+), huge piercing (pi++), and impaling\n(imp) damage to x1. Any major wound (loss of over ⅓ HP\nfrom one blow) cripples the extremity. Damage beyond that\nthreshold is lost.",
+					"calc": {
+						"roll_range": "15",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Foot",
+					"table_name": "Foot",
+					"slots": 1,
+					"hit_penalty": -4,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge\npiercing (pi++), and impaling (imp) damage to x1. Any major\nwound (loss of over ⅓ HP from one blow) cripples the\nextremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "16",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Neck",
+					"table_name": "Neck",
+					"slots": 2,
+					"hit_penalty": -5,
+					"description": "An attack that misses by 1 hits the torso instead. Neck and\nthroat. Increase the wounding multiplier of crushing (cr)\nand corrosion (cor) attacks to x1½, and that of cutting\n(cut) damage to x2. At the GM’s option, anyone killed by a\ncutting (cut) blow to the neck is decapitated!",
+					"calc": {
+						"roll_range": "17-18",
+						"dr": {
+							"all": 0
+						}
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Vitals",
+					"table_name": "Vitals",
+					"hit_penalty": -3,
+					"description": "An attack that misses by 1 hits the torso instead. Heart,\nlungs, kidneys, etc. Increase the wounding modifier for an\nimpaling (imp) or any piercing (pi-, pi, pi+, pi++) attack\nto x3. Increase the wounding modifier for a tight-beam\nburning (burn) attack to x2. Other attacks cannot target the\nvitals.",
+					"calc": {
+						"roll_range": "-",
+						"dr": {
+							"all": 1
+						}
+					}
+				}
+			]
+		},
+		"damage_progression": "basic_set",
+		"default_length_units": "ft_in",
+		"default_weight_units": "lb",
+		"user_description_display": "tooltip",
+		"modifiers_display": "inline",
+		"notes_display": "inline",
+		"skill_level_adj_display": "tooltip",
+		"show_spell_adj": true
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": -1,
+			"calc": {
+				"value": 9,
+				"points": -10
+			}
+		},
+		{
+			"attr_id": "dx",
+			"adj": 1,
+			"calc": {
+				"value": 11,
+				"points": 20
+			}
+		},
+		{
+			"attr_id": "iq",
+			"adj": 2,
+			"calc": {
+				"value": 12,
+				"points": 40
+			}
+		},
+		{
+			"attr_id": "ht",
+			"adj": 1,
+			"calc": {
+				"value": 11,
+				"points": 10
+			}
+		},
+		{
+			"attr_id": "will",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0,
+			"calc": {
+				"value": 14,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "per",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 0,
+			"calc": {
+				"value": 5.5,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0,
+			"calc": {
+				"value": 5,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "fp",
+			"adj": 3,
+			"calc": {
+				"value": 14,
+				"current": 14,
+				"points": 9
+			}
+		},
+		{
+			"attr_id": "hp",
+			"adj": 0,
+			"calc": {
+				"value": 9,
+				"current": 9,
+				"points": 0
+			}
+		}
+	],
+	"traits": [
+		{
+			"id": "tfBoflle9nb80QWs0",
+			"name": "Natural Attacks",
+			"reference": "B271",
+			"weapons": [
+				{
+					"id": "w5JWp0qIsFXr7X_Bz",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Bite",
+					"reach": "C",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						}
+					],
+					"calc": {
+						"level": 11,
+						"damage": "1d-3 cr"
+					}
+				},
+				{
+					"id": "wjcVgIzKXFYsB3bMR",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					],
+					"calc": {
+						"level": 11,
+						"damage": "1d-3 cr",
+						"parry": "9"
+					}
+				},
+				{
+					"id": "w1N0QlDRxU80Os8B5",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Kick",
+					"reach": "C,1",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Brawling",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Kicking"
+						},
+						{
+							"type": "skill",
+							"name": "Karate",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"level": 9,
+						"damage": "1d-2 cr"
+					}
+				}
+			],
+			"calc": {
+				"points": 0
+			}
+		},
+		{
+			"id": "t4Y_CuM0uTEoh9_rx",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tDHschYOgUSlMTOYN"
+			},
+			"name": "Compartmentalized Mind",
+			"reference": "B43,PSI13",
+			"tags": [
+				"Advantage",
+				"Exotic",
+				"Mental"
+			],
+			"modifiers": [
+				{
+					"id": "miV9wrRsEhDLegYu8",
+					"name": "Massively Parallel",
+					"reference": "SU26",
+					"cost_adj": "20%",
+					"disabled": true
+				},
+				{
+					"id": "myrTFK-PiSJDQ_G_K",
+					"name": "Controls",
+					"reference": "B43",
+					"cost_adj": "-25",
+					"affects": "base_only",
+					"disabled": true
+				},
+				{
+					"id": "mCKETx0ToI4A3czs5",
+					"name": "Dedicated Controls",
+					"reference": "B43",
+					"cost_adj": "-40",
+					"affects": "base_only",
+					"disabled": true
+				},
+				{
+					"id": "mGiAoe6Lnb80ZFBbE",
+					"name": "Limited, One Ability",
+					"reference": "PSI13",
+					"local_notes": "@Ability@",
+					"cost_adj": "-30%",
+					"disabled": true
+				},
+				{
+					"id": "mYFFOJzrlgPplLsj5",
+					"name": "Limited, One Power",
+					"reference": "PSI13",
+					"local_notes": "@Power@",
+					"cost_adj": "-20%",
+					"disabled": true
+				},
+				{
+					"id": "mWq8Eqy5X0Qi6BSjH",
+					"name": "Mental Separation Only",
+					"reference": "PSI13",
+					"cost_adj": "-80%",
+					"disabled": true
+				},
+				{
+					"id": "mOZfzlLljy8tqEfpi",
+					"name": "Mentalism",
+					"reference": "PSI14",
+					"cost_adj": "-10%",
+					"disabled": true
+				},
+				{
+					"id": "mgdzwm8dNbUD1ehvU",
+					"name": "No Mental Separation",
+					"reference": "PSI14",
+					"cost_adj": "-20%",
+					"disabled": true
+				}
+			],
+			"points_per_level": 50,
+			"can_level": true,
+			"levels": 1,
+			"calc": {
+				"points": 50,
+				"current_level": 1
+			}
+		},
+		{
+			"id": "tC8IysseN_FQjGup4",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tpnv8EEpAS6Er2pwK"
+			},
+			"name": "Magery",
+			"reference": "B66",
+			"tags": [
+				"Advantage",
+				"Mental",
+				"Supernatural"
+			],
+			"modifiers": [
+				{
+					"id": "mgmtVS3rJOpXSSRC4",
+					"name": "Dance",
+					"cost_adj": "-40%",
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "mJx0Vq3Wk7qhO_3Ed",
+					"name": "Dark-Aspected",
+					"cost_adj": "-50%",
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "mvjajB0B0t6fIvWLO",
+					"name": "Day-Aspected",
+					"cost_adj": "-40%",
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "mbsiPos05YXIf4JPu",
+					"name": "Musical",
+					"cost_adj": "-50%",
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "mT36kMmOY7Ay99vwX",
+					"name": "Night-Aspected",
+					"cost_adj": "-40%",
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "mOiWIEIsnvfgA6IxQ",
+					"name": "One College",
+					"local_notes": "@College@",
+					"cost_adj": "-40%",
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "mfMR_SHo2MqT6auxH",
+					"name": "Solitary",
+					"cost_adj": "-40%",
+					"affects": "levels_only",
+					"disabled": true
+				},
+				{
+					"id": "mJZfdFZNrCezSG7AC",
+					"name": "Song",
+					"cost_adj": "-40%",
+					"affects": "levels_only",
+					"disabled": true
+				}
+			],
+			"base_points": 5,
+			"points_per_level": 10,
+			"features": [
+				{
+					"type": "spell_bonus",
+					"match": "all_colleges",
+					"amount": 1,
+					"per_level": true
+				},
+				{
+					"type": "skill_bonus",
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "thaumatology"
+					},
+					"amount": 1,
+					"per_level": true
+				}
+			],
+			"can_level": true,
+			"levels": 2,
+			"calc": {
+				"points": 25,
+				"current_level": 2
+			}
+		},
+		{
+			"id": "tkkLvrp958EdlK8wx",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tGjjVtxav9KsrG7Wx"
+			},
+			"name": "Combat Reflexes",
+			"reference": "B43",
+			"local_notes": "Never freeze",
+			"tags": [
+				"Advantage",
+				"Mental"
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Enhanced Time Sense"
+						}
+					}
+				]
+			},
+			"base_points": 15,
+			"features": [
+				{
+					"type": "skill_bonus",
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "starts_with",
+						"qualifier": "fast-draw"
+					},
+					"amount": 1
+				},
+				{
+					"type": "attribute_bonus",
+					"attribute": "dodge",
+					"amount": 1
+				},
+				{
+					"type": "attribute_bonus",
+					"attribute": "parry",
+					"amount": 1
+				},
+				{
+					"type": "attribute_bonus",
+					"attribute": "block",
+					"amount": 1
+				},
+				{
+					"type": "attribute_bonus",
+					"attribute": "fright_check",
+					"amount": 2
+				},
+				{
+					"type": "conditional_modifier",
+					"situation": "on all IQ rolls to wake up or to recover from surprise or mental stun",
+					"amount": 6
+				},
+				{
+					"type": "conditional_modifier",
+					"situation": "to initiative rolls for your side (+2 if you are the leader)",
+					"amount": 1
+				}
+			],
+			"calc": {
+				"points": 15
+			}
+		},
+		{
+			"id": "tOw8Pf_09tVmcCnZr",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tw1Ad0oSMw2ATM4X1"
+			},
+			"name": "Language: @Language@",
+			"reference": "B24",
+			"tags": [
+				"Advantage",
+				"Language",
+				"Mental"
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Language Talent"
+						},
+						"level": {
+							"compare": "at_least"
+						}
+					}
+				]
+			},
+			"replacements": {
+				"Language": "Dwarven"
+			},
+			"modifiers": [
+				{
+					"id": "mH0ER7NJC2idCgyn5",
+					"name": "Native",
+					"reference": "B23",
+					"cost_adj": "-6",
+					"disabled": true
+				},
+				{
+					"id": "m4we7BEprUHbH0z24",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "None",
+					"disabled": true
+				},
+				{
+					"id": "m_eToavqeOy2Zrmq4",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Broken",
+					"cost_adj": "1",
+					"disabled": true
+				},
+				{
+					"id": "msFUkb6JuLGjKHJ97",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Accented",
+					"cost_adj": "2"
+				},
+				{
+					"id": "m0EXwChREituKLMsF",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Native",
+					"cost_adj": "3",
+					"disabled": true
+				},
+				{
+					"id": "mL2O-5-CZvKKu4Yos",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "None",
+					"disabled": true
+				},
+				{
+					"id": "mAkNE6xPYWdtLom6b",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Broken",
+					"cost_adj": "1",
+					"disabled": true
+				},
+				{
+					"id": "mOym925hTyz-5-SuG",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Accented",
+					"cost_adj": "2"
+				},
+				{
+					"id": "mu0R8mjK5pF7j0aGa",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Native",
+					"cost_adj": "3",
+					"disabled": true
+				}
+			],
+			"calc": {
+				"points": 4
+			}
+		},
+		{
+			"id": "t-4urxZecghRNnTjX",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tw1Ad0oSMw2ATM4X1"
+			},
+			"name": "Language: @Language@",
+			"reference": "B24",
+			"tags": [
+				"Advantage",
+				"Language",
+				"Mental"
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Language Talent"
+						},
+						"level": {
+							"compare": "at_least"
+						}
+					}
+				]
+			},
+			"replacements": {
+				"Language": "Elvish"
+			},
+			"modifiers": [
+				{
+					"id": "mtoMV2ADRHoVD4cid",
+					"name": "Native",
+					"reference": "B23",
+					"cost_adj": "-6",
+					"disabled": true
+				},
+				{
+					"id": "miZdA8bqklVQKz7cV",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "None",
+					"disabled": true
+				},
+				{
+					"id": "mdVeavhXQQ5kHQri5",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Broken",
+					"cost_adj": "1",
+					"disabled": true
+				},
+				{
+					"id": "m-t3JUNpLHzyKVD1j",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Accented",
+					"cost_adj": "2"
+				},
+				{
+					"id": "mbt2UcR9CJhTGhUaG",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Native",
+					"cost_adj": "3",
+					"disabled": true
+				},
+				{
+					"id": "mNSgh9U9Dkg-0iE7K",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "None",
+					"disabled": true
+				},
+				{
+					"id": "mKJcjUR9eU0KrIgM0",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Broken",
+					"cost_adj": "1",
+					"disabled": true
+				},
+				{
+					"id": "m8WaioawS1Fc8VNDL",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Accented",
+					"cost_adj": "2"
+				},
+				{
+					"id": "mXcR6K3IeG6a1K37v",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Native",
+					"cost_adj": "3",
+					"disabled": true
+				}
+			],
+			"calc": {
+				"points": 4
+			}
+		},
+		{
+			"id": "tAaKXJ2wFVFmYNX5V",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tw1Ad0oSMw2ATM4X1"
+			},
+			"name": "Language: @Language@",
+			"reference": "B24",
+			"tags": [
+				"Advantage",
+				"Language",
+				"Mental"
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Language Talent"
+						},
+						"level": {
+							"compare": "at_least"
+						}
+					}
+				]
+			},
+			"replacements": {
+				"Language": "Draconic"
+			},
+			"modifiers": [
+				{
+					"id": "m8FfFXYp7qlx4hiuB",
+					"name": "Native",
+					"reference": "B23",
+					"cost_adj": "-6",
+					"disabled": true
+				},
+				{
+					"id": "mlvzySSmwBnuzdbzM",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "None",
+					"disabled": true
+				},
+				{
+					"id": "mVL0GK-fk_0xS2OQD",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Broken",
+					"cost_adj": "1",
+					"disabled": true
+				},
+				{
+					"id": "m3V8WK8NvMB5SgJ5E",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Accented",
+					"cost_adj": "2"
+				},
+				{
+					"id": "ms6El_hwdHPa1JSFK",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Native",
+					"cost_adj": "3",
+					"disabled": true
+				},
+				{
+					"id": "me6kh3gDCV56uIZgI",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "None",
+					"disabled": true
+				},
+				{
+					"id": "mJYrNlS3YPcy_n9l-",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Broken",
+					"cost_adj": "1",
+					"disabled": true
+				},
+				{
+					"id": "mmWY4Aqkt7meS2z0N",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Accented",
+					"cost_adj": "2"
+				},
+				{
+					"id": "mtt4-jv4J1gxfDEbp",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Native",
+					"cost_adj": "3",
+					"disabled": true
+				}
+			],
+			"calc": {
+				"points": 4
+			}
+		},
+		{
+			"id": "thKcgrSmTKS91X10g",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tw1Ad0oSMw2ATM4X1"
+			},
+			"name": "Language: @Language@",
+			"reference": "B24",
+			"tags": [
+				"Advantage",
+				"Language",
+				"Mental"
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Language Talent"
+						},
+						"level": {
+							"compare": "at_least"
+						}
+					}
+				]
+			},
+			"replacements": {
+				"Language": "Common"
+			},
+			"modifiers": [
+				{
+					"id": "mIbxlAyeTqpQVqRYd",
+					"name": "Native",
+					"reference": "B23",
+					"cost_adj": "-6"
+				},
+				{
+					"id": "m2AvxWO_pLphy-jIw",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "None",
+					"disabled": true
+				},
+				{
+					"id": "mwD1p8uUsh7sfkn24",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Broken",
+					"cost_adj": "1",
+					"disabled": true
+				},
+				{
+					"id": "mCildPCGV0Im48V4z",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Accented",
+					"cost_adj": "2",
+					"disabled": true
+				},
+				{
+					"id": "moLr5L0dPqKpsh2MB",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Native",
+					"cost_adj": "3"
+				},
+				{
+					"id": "mAQcR7WuSJi-XWFVa",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "None",
+					"disabled": true
+				},
+				{
+					"id": "m8rIRxCHGJHqTLS37",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Broken",
+					"cost_adj": "1",
+					"disabled": true
+				},
+				{
+					"id": "m76ktSGUKJoFbzeJr",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Accented",
+					"cost_adj": "2",
+					"disabled": true
+				},
+				{
+					"id": "mobazFWo1YprZftyL",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Native",
+					"cost_adj": "3"
+				}
+			],
+			"calc": {
+				"points": 0
+			}
+		},
+		{
+			"id": "t4AAldIqhx7gSQLAW",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tNe543pbMl1IkZxSo"
+			},
+			"name": "Callous",
+			"reference": "B125",
+			"tags": [
+				"Disadvantage",
+				"Mental"
+			],
+			"base_points": -5,
+			"features": [
+				{
+					"type": "skill_bonus",
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "psychology"
+					},
+					"amount": -3
+				},
+				{
+					"type": "skill_bonus",
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "teaching"
+					},
+					"amount": -3
+				},
+				{
+					"type": "reaction_bonus",
+					"situation": "from past victims and anyone with Empathy",
+					"amount": -1
+				},
+				{
+					"type": "conditional_modifier",
+					"situation": "to Interrogation and Intimidation rolls when you use threats or torture",
+					"amount": 1
+				}
+			],
+			"calc": {
+				"points": -5
+			}
+		},
+		{
+			"id": "t0TblRfxONZbhANxB",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tfH5wLK63v1I9hTlq"
+			},
+			"name": "Disciplines of Faith (Monasticism)",
+			"reference": "B132",
+			"tags": [
+				"Disadvantage",
+				"Mental"
+			],
+			"base_points": -10,
+			"calc": {
+				"points": -10
+			}
+		},
+		{
+			"id": "ta2e2_xdQrguJgEQw",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tIwv4VeJHsrnAQG0T"
+			},
+			"name": "Frightens Animals",
+			"reference": "B137",
+			"tags": [
+				"Disadvantage",
+				"Mental",
+				"Supernatural"
+			],
+			"base_points": -10,
+			"calc": {
+				"points": -10
+			}
+		},
+		{
+			"id": "tPYiwiCdoB3mpK07G",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tVtZXW1iMP4GMuRf1"
+			},
+			"name": "Social Stigma (Disowned, Outcast)",
+			"reference": "B155",
+			"tags": [
+				"Disadvantage",
+				"Social"
+			],
+			"base_points": -10,
+			"features": [
+				{
+					"type": "reaction_bonus",
+					"situation": "from others",
+					"amount": -2
+				}
+			],
+			"calc": {
+				"points": -10
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "sJbzV1c8B_yALu2uA",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sa_ZE2rnayiRCI376"
+			},
+			"name": "Alchemy",
+			"reference": "B174",
+			"tags": [
+				"Magical",
+				"Natural Science",
+				"Occult"
+			],
+			"difficulty": "iq/vh",
+			"tech_level": "3",
+			"points": 1,
+			"calc": {
+				"level": 9,
+				"rsl": "IQ-3"
+			}
+		},
+		{
+			"id": "sf23FxM5hQr8IiWX5",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sarvhf6ZiRjeof8Tf"
+			},
+			"name": "Archaeology",
+			"reference": "B176",
+			"tags": [
+				"Humanities",
+				"Social Sciences"
+			],
+			"difficulty": "iq/h",
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				}
+			],
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -6,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"calc": {
+				"level": 10,
+				"rsl": "IQ-2"
+			}
+		},
+		{
+			"id": "swl9LJ8qV6Z8z2_hF",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "s8j6tcaNxXkF89Xbt"
+			},
+			"name": "Diplomacy",
+			"reference": "B187",
+			"tags": [
+				"Business",
+				"Police",
+				"Social"
+			],
+			"difficulty": "iq/h",
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Politics",
+					"modifier": -6
+				}
+			],
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -6,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"calc": {
+				"level": 10,
+				"rsl": "IQ-2"
+			}
+		},
+		{
+			"id": "sjFVT65UvwLwzzEIE",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sC3Hao70ucDyPFMyx"
+			},
+			"name": "Esoteric Medicine",
+			"reference": "B192,MA56",
+			"tags": [
+				"Esoteric",
+				"Medical"
+			],
+			"difficulty": "per/h",
+			"defaults": [
+				{
+					"type": "per",
+					"modifier": -6
+				}
+			],
+			"points": 1,
+			"defaulted_from": {
+				"type": "per",
+				"modifier": -6,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"calc": {
+				"level": 10,
+				"rsl": "Per-2"
+			}
+		},
+		{
+			"id": "s-XvKinH2-35Fwk7X",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sIGnp4W_M8XBodpEH"
+			},
+			"name": "Hidden Lore",
+			"reference": "B199,MA57",
+			"tags": [
+				"Knowledge"
+			],
+			"replacements": {
+				"Subject": "Arcane Powers"
+			},
+			"specialization": "@Subject@",
+			"difficulty": "iq/a",
+			"points": 1,
+			"calc": {
+				"level": 11,
+				"rsl": "IQ-1"
+			}
+		},
+		{
+			"id": "soVYhCA2lPsC-H9sI",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sRzoU2_LS2s4r51LA"
+			},
+			"name": "History",
+			"reference": "B200",
+			"tags": [
+				"Humanities",
+				"Social Sciences"
+			],
+			"replacements": {
+				"Specialty": "Magic"
+			},
+			"specialization": "@Specialty@",
+			"difficulty": "iq/h",
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				}
+			],
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -6,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"calc": {
+				"level": 10,
+				"rsl": "IQ-2"
+			}
+		},
+		{
+			"id": "spxoLKhXA-AEkY5zI",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sJvwPKtI422-KNEiv"
+			},
+			"name": "Innate Attack",
+			"reference": "B201",
+			"tags": [
+				"Combat",
+				"Ranged Combat",
+				"Weapon"
+			],
+			"specialization": "Projectile",
+			"difficulty": "dx/e",
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Innate Attack",
+					"modifier": -2
+				}
+			],
+			"points": 4,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -4,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"calc": {
+				"level": 13,
+				"rsl": "DX+2"
+			}
+		},
+		{
+			"id": "sLJEihhi9yqUZCpmE",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "s7TXAnMYKalDo9ZEs"
+			},
+			"name": "Literature",
+			"reference": "B205",
+			"tags": [
+				"Humanities",
+				"Scholarly",
+				"Social Sciences"
+			],
+			"difficulty": "iq/h",
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -6
+				}
+			],
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -6,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"calc": {
+				"level": 10,
+				"rsl": "IQ-2"
+			}
+		},
+		{
+			"id": "sKpEsaTLrw2kli6-l",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sa4xUKRmFe81nvpnd"
+			},
+			"name": "Occultism",
+			"reference": "B212",
+			"tags": [
+				"Magical",
+				"Occult"
+			],
+			"difficulty": "iq/a",
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"calc": {
+				"level": 11,
+				"rsl": "IQ-1"
+			}
+		},
+		{
+			"id": "sjk4fyvk2eaZosOIf",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Skills.skl",
+				"id": "soilUSeitMyIlPAtg"
+			},
+			"name": "Staff",
+			"reference": "DFA81",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Weapon"
+			],
+			"difficulty": "dx/a",
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Polearm",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Spear",
+					"modifier": -2
+				}
+			],
+			"points": 4,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"calc": {
+				"level": 12,
+				"rsl": "DX+1"
+			}
+		},
+		{
+			"id": "sz3ExJRQ8b8anEvI4",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sGkpZOHz0g5ARAcej"
+			},
+			"name": "Thaumatology",
+			"reference": "B225",
+			"tags": [
+				"Magical",
+				"Occult"
+			],
+			"difficulty": "iq/vh",
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -7
+				}
+			],
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -7,
+				"level": 5,
+				"adjusted_level": 5,
+				"points": -5
+			},
+			"calc": {
+				"level": 11,
+				"rsl": "IQ-1"
+			}
+		}
+	],
+	"spells": [
+		{
+			"id": "pett0Sl1fzDe1QTMb",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "p03sy00PGKLo6Ztl7"
+			},
+			"name": "Apportation",
+			"reference": "M142",
+			"tags": [
+				"Movement"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Movement"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"resist": "Will",
+			"casting_cost": "Varies",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "does_not_contain",
+									"qualifier": "one college"
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "one college (movement)"
+								}
+							}
+						]
+					}
+				]
+			},
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "pcCLK6DjS6O6H009j",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pSzV0DNkWX5iPOM_H"
+			},
+			"name": "Blink",
+			"reference": "M148",
+			"tags": [
+				"Gate",
+				"Movement"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Gate",
+				"Movement"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Blocking",
+			"casting_cost": "2",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "Instant",
+			"prereq_count": 5,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "teleport"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"points": 2,
+			"calc": {
+				"level": 13,
+				"rsl": "IQ+1"
+			}
+		},
+		{
+			"id": "pM-u-Q8OpoKNtL1R6",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pyXk79vBSgSqWGi5i"
+			},
+			"name": "Charm",
+			"reference": "M139",
+			"tags": [
+				"Mind Control"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Mind Control"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"resist": "Will",
+			"casting_cost": "6",
+			"maintenance_cost": "3",
+			"casting_time": "3 sec",
+			"duration": "1 min",
+			"prereq_count": 8,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "college",
+						"has": true,
+						"qualifier": {
+							"compare": "contains",
+							"qualifier": "Mind Control"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 7
+						}
+					},
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "loyalty"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					},
+					{
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "does_not_contain",
+									"qualifier": "one college"
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "one college (mind control)"
+								}
+							}
+						]
+					}
+				]
+			},
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "Pxutl0_xyU6qaQJbB",
+			"name": "Chud Spells",
+			"children": [
+				{
+					"id": "p_WzblkIhz4zzFz6h",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "paTQvc6JesIe7rsKW"
+					},
+					"name": "Bravery",
+					"reference": "M134",
+					"tags": [
+						"Mind Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Mind Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "1 hr",
+					"prereq_count": 1,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "fear"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pZgkNud9PVZdX1Tv_",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pPUWigaeKjk3-HMwM"
+					},
+					"name": "Clumsiness",
+					"reference": "M36",
+					"tags": [
+						"Body Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Body Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "HT",
+					"casting_cost": "1-5",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"prereq_count": 2,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "spasm"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pAdzL4vCMIFK92S5X",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pID_KoeYb8yT5tsEd"
+					},
+					"name": "Create Air",
+					"reference": "M23",
+					"tags": [
+						"Air"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Air"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "5 sec",
+					"prereq_count": 1,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "purify air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "seek air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pniV597EDv_uhBSga",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pOd9dcCDEqXBdnAnV"
+					},
+					"name": "Debility",
+					"reference": "M36",
+					"tags": [
+						"Body Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Body Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "HT",
+					"casting_cost": "1/-ST",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "p7Y5dRp-I9cLbI83i",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pcbrmui5IhutDREzD"
+					},
+					"name": "Dull Vision",
+					"reference": "M133",
+					"tags": [
+						"Mind Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Mind Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "HT",
+					"casting_cost": "1/2 pts decrease",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "30 min",
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pxwg8EtNkjw6UHsPt",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pKKFr7WQcDZt1dIRn"
+					},
+					"name": "Fear",
+					"reference": "M134",
+					"tags": [
+						"Mind Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Mind Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"resist": "Will",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "10 min",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "sense emotion"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "empathy"
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pjycpKNehhexEqakm",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "plPvve9ttCVO7DQz_"
+					},
+					"name": "Flight",
+					"reference": "M145",
+					"tags": [
+						"Movement"
+					],
+					"difficulty": "iq/vh",
+					"college": [
+						"Movement"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "5",
+					"maintenance_cost": "3",
+					"casting_time": "2 sec",
+					"duration": "1 min",
+					"prereq_count": 2,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "prereq_list",
+								"all": false,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 2
+										},
+										"notes": {
+											"compare": "does_not_contain",
+											"qualifier": "one college"
+										}
+									},
+									{
+										"type": "trait_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 2
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "one college (movement)"
+										}
+									}
+								]
+							},
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "levitation"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				},
+				{
+					"id": "pv8e42NS96pNnm5O-",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pIFb2-henE9nKHZ4K"
+					},
+					"name": "Foolishness",
+					"reference": "M134",
+					"tags": [
+						"Mind Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Mind Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "Will",
+					"casting_cost": "1-5",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "attribute_prereq",
+								"has": true,
+								"qualifier": {
+									"compare": "at_least",
+									"qualifier": 12
+								},
+								"which": "iq"
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pEPV4U2FE3kNaOWtm",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pBT6I3GoA3rF4AoMB"
+					},
+					"name": "Hawk Flight",
+					"reference": "M146",
+					"tags": [
+						"Movement"
+					],
+					"difficulty": "iq/vh",
+					"college": [
+						"Movement"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "8",
+					"maintenance_cost": "4",
+					"casting_time": "3 sec",
+					"duration": "1 min",
+					"prereq_count": 3,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "flight"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				},
+				{
+					"id": "pRPKD3752lmbU5sHW",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pPD1lGNCNl8Ys9FPq"
+					},
+					"name": "Itch",
+					"reference": "M35",
+					"tags": [
+						"Body Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Body Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "HT",
+					"casting_cost": "2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Until scratched",
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pw29EDKZDJpp2j9rY",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pzwEO3g7_FMmWMiP_"
+					},
+					"name": "Keen Hearing",
+					"reference": "M133",
+					"tags": [
+						"Mind Control",
+						"Sound"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Mind Control",
+						"Sound"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "1/pt increase",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "30 min",
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pDGWzBgcxhiTPyJYK",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pxfJvkhmeg5UJXXzp"
+					},
+					"name": "Keen Vision",
+					"reference": "M133",
+					"tags": [
+						"Mind Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Mind Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "1/pt increase",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "30 min",
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "p35gY_gt9XwnKD5lf",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pIgFTdqPxwKooRUJ6"
+					},
+					"name": "Levitation",
+					"reference": "M143",
+					"tags": [
+						"Movement"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Movement"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "ST or Will",
+					"casting_cost": "1 per 80 lbs",
+					"maintenance_cost": "Half",
+					"casting_time": "2 sec",
+					"duration": "1 min",
+					"prereq_count": 1,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "apportation"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "peDWmFBk3R1dmi-Rg",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pdQouwbDb20oZtU7Z"
+					},
+					"name": "Loyalty",
+					"reference": "M136",
+					"tags": [
+						"Mind Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Mind Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "Will",
+					"casting_cost": "2",
+					"maintenance_cost": "2",
+					"casting_time": "2 sec",
+					"duration": "1 hr",
+					"prereq_count": 3,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "bravery"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"sub_type": "college",
+								"has": true,
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Mind Control"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 2
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "p76ceOS5HfLXgEMFZ",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pYAYLspcGLKMhINAM"
+					},
+					"name": "No-Smell",
+					"reference": "M24",
+					"tags": [
+						"Air"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Air"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "2",
+					"maintenance_cost": "2",
+					"casting_time": "1 sec",
+					"duration": "1 hr",
+					"prereq_count": 1,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "purify air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pjd0-yYX9AAB2qdUD",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pgzuW8m63MURWEsFS"
+					},
+					"name": "Paralyze Limb",
+					"reference": "M40",
+					"tags": [
+						"Body Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Body Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Melee",
+					"resist": "HT",
+					"casting_cost": "3",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"prereq_count": 5,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "prereq_list",
+								"all": false,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 1
+										},
+										"notes": {
+											"compare": "does_not_contain",
+											"qualifier": "one college"
+										}
+									},
+									{
+										"type": "trait_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "magery"
+										},
+										"level": {
+											"compare": "at_least",
+											"qualifier": 1
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "one college (body control)"
+										}
+									}
+								]
+							},
+							{
+								"type": "spell_prereq",
+								"sub_type": "college",
+								"has": true,
+								"qualifier": {
+									"compare": "contains",
+									"qualifier": "Body Control"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 5
+								}
+							},
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "clumsiness"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pHsFD_ZC9o6baq23Z",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pQnpeCNJULs0zZkzI"
+					},
+					"name": "Purify Air",
+					"reference": "M23",
+					"tags": [
+						"Air"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Air"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "prVjAvOJHeiQfq_W5",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pAtiy8MRrWJvlpy-j"
+					},
+					"name": "Seek Air",
+					"reference": "M23",
+					"tags": [
+						"Air"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Air"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Info",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pC-U8WfMP6hkljMlV",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "p1k9H-uY4LDIKaqr9"
+					},
+					"name": "Sense Emotion",
+					"reference": "M45",
+					"tags": [
+						"Communication \u0026 Empathy"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Communication \u0026 Empathy"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"prereq_count": 1,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "sense foes"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pLSsfESDYIDKUqGkC",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pWhDcPE0H6H5YLDL5"
+					},
+					"name": "Sense Foes",
+					"reference": "M44",
+					"tags": [
+						"Communication \u0026 Empathy"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Communication \u0026 Empathy"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Info/Area",
+					"casting_cost": "1/area, min 2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pcWHWJDoEQ03mGSdD",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pxZi3gEeSEcHS4TWd"
+					},
+					"name": "Spasm",
+					"reference": "M35",
+					"tags": [
+						"Body Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Body Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"resist": "HT",
+					"casting_cost": "2",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"prereq_count": 1,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "itch"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pj9YzfhNzqd_Rf5uv",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "peKLp-uHUmlA2w5kU"
+					},
+					"name": "Stench",
+					"reference": "M24",
+					"tags": [
+						"Air"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Air"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "1",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "5 min",
+					"prereq_count": 1,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "purify air"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 12,
+						"rsl": "IQ+0"
+					}
+				},
+				{
+					"id": "pl6JQe0csC7BaKipo",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "p1VQXxbWhD8bnPJ7Y"
+					},
+					"name": "Teleport",
+					"reference": "M147",
+					"tags": [
+						"Gate",
+						"Movement"
+					],
+					"difficulty": "iq/vh",
+					"college": [
+						"Gate",
+						"Movement"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Special",
+					"casting_cost": "Varies",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"prereq_count": 4,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "spell_prereq",
+								"sub_type": "name",
+								"has": true,
+								"qualifier": {
+									"compare": "is",
+									"qualifier": "hawk flight"
+								},
+								"quantity": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "attribute_prereq",
+										"has": true,
+										"qualifier": {
+											"compare": "at_least",
+											"qualifier": 13
+										},
+										"which": "iq"
+									},
+									{
+										"type": "spell_prereq",
+										"sub_type": "college_count",
+										"has": true,
+										"quantity": {
+											"compare": "at_least",
+											"qualifier": 10
+										}
+									}
+								]
+							}
+						]
+					},
+					"points": 1,
+					"calc": {
+						"level": 11,
+						"rsl": "IQ-1"
+					}
+				}
+			]
+		},
+		{
+			"id": "pQeT7UuEa2j0FYjGB",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pulCt4eOEOBjcij_o"
+			},
+			"name": "Light",
+			"reference": "M110",
+			"tags": [
+				"Light \u0026 Darkness"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Light \u0026 Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"casting_cost": "1",
+			"maintenance_cost": "1",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "pzDiNLEFE3YJN4TXx",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "prnkk9Zj1f_vCE4z2"
+			},
+			"name": "Lightning",
+			"reference": "M196",
+			"tags": [
+				"Air",
+				"Weather"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Air",
+				"Weather"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Missile",
+			"casting_cost": "1-Magery",
+			"maintenance_cost": "-",
+			"casting_time": "1-3 sec",
+			"duration": "Instant",
+			"prereq_count": 6,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "does_not_contain",
+									"qualifier": "one college"
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "one college (air)"
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "one college (weather)"
+								}
+							}
+						]
+					},
+					{
+						"type": "spell_prereq",
+						"sub_type": "college",
+						"has": true,
+						"qualifier": {
+							"compare": "contains",
+							"qualifier": "Air"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 6
+						}
+					}
+				]
+			},
+			"weapons": [
+				{
+					"id": "WEAMbmyvC8f1iBy65",
+					"sv": 1,
+					"damage": {
+						"type": "burn/point",
+						"base": "1d-1"
+					},
+					"accuracy": "3",
+					"range": "50/100",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Innate Attack",
+							"specialization": "Projectile"
+						}
+					],
+					"calc": {
+						"level": 13,
+						"damage": "1d-1 burn/point"
+					}
+				}
+			],
+			"points": 2,
+			"calc": {
+				"level": 13,
+				"rsl": "IQ+1"
+			}
+		},
+		{
+			"id": "p4zOOeJ7bcwmK8NFA",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pY70taLLub6swp4iN"
+			},
+			"name": "Shocking Touch",
+			"reference": "M196",
+			"tags": [
+				"Air",
+				"Weather"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Air",
+				"Weather"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Melee",
+			"casting_cost": "1-3",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "Instant",
+			"prereq_count": 7,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "lightning"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"weapons": [
+				{
+					"id": "wADCBfN1ClK78fH1h",
+					"sv": 1,
+					"damage": {
+						"type": "cr +1d+1 burn/point",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					],
+					"calc": {
+						"level": 11,
+						"damage": "1d-3 cr +1d+1 burn/point",
+						"parry": "9"
+					}
+				}
+			],
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "pEY3as-rlDrG4lgU7",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pNijWMuu56ulOOO8G"
+			},
+			"name": "Total Paralysis",
+			"reference": "M40",
+			"tags": [
+				"Body Control"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Body Control"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Melee",
+			"resist": "HT",
+			"casting_cost": "5",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"prereq_count": 6,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "paralyze limb"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"weapons": [
+				{
+					"id": "w707HBm8MpwdxL5VP",
+					"sv": 1,
+					"damage": {
+						"type": "cr + Paralysis",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					],
+					"calc": {
+						"level": 11,
+						"damage": "1d-3 cr + Paralysis",
+						"parry": "9"
+					}
+				}
+			],
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		}
+	],
+	"equipment": [
+		{
+			"id": "eNHSw5g09jk9osh7c",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Equipment.eqp",
+				"id": "ehMCFza9AnnjZl4Jn"
+			},
+			"description": "5 pt Powerstone",
+			"reference": "M20",
+			"tags": [
+				"Powerstone"
+			],
+			"base_value": "595",
+			"base_weight": "0.002 lb",
+			"max_uses": 5,
+			"quantity": 1,
+			"uses": 5,
+			"equipped": true,
+			"calc": {
+				"value": 595,
+				"extended_value": 595,
+				"weight": "0.002 lb",
+				"extended_weight": "0.002 lb"
+			}
+		},
+		{
+			"id": "e_KVsIAk29Cu6w8vt",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "ehIxhuv_8_PA8EnPd"
+			},
+			"description": "Cloth Armor",
+			"reference": "B283",
+			"local_notes": "Flexible, concealable",
+			"tech_level": "1",
+			"tags": [
+				"Body Armor"
+			],
+			"base_value": "30",
+			"base_weight": "6 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"groin",
+						"torso",
+						"vitals"
+					],
+					"amount": 1
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 30,
+				"extended_value": 30,
+				"weight": "6 lb",
+				"extended_weight": "6 lb"
+			}
+		},
+		{
+			"id": "efJjpyROZ7gSbh5ye",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "el3Sq4j8drjABJ4yx"
+			},
+			"description": "Wizard’s Staff",
+			"reference": "DFA118",
+			"local_notes": "Extends a wizard's reach by 2 yards when casting",
+			"tags": [
+				"Melee Weapon"
+			],
+			"base_value": "40",
+			"base_weight": "4 lb",
+			"weapons": [
+				{
+					"id": "wfkIxRg2naSwroN3U",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "sw",
+						"base": "2"
+					},
+					"strength": "7†",
+					"usage": "Swung",
+					"reach": "1-2",
+					"parry": "2",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Staff"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"level": 12,
+						"damage": "1d+1 cr",
+						"parry": "12"
+					}
+				},
+				{
+					"id": "wIVp9gFORzcn4-KI0",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "2"
+					},
+					"strength": "7†",
+					"usage": "Thrust",
+					"reach": "1-2",
+					"parry": "2",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Staff"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"level": 12,
+						"damage": "1d cr",
+						"parry": "12"
+					}
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 40,
+				"extended_value": 40,
+				"weight": "4 lb",
+				"extended_weight": "4 lb"
+			}
+		}
+	],
+	"created_date": "2026-02-25T23:25:20Z",
+	"modified_date": "2026-02-26T18:47:20Z",
+	"calc": {
+		"swing": "1d-1",
+		"thrust": "1d-2",
+		"basic_lift": "16 lb",
+		"dodge_bonus": 1,
+		"parry_bonus": 1,
+		"block_bonus": 1,
+		"move": [
+			5,
+			4,
+			3,
+			2,
+			1
+		],
+		"dodge": [
+			9,
+			8,
+			7,
+			6,
+			5
+		]
+	}
+}

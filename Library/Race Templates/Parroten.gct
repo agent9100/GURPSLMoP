@@ -1,0 +1,524 @@
+{
+	"version": 5,
+	"id": "BZf_UGCzklYSfpOz4",
+	"traits": [
+		{
+			"id": "TfteRdVpSMETUZcs7",
+			"name": "Parroten",
+			"ancestry": "Human",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "t0ue862ZPC1D-7qOQ",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t1w1RFcFceKR2T9_e"
+					},
+					"name": "Increased Intelligence",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Mental"
+					],
+					"points_per_level": 20,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "iq",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t7CIaXvdb7ShuY1fu",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t2uxXuNNQjGUAFAd0"
+					},
+					"name": "Perfect Balance",
+					"reference": "B74",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 15,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "on DX and DX-based skill rolls to keep your feet or avoid being knocked down in combat",
+							"amount": 4
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on all rolls to keep your feet if the surface is wet, slippery or unstable",
+							"amount": 6
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "starts_with",
+								"qualifier": "piloting"
+							},
+							"amount": 1
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "acrobatics"
+							},
+							"amount": 1
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "aerobatics"
+							},
+							"amount": 1
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "aquabatics"
+							},
+							"amount": 1
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "climbing"
+							},
+							"amount": 1
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "tgWxe7icSmw5buJKb",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t6XtSYhM7yan5_B73"
+					},
+					"name": "Acute Hearing",
+					"reference": "B35",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "hearing",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 2,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tEmhstpJJkf78ci3f",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tUJz4wvVveMiGDX0R"
+					},
+					"name": "Extended Lifespan",
+					"reference": "B53",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"points_per_level": 2,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 2,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tgxZonRX_ZLNDO3i7",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tsIfS0jZqdshsDFOM"
+					},
+					"name": "Extra Fatigue Points",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "fp",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 3,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tSCw2yXTo7zfa6482",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tBp8Q-gJeFHzopeuI"
+					},
+					"name": "Flight",
+					"reference": "B56,P50,PSI14",
+					"local_notes": "Air Move is Basic Speed x 2 (drop all fractions)",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mORRcqQGl2EzyeXw5",
+							"name": "Newtonian Space Flight",
+							"reference": "B56",
+							"cost_adj": "25%",
+							"disabled": true
+						},
+						{
+							"id": "m8jom5tWztB7V0mkQ",
+							"name": "Space Flight",
+							"reference": "B56",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "msMR-yC0SZvKq5pWr",
+							"name": "Cannot Hover",
+							"reference": "B56",
+							"cost_adj": "-15%"
+						},
+						{
+							"id": "mzx9A_LRBjrdaWyJy",
+							"name": "Controlled Gliding",
+							"reference": "B56",
+							"cost_adj": "-45%",
+							"disabled": true
+						},
+						{
+							"id": "m2IM1Q5OahZMFv-sE",
+							"name": "Gliding",
+							"reference": "B56",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "mpih0HL396V-hUzY8",
+							"name": "Lighter Than Air",
+							"reference": "B56",
+							"cost_adj": "-10%",
+							"disabled": true
+						},
+						{
+							"id": "mup6IHm_pHclEvLBT",
+							"name": "Low Ceiling",
+							"reference": "B56",
+							"local_notes": "30'",
+							"cost_adj": "-10%",
+							"disabled": true
+						},
+						{
+							"id": "mqHjwE3PeI_bCQFBJ",
+							"name": "Low Ceiling",
+							"reference": "B56",
+							"local_notes": "10'",
+							"cost_adj": "-20%",
+							"disabled": true
+						},
+						{
+							"id": "mU8zs-ApOSYOoR1Ki",
+							"name": "Low Ceiling",
+							"reference": "B56",
+							"local_notes": "5'",
+							"cost_adj": "-25%",
+							"disabled": true
+						},
+						{
+							"id": "mkluwGpE-qLEovHVJ",
+							"name": "Small Wings",
+							"reference": "B56",
+							"cost_adj": "-10%",
+							"disabled": true
+						},
+						{
+							"id": "mDP9hNaZDQihPQHJv",
+							"name": "Space Flight Only",
+							"reference": "B56",
+							"cost_adj": "-75%",
+							"disabled": true
+						},
+						{
+							"id": "mml6ZYD7pdExKXWfi",
+							"name": "Winged",
+							"reference": "B56",
+							"cost_adj": "-25%"
+						},
+						{
+							"id": "mBkrtIrlA1SZBNsA8",
+							"name": "Planetary",
+							"reference": "P50",
+							"cost_adj": "-5%",
+							"disabled": true
+						},
+						{
+							"id": "m6BFAUK902NL1zV60",
+							"name": "Requires Surface",
+							"reference": "P50",
+							"cost_adj": "-20%",
+							"disabled": true
+						},
+						{
+							"id": "mEIkn6GzLMuz9uo6X",
+							"name": "Slow",
+							"reference": "PSI14",
+							"local_notes": "Basic Speed",
+							"cost_adj": "-25%",
+							"disabled": true
+						},
+						{
+							"id": "mGnqI77R0K55Ec1bt",
+							"name": "Slow, Move 1",
+							"reference": "PSI14",
+							"cost_adj": "-45%",
+							"disabled": true
+						},
+						{
+							"id": "myDnLNYx67SAMzEGb",
+							"name": "Encumbrance-Limited (No encumbrance)",
+							"reference": "FFWF12",
+							"reference_highlight": "Encumbrance-Limited",
+							"local_notes": "Can only glide at best when overburdened",
+							"cost_adj": "-15%",
+							"disabled": true
+						},
+						{
+							"id": "mXIkVb8sOmsV8NaE0",
+							"name": "Encumbrance-Limited (Light encumbrance)",
+							"reference": "FFWF12",
+							"reference_highlight": "Encumbrance-Limited",
+							"local_notes": "Can only glide at best when overburdened",
+							"cost_adj": "-10%"
+						},
+						{
+							"id": "maRKOjJMTTPqKXCIQ",
+							"name": "Encumbrance-Limited (Medium encumbrance)",
+							"reference": "FFWF12",
+							"reference_highlight": "Encumbrance-Limited",
+							"local_notes": "Can only glide at best when overburdened",
+							"cost_adj": "-5%",
+							"disabled": true
+						}
+					],
+					"base_points": 40,
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tM2FdJdrnHpl1IOwy",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t8duh7FJvBdSs4NOb"
+					},
+					"name": "Restricted Diet (Herbivore)",
+					"reference": "B151",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"replacements": {
+						"Food": "Herbivorous"
+					},
+					"modifiers": [
+						{
+							"id": "mAdrZckSZIJAKElAl",
+							"name": "Substitution",
+							"reference": "B151",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "mOp5k1ASqQ9WWojZq",
+							"name": "Very Common",
+							"reference": "B151",
+							"cost_adj": "-10"
+						},
+						{
+							"id": "mAFF5c5qeQTqqVOAJ",
+							"name": "Common",
+							"reference": "B151",
+							"cost_adj": "-20",
+							"disabled": true
+						},
+						{
+							"id": "mdHbprN4tU-lyEBLm",
+							"name": "Occasional",
+							"reference": "B151",
+							"cost_adj": "-30",
+							"disabled": true
+						},
+						{
+							"id": "mFYYPpaI7tRSYjj-O",
+							"name": "Rare",
+							"reference": "B151",
+							"cost_adj": "-40",
+							"disabled": true
+						}
+					],
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tDqxERLH0631mL9Bj",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t2O8gMxbRPpAWLej9"
+					},
+					"name": "Curious",
+					"reference": "B129",
+					"local_notes": "Make a self-control roll when presented with an interesting item or situation",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"cr": 12,
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tCj5caG2XnA0bSx0I",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tw81RysAzky-yjNYN"
+					},
+					"name": "Selfless",
+					"reference": "B153",
+					"local_notes": "You must make a self-control roll to put your needs – even survival – before those of someone else.",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"cr": 12,
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tXf5iuICbRkR1GB7d",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t04cLZ44QvEYdsP3F"
+					},
+					"name": "Sense of Duty",
+					"reference": "B153",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"replacements": {
+						"Large Group": "Travellers"
+					},
+					"modifiers": [
+						{
+							"id": "mpgXnesE3R9C6ousZ",
+							"name": "Friends and Companions",
+							"reference": "B153",
+							"cost_adj": "-5",
+							"disabled": true
+						},
+						{
+							"id": "mpQ_Ak0acCd4UI-TC",
+							"name": "@Small Group@",
+							"reference": "B153",
+							"cost_adj": "-5",
+							"disabled": true
+						},
+						{
+							"id": "mLrSMfGP-N2_1YlDd",
+							"name": "@Individual@",
+							"reference": "B153",
+							"cost_adj": "-2",
+							"disabled": true
+						},
+						{
+							"id": "mwjuedhft1qJPD4D8",
+							"name": "@Large Group@",
+							"reference": "B153",
+							"cost_adj": "-10"
+						},
+						{
+							"id": "mQuIpfy3PY3Pkb-_p",
+							"name": "@Entire Race@",
+							"reference": "B153",
+							"cost_adj": "-15",
+							"disabled": true
+						},
+						{
+							"id": "m01qQHZmWwq9xu5n_",
+							"name": "Every Living Being",
+							"reference": "B153",
+							"cost_adj": "-20",
+							"disabled": true
+						}
+					],
+					"calc": {
+						"points": -10
+					}
+				}
+			],
+			"calc": {
+				"points": 32
+			}
+		}
+	]
+}
