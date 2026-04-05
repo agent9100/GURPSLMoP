@@ -4,7 +4,7 @@
 	"traits": [
 		{
 			"id": "TkTepalTD7Ifs5B70",
-			"name": "Goblinoid",
+			"name": "Goblin",
 			"children": [
 				{
 					"id": "tsrBrh3EKf-nJeG02",
@@ -896,24 +896,37 @@
 					}
 				},
 				{
-					"id": "tOg3862cAu9E8yRhS",
+					"id": "tLd0YkaYZVoTVoXs4",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
 						"path": "Basic Set/Basic Set Traits.adq",
-						"id": "tk0ZKpvgqpE35AZcM"
+						"id": "tEFtRoCNBxTe9vjsG"
 					},
-					"name": "Night Vision",
-					"reference": "B71,P87",
+					"name": "Dark Vision",
+					"reference": "B47,P46",
 					"tags": [
 						"Advantage",
+						"Exotic",
 						"Physical"
 					],
-					"points_per_level": 1,
-					"can_level": true,
-					"levels": 9,
+					"modifiers": [
+						{
+							"id": "mdUzEGOeqVrHXSVCP",
+							"name": "Can see colors in the dark",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "m7ApN3Pn2moFRZjox",
+							"name": "Hypersensory",
+							"reference": "P46",
+							"cost_adj": "40%",
+							"disabled": true
+						}
+					],
+					"base_points": 25,
 					"calc": {
-						"points": 9,
-						"current_level": 9
+						"points": 25
 					}
 				},
 				{
@@ -1153,7 +1166,7 @@
 				}
 			],
 			"calc": {
-				"points": -54
+				"points": -38
 			}
 		}
 	]

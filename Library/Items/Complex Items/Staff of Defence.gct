@@ -1,0 +1,641 @@
+{
+	"version": 5,
+	"id": "BPjzdxsPN16BxCNXH",
+	"traits": [
+		{
+			"id": "T9F2nQduEIvaMuq4f",
+			"name": "Staff of Defence",
+			"children": [
+				{
+					"id": "tkPtsramT1tuOx9GF",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tBmSJ3pNE53c4IRUU"
+					},
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Staff of Defence"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "MCJp0oKlY14pb0Yvh",
+							"name": "Special Enhancements",
+							"children": [
+								{
+									"id": "mSZGFiO7v-V0c42zT",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Enhances @Trait@",
+									"cost_adj": "80%",
+									"disabled": true
+								},
+								{
+									"id": "m_KWJxjAEsGvvfWI_",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Healing only",
+									"cost_adj": "80%",
+									"disabled": true
+								},
+								{
+									"id": "myOGd-x8X6hh5cE2l",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Enhances any trait",
+									"cost_adj": "100%",
+									"disabled": true
+								},
+								{
+									"id": "m0A8i_XmGT2wJt9Db",
+									"name": "Force Field",
+									"reference": "B47",
+									"cost_adj": "20%",
+									"disabled": true
+								},
+								{
+									"id": "mbhrnciqRE6rqyxzu",
+									"name": "Hardened",
+									"reference": "B47",
+									"local_notes": "Reduces armor divisor by @Hardened level@ step(s): \"ignores DR\"→100→10→5→3→2→\"no divisor\"",
+									"cost_adj": "20%",
+									"levels": 1,
+									"disabled": true
+								},
+								{
+									"id": "mFJRsD8NMkeBKG3WG",
+									"name": "Laminate",
+									"reference": "RSWL18",
+									"cost_adj": "10%",
+									"disabled": true
+								},
+								{
+									"id": "mUfNtSedpRoXtJSug",
+									"name": "Malediction-Proof",
+									"reference": "PSI14",
+									"cost_adj": "50%",
+									"disabled": true
+								},
+								{
+									"id": "m-6pGqV4oRoTYY5gk",
+									"name": "Maledictions Only",
+									"reference": "PSI14",
+									"disabled": true
+								},
+								{
+									"id": "mnownnzIehOD7kZYD",
+									"name": "Reflection",
+									"reference": "B47",
+									"cost_adj": "100%",
+									"disabled": true
+								}
+							]
+						},
+						{
+							"id": "MB7KeWE4nsMMPpyrK",
+							"name": "Special Limitations",
+							"children": [
+								{
+									"id": "mbqMOqdS3SvXz32hk",
+									"name": "Ablative",
+									"reference": "B47",
+									"cost_adj": "-80%",
+									"disabled": true
+								},
+								{
+									"id": "mJsq5NFDCBOp67yUL",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Very Common@",
+									"cost_adj": "-15%",
+									"disabled": true
+								},
+								{
+									"id": "mnIaqitMGlbaaZLOy",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Common@",
+									"cost_adj": "-10%",
+									"disabled": true
+								},
+								{
+									"id": "mvUA2jr1Nywl-NHM2",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Occasional@",
+									"cost_adj": "-5%",
+									"disabled": true
+								},
+								{
+									"id": "mupdAWNOrk9ObL0x9",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Rare@",
+									"cost_adj": "-1",
+									"disabled": true
+								},
+								{
+									"id": "m1OeOKcG1HcRTkqAf",
+									"name": "Can't wear armor",
+									"reference": "B47",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "mdl0RNPgF5Skqnn-D",
+									"name": "Directional",
+									"reference": "B47",
+									"local_notes": "Front",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "m34P8vVQ3sha0jwbI",
+									"name": "Directional",
+									"reference": "B47",
+									"local_notes": "@Direction: Back, Right, Left, Top or Underside@",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "mygcLHb10ZT-lnDOi",
+									"name": "Flexible",
+									"reference": "B47",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mw0uXqhgXICAwJ5Nz",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Very Common Attack Form@",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mTYU37WU7srg2mTqB",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Common Attack Form@",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "mwczpxDiadJd5n6eQ",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Occasional Attack Form@",
+									"cost_adj": "-60%",
+									"disabled": true
+								},
+								{
+									"id": "mWUKqogzgtvxY33sB",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Rare Attack Form@",
+									"cost_adj": "-80%",
+									"disabled": true
+								},
+								{
+									"id": "mzueD-BZLWVq15a_j",
+									"name": "Partial (@Location, 1 level per -1 Per Hit Modifier, Torso is -10% thus level 1@)",
+									"reference": "B47",
+									"cost_adj": "-10%",
+									"disabled": true
+								},
+								{
+									"id": "mXwlzyBTALs17l0N8",
+									"name": "Semi-Ablative",
+									"reference": "B47",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "m6iVtQVSUvlOqVVmj",
+									"name": "Tough Skin",
+									"reference": "B47",
+									"local_notes": "Effects that just require skin contact or a scratch ignore this DR",
+									"cost_adj": "-40%",
+									"disabled": true
+								}
+							]
+						}
+					],
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tVPozNLVglsVsRNtt",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "twvmiGFkU_Fw0FuZF"
+					},
+					"name": "Extra Fatigue Points",
+					"reference": "B16",
+					"local_notes": "Staff of Defence spells only",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Staff of Defence"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "m4FwtovAjSyKG_rPo",
+							"name": "Magic Only",
+							"local_notes": "Subject to involuntary FP drain",
+							"cost_adj": "-10%"
+						}
+					],
+					"points_per_level": 3,
+					"can_level": true,
+					"levels": 10,
+					"calc": {
+						"points": 27,
+						"current_level": 10
+					}
+				},
+				{
+					"id": "tLLjVVFvyPodZ8K9t",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tpnv8EEpAS6Er2pwK"
+					},
+					"name": "Magery",
+					"reference": "B66",
+					"local_notes": "Staff of Defence spells only",
+					"tags": [
+						"Advantage",
+						"Mental",
+						"Supernatural"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Staff of Defence"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "m5yIcPiTwp9AUUJJ5",
+							"name": "Dance",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mgBWkRcmgn9VmnTUE",
+							"name": "Dark-Aspected",
+							"cost_adj": "-50%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "m6gZYsCCxufEeyjC9",
+							"name": "Day-Aspected",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "miyh6dXf2bW9bIX9X",
+							"name": "Musical",
+							"cost_adj": "-50%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "ms0qUD6SevFGJ3-kw",
+							"name": "Night-Aspected",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mRc7dwyi6dRI54jQN",
+							"name": "One College",
+							"local_notes": "@College@",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mhUVsxFOjox-5F2FD",
+							"name": "Solitary",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mMNOOOd4rwzy7MIzj",
+							"name": "Song",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mIsYZSS1ZvyCk-U3j",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Limitation Modifiers.adm",
+								"id": "mlh_0hHKF2oeickUF"
+							},
+							"name": "Limited Use",
+							"reference": "B112,P103",
+							"local_notes": "10 uses per day",
+							"cost_adj": "-10%"
+						}
+					],
+					"base_points": 5,
+					"points_per_level": 10,
+					"features": [
+						{
+							"type": "spell_bonus",
+							"match": "spell_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Armor"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "spell_bonus",
+							"match": "spell_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Block"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "thaumatology"
+							},
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 14,
+						"current_level": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 46
+			}
+		}
+	],
+	"spells": [
+		{
+			"id": "PFylPEYR3gYlkDrcu",
+			"name": "Staff of Defence",
+			"children": [
+				{
+					"id": "pw8fMtXepJ1tPdeqj",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pz-a8eHkuICvI8BLo"
+					},
+					"name": "Armor",
+					"reference": "M167",
+					"tags": [
+						"Protection \u0026 Warning"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Protection \u0026 Warning"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "2 per DR",
+					"maintenance_cost": "Half",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"prereq_count": 1,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Staff of Defence"
+								}
+							}
+						]
+					},
+					"points": 16
+				},
+				{
+					"id": "plKCVvyRrIQmsHEZe",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pFQyada3rQucfguQQ"
+					},
+					"name": "Block",
+					"reference": "M166",
+					"tags": [
+						"Protection \u0026 Warning"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Protection \u0026 Warning"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Blocking",
+					"casting_cost": "1 per DB",
+					"maintenance_cost": "-",
+					"casting_time": "1 sec",
+					"duration": "Instant",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Staff of Defence"
+								}
+							}
+						]
+					},
+					"points": 16
+				}
+			]
+		}
+	],
+	"equipment": [
+		{
+			"id": "ee6TworuEvYZZSP8B",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "el3Sq4j8drjABJ4yx"
+			},
+			"description": "Staff of Defence",
+			"reference": "DFA118",
+			"local_notes": "Extends a wizard's reach by 2 yards when casting; Is a Complex Item; Recharges 1d6+4 uses/day; Critical failure to cast a spell or at 0 charges left disintegrates.",
+			"tags": [
+				"Melee Weapon"
+			],
+			"base_value": "4000",
+			"base_weight": "4 lb",
+			"max_uses": 10,
+			"weapons": [
+				{
+					"id": "wO8iQIW9ow6-v7Tb8",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "sw",
+						"base": "2"
+					},
+					"strength": "7†",
+					"usage": "Swung",
+					"reach": "1-2",
+					"parry": "2",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Staff"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "sw+2 cr"
+					}
+				},
+				{
+					"id": "wG_wxLmoRgvfXZrzs",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "2"
+					},
+					"strength": "7†",
+					"usage": "Thrust",
+					"reach": "1-2",
+					"parry": "2",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Staff"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "thr+2 cr"
+					}
+				}
+			],
+			"quantity": 1,
+			"uses": 10,
+			"equipped": true,
+			"calc": {
+				"value": 4000,
+				"extended_value": 4000,
+				"weight": "4 lb",
+				"extended_weight": "4 lb"
+			}
+		}
+	]
+}

@@ -1,0 +1,754 @@
+{
+	"version": 5,
+	"id": "B7uoQPks_tEFIa4Zs",
+	"traits": [
+		{
+			"id": "T7v-eDeepgOZ47CYQ",
+			"name": "Isolas",
+			"ancestry": "Human",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tKXhMiZksiIK3ybm6",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tGWOSEE6SmBHACE6Y"
+					},
+					"name": "Increased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mlUdePEwDiBdDwpGW",
+							"name": "No Fine Manipulators",
+							"cost_adj": "-40%",
+							"disabled": true
+						}
+					],
+					"points_per_level": 20,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 20,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tChcMsmsrsw5KDPx_",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t0RpC5DR3ijYx7aYU"
+					},
+					"name": "Scanning Sense",
+					"reference": "B81,P72,PSI17",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mKtKZJAmYc0zG1qqj",
+							"name": "Imaging Radar",
+							"reference": "B81",
+							"cost_adj": "20"
+						},
+						{
+							"id": "mOc9-Udfet4VRz-hp",
+							"name": "Radar",
+							"reference": "B81",
+							"cost_adj": "20",
+							"disabled": true
+						},
+						{
+							"id": "mlUdtbBbupebEah82",
+							"name": "Ladar",
+							"reference": "B81",
+							"cost_adj": "20",
+							"disabled": true
+						},
+						{
+							"id": "mw-c20xcXFFHN_Oc0",
+							"name": "Para-Radar",
+							"reference": "B81",
+							"cost_adj": "40",
+							"disabled": true
+						},
+						{
+							"id": "mR5olxwjUAsbK_p4D",
+							"name": "Sonar",
+							"reference": "B81",
+							"cost_adj": "20",
+							"disabled": true
+						},
+						{
+							"id": "mEeOqbsq4rQARvSLI",
+							"name": "Extended Arc",
+							"reference": "B82",
+							"local_notes": "240°",
+							"cost_adj": "75%",
+							"disabled": true
+						},
+						{
+							"id": "maSSsSysp_Lzk8DMG",
+							"name": "Extended Arc",
+							"reference": "B82",
+							"local_notes": "360°",
+							"cost_adj": "125%",
+							"disabled": true
+						},
+						{
+							"id": "mFRwMzIB4ZL9y9jit",
+							"name": "Low-Probability Intercept",
+							"reference": "B82",
+							"cost_adj": "10%",
+							"disabled": true
+						},
+						{
+							"id": "midKglewGix7kS_C-",
+							"name": "Multi-Mode",
+							"reference": "B82",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "mBr3CgWbN8wGnS8fy",
+							"name": "Penetrating",
+							"reference": "B82",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "m05KO49RDAUe2raob",
+							"name": "Targeting",
+							"reference": "B82",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mkSmRroq2A-53YF25",
+							"name": "Targeting Only",
+							"reference": "B82",
+							"cost_adj": "-40%",
+							"disabled": true
+						},
+						{
+							"id": "m15p43_8C3bBCr2qa",
+							"name": "Active IR",
+							"reference": "P72",
+							"cost_adj": "20",
+							"disabled": true
+						},
+						{
+							"id": "mu1Xkn4Hcj1sAaqx8",
+							"name": "T-Ray Vision",
+							"reference": "P72",
+							"cost_adj": "25",
+							"disabled": true
+						},
+						{
+							"id": "mG_XOejV7dzO4exgi",
+							"name": "Bio-Scan",
+							"reference": "P72",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "mhM8w7oAgPGSkObAp",
+							"name": "No Intercept",
+							"reference": "P72",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "mLjHepYhKbalcp-eu",
+							"name": "Scanner",
+							"reference": "P72",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "m1h2TeB_UMbyphxSZ",
+							"name": "Field Sense",
+							"reference": "SU27",
+							"cost_adj": "10",
+							"disabled": true
+						},
+						{
+							"id": "mySfZ_AxLGTlExWlt",
+							"name": "Extra-Sensory Awareness",
+							"reference": "PSI17",
+							"cost_adj": "20",
+							"disabled": true
+						}
+					],
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "tbYDMFLdB1g9_nrM3",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tap6QZdAg9aCR_Tvf"
+					},
+					"name": "Detect",
+					"reference": "B48,P47,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Mental",
+						"Physical"
+					],
+					"replacements": {
+						"Common Substance/Condition": "Life"
+					},
+					"modifiers": [
+						{
+							"id": "mz-l0MCqQ_l4wc_zF",
+							"name": "@Rare Substance/Condition@",
+							"reference": "B48",
+							"cost_adj": "5",
+							"disabled": true
+						},
+						{
+							"id": "mOxHZK-UBi728KxL-",
+							"name": "@Occasional Substance/Condition@",
+							"reference": "B48",
+							"cost_adj": "10",
+							"disabled": true
+						},
+						{
+							"id": "mO5uegxMEejdVeZEU",
+							"name": "Has a pulse",
+							"reference": "B48",
+							"cost_adj": "20"
+						},
+						{
+							"id": "mq03troEFyyc5-MUx",
+							"name": "@Very Common Substance/Condition@",
+							"reference": "B48",
+							"cost_adj": "30",
+							"disabled": true
+						},
+						{
+							"id": "mXzzq4jOg63NZ5I06",
+							"name": "Precise",
+							"reference": "B48",
+							"cost_adj": "100%",
+							"disabled": true
+						},
+						{
+							"id": "mMOxJKU6WstjRdDes",
+							"name": "Signal Detection",
+							"reference": "B48",
+							"disabled": true
+						},
+						{
+							"id": "mGdnR40GueHyFfMPM",
+							"name": "Vague",
+							"reference": "B48",
+							"cost_adj": "-50%"
+						},
+						{
+							"id": "mRothmKTNHL7gfxxE",
+							"name": "Analyzing",
+							"reference": "P47",
+							"cost_adj": "100%",
+							"disabled": true
+						},
+						{
+							"id": "mzRPtHHtZX90dFXED",
+							"name": "Lock-On",
+							"reference": "PSI14",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "mPCZ_QNhdIlp1QLxC",
+							"name": "Precise, Nontargeting",
+							"reference": "PSI14",
+							"cost_adj": "90%",
+							"disabled": true
+						},
+						{
+							"id": "mwxe04Ul7lXQLah-z",
+							"name": "Analysis Only",
+							"reference": "PSI14",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "m6u55GmekQTI9f0K8",
+							"name": "Cannot Analyze",
+							"reference": "PSI14",
+							"cost_adj": "-10%",
+							"disabled": true
+						}
+					],
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tLo2j3Og1aa7fRouK",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tBmSJ3pNE53c4IRUU"
+					},
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "MeVg1xt9SymvpFHoO",
+							"name": "Special Enhancements",
+							"children": [
+								{
+									"id": "mONz_Hc-99CBkVQCs",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Enhances @Trait@",
+									"cost_adj": "80%",
+									"disabled": true
+								},
+								{
+									"id": "mraHFThozyNy3UNpf",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Healing only",
+									"cost_adj": "80%",
+									"disabled": true
+								},
+								{
+									"id": "memq4QZoh6JhyGmfz",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Enhances any trait",
+									"cost_adj": "100%",
+									"disabled": true
+								},
+								{
+									"id": "muKwDaEuvcw8KGhJa",
+									"name": "Force Field",
+									"reference": "B47",
+									"cost_adj": "20%",
+									"disabled": true
+								},
+								{
+									"id": "mgeogCMyluQuYf9Ha",
+									"name": "Hardened",
+									"reference": "B47",
+									"local_notes": "Reduces armor divisor by @Hardened level@ step(s): \"ignores DR\"→100→10→5→3→2→\"no divisor\"",
+									"cost_adj": "20%",
+									"levels": 1,
+									"disabled": true
+								},
+								{
+									"id": "m6NU2jnhnmvwPQIdY",
+									"name": "Laminate",
+									"reference": "RSWL18",
+									"cost_adj": "10%",
+									"disabled": true
+								},
+								{
+									"id": "mcVgy8SRwjDxlvK99",
+									"name": "Malediction-Proof",
+									"reference": "PSI14",
+									"cost_adj": "50%",
+									"disabled": true
+								},
+								{
+									"id": "mWTOuBNQCHpBm593y",
+									"name": "Maledictions Only",
+									"reference": "PSI14",
+									"disabled": true
+								},
+								{
+									"id": "m6aOdjJRxQ11LIorS",
+									"name": "Reflection",
+									"reference": "B47",
+									"cost_adj": "100%",
+									"disabled": true
+								}
+							]
+						},
+						{
+							"id": "MWKWOViZIPmGZzGWV",
+							"name": "Special Limitations",
+							"children": [
+								{
+									"id": "m65HHRLmLAdSg980e",
+									"name": "Ablative",
+									"reference": "B47",
+									"cost_adj": "-80%",
+									"disabled": true
+								},
+								{
+									"id": "mZK6lByFGHqkrtPA_",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Very Common@",
+									"cost_adj": "-15%",
+									"disabled": true
+								},
+								{
+									"id": "mlIKZqn42SkX3SFzf",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Common@",
+									"cost_adj": "-10%",
+									"disabled": true
+								},
+								{
+									"id": "mPfjynNOQZP0XKuiL",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Occasional@",
+									"cost_adj": "-5%",
+									"disabled": true
+								},
+								{
+									"id": "mTYWX5wri177mszNe",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Rare@",
+									"cost_adj": "-1",
+									"disabled": true
+								},
+								{
+									"id": "mfjNUir3fPf_F1GRX",
+									"name": "Can't wear armor",
+									"reference": "B47",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "mTCO3LoFD89yI0cEW",
+									"name": "Directional",
+									"reference": "B47",
+									"local_notes": "Front",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "m1pRgcQyVJbcKk-C2",
+									"name": "Directional",
+									"reference": "B47",
+									"local_notes": "@Direction: Back, Right, Left, Top or Underside@",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "mItAPBVPYCOi3MOey",
+									"name": "Flexible",
+									"reference": "B47",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "m4Ew7Ph_R1Q7k9it5",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Very Common Attack Form@",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "m77OinJhQsYEwemkm",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Common Attack Form@",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "m1HE1AiIpa97r-hH-",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Occasional Attack Form@",
+									"cost_adj": "-60%",
+									"disabled": true
+								},
+								{
+									"id": "mUD6By1jBov50cGz8",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Rare Attack Form@",
+									"cost_adj": "-80%",
+									"disabled": true
+								},
+								{
+									"id": "m4WEFu3KMicT8CU_j",
+									"name": "Partial (@Location, 1 level per -1 Per Hit Modifier, Torso is -10% thus level 1@)",
+									"reference": "B47",
+									"cost_adj": "-10%",
+									"disabled": true
+								},
+								{
+									"id": "mhpVdttANwju8aehh",
+									"name": "Semi-Ablative",
+									"reference": "B47",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mGd1oIUXXMXz-1wJw",
+									"name": "Tough Skin",
+									"reference": "B47",
+									"local_notes": "Effects that just require skin contact or a scratch ignore this DR",
+									"cost_adj": "-40%"
+								}
+							]
+						}
+					],
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 6,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "tB91Tm8B3lu5dEFUm",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tmlb6LFRFAUiYGyPa"
+					},
+					"name": "Acute Sense (@Special Sense@)",
+					"reference": "B35",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"replacements": {
+						"Special Sense": "Imaging Radar"
+					},
+					"points_per_level": 2,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "Scanning Sense (Acute Sense)",
+							"amount": 1
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 2,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "ta6lK3gla798hKbek",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tNeakSSbeLd8qrQiQ"
+					},
+					"name": "Accessory (@Tool@)",
+					"reference": "B100",
+					"tags": [
+						"Exotic",
+						"Perk",
+						"Physical"
+					],
+					"replacements": {
+						"Tool": "Glows at will"
+					},
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tyFipBPMcSmgKH7lr",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tPEcwivcwBjDIVWoM"
+					},
+					"name": "Piercing Striker (@Body Part@)",
+					"reference": "B88",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"replacements": {
+						"Body Part": "Head",
+						"Direction": "Front"
+					},
+					"modifiers": [
+						{
+							"id": "melozdFuMUEeY98Ur",
+							"name": "Cannot Parry",
+							"reference": "B88",
+							"cost_adj": "-40%"
+						},
+						{
+							"id": "m1nGmh2j4v2GUx_ax",
+							"name": "Clumsy",
+							"reference": "B88",
+							"cost_adj": "-20%",
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"amount": -1,
+									"per_level": true
+								}
+							],
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mbvtQmMxilMgiTC5C",
+							"name": "Limited Arc (@Direction@)",
+							"reference": "B88",
+							"cost_adj": "-40%"
+						},
+						{
+							"id": "mBzQY4qEVCiOw7wR9",
+							"name": "Weak",
+							"reference": "B88",
+							"cost_adj": "-50%",
+							"features": [
+								{
+									"type": "weapon_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"level": {
+										"compare": "at_least"
+									},
+									"amount": -1,
+									"per_die": true
+								}
+							],
+							"disabled": true
+						},
+						{
+							"id": "molfoSLqByAQx4eU2",
+							"name": "Long",
+							"reference": "B88",
+							"cost_adj": "100%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mDkkcR9l0LJfG6IZQ",
+							"name": "Long, max reach only",
+							"reference": "B88",
+							"cost_adj": "75%",
+							"levels": 1,
+							"disabled": true
+						}
+					],
+					"base_points": 5,
+					"weapons": [
+						{
+							"id": "wqDrjX2Q3Wx3Tcow-",
+							"sv": 1,
+							"damage": {
+								"type": "pi",
+								"st": "thr",
+								"modifier_per_die": 1
+							},
+							"reach": "C",
+							"parry": "0",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "dx"
+								}
+							],
+							"calc": {
+								"damage": "thr (+1 per die) pi"
+							}
+						}
+					],
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tMJ_L7Qiqo-_l7fNK",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tPcvlsavyazeq1Qg4"
+					},
+					"name": "Blindness",
+					"reference": "B124",
+					"local_notes": "Cannot target hit locations",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -50,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "combat while truly blind (no scanning sense)",
+							"amount": -6
+						}
+					],
+					"calc": {
+						"points": -50
+					}
+				}
+			],
+			"calc": {
+				"points": 10
+			}
+		}
+	]
+}

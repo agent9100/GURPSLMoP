@@ -1,0 +1,529 @@
+{
+	"version": 5,
+	"id": "BGM04HD0_SHUljUL6",
+	"traits": [
+		{
+			"id": "TbuTPFgf3wyadfGF_",
+			"name": "Wand of Magic Missiles",
+			"children": [
+				{
+					"id": "t2ssTv1R2oeCklD6j",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "twvmiGFkU_Fw0FuZF"
+					},
+					"name": "Extra Fatigue Points",
+					"reference": "B16",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Wand of Magic Missiles"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "mvWXSf_3EXKxvjYJ7",
+							"name": "Magic Only",
+							"local_notes": "Subject to involuntary FP drain",
+							"cost_adj": "-10%"
+						}
+					],
+					"points_per_level": 3,
+					"can_level": true,
+					"levels": 7,
+					"calc": {
+						"points": 19,
+						"current_level": 7
+					}
+				},
+				{
+					"id": "tJzVzeu0uGOumpisI",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tPn0MAB9RgKaGCCBe"
+					},
+					"name": "Magic Missile (Crush)",
+					"reference": "B61,P53,MA45",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Wand of Magic Missiles"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "mfhG7HM58RpWpZrj9",
+							"name": "Symptoms",
+							"reference": "B109",
+							"local_notes": "@Effect@",
+							"disabled": true
+						},
+						{
+							"id": "mR6HuzNNNOidROoLn",
+							"name": "Side Effect",
+							"reference": "B109",
+							"local_notes": "@Effect@",
+							"disabled": true
+						},
+						{
+							"id": "mamnTm8P6mNHiv8qB",
+							"name": "Incendiary",
+							"reference": "B104",
+							"cost_adj": "10%",
+							"disabled": true
+						},
+						{
+							"id": "mCk3h_-L0Will7uuj",
+							"name": "Fragmentation",
+							"reference": "B104",
+							"cost_adj": "15%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mKxpXwn0ZyanfPLap",
+							"name": "Fragmentation",
+							"reference": "B104",
+							"local_notes": "Hot",
+							"cost_adj": "15%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mBTzLp20q5mJGaDK7",
+							"name": "Surge",
+							"reference": "B104",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "m0bzuoDmWSfnOXM04",
+							"name": "Double Knockback",
+							"reference": "B104",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mL7GhZettrSicvCNC",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "2",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "m8Vufyq-0rxWyrLp9",
+							"name": "Explosion",
+							"reference": "B104",
+							"cost_adj": "50%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mZl5AHMaxr8EDYyOs",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Enhancement Modifiers.adm",
+								"id": "mcbR2hn-OMSzhW7gf"
+							},
+							"name": "Homing (Hyperspectral Vision)",
+							"reference": "B105",
+							"cost_adj": "+75%"
+						},
+						{
+							"id": "mH3aMgavvhKsa-DiZ",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "3",
+							"cost_adj": "100%",
+							"disabled": true
+						},
+						{
+							"id": "m5bUeYqeQAmyTGryA",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "5",
+							"cost_adj": "150%",
+							"disabled": true
+						},
+						{
+							"id": "mpR2aY6f9YkuP3snb",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "10",
+							"cost_adj": "200%",
+							"disabled": true
+						},
+						{
+							"id": "mwrNooVOTVwMG3t-M",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Limitation Modifiers.adm",
+								"id": "mb8dKIbPtFmqDLYaM"
+							},
+							"name": "Costs Fatigue",
+							"reference": "B111,P101",
+							"cost_adj": "-5%",
+							"levels": 1
+						},
+						{
+							"id": "m_36y-hDIybMDahhS",
+							"name": "No Knockback",
+							"reference": "B111",
+							"cost_adj": "-10%"
+						},
+						{
+							"id": "mcsp9gfOyJZIBb-P6",
+							"name": "No Blunt Trauma",
+							"reference": "B111",
+							"cost_adj": "-20%"
+						},
+						{
+							"id": "mh3xC9zhTAf4y5vCG",
+							"name": "Armor Divisor",
+							"reference": "B110",
+							"local_notes": "0.5",
+							"cost_adj": "-30%",
+							"disabled": true
+						},
+						{
+							"id": "meILoVPuMxIq4360J",
+							"name": "No Wounding",
+							"reference": "B111",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "mtUUW-sEAJFtAbKJy",
+							"name": "Armor Divisor",
+							"reference": "B110",
+							"local_notes": "0.2",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "mLmLGT4tUb5XyTG-6",
+							"name": "Armor Divisor",
+							"reference": "B110",
+							"local_notes": "0.1",
+							"cost_adj": "-70%",
+							"disabled": true
+						},
+						{
+							"id": "mp-RCSD6NAFDQ41fy",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Limitation Modifiers.adm",
+								"id": "muEHnnBcFvKfMCDHp"
+							},
+							"name": "Reduced Range",
+							"reference": "B115,P105",
+							"local_notes": "2 Range Divisor",
+							"cost_adj": "-10%"
+						},
+						{
+							"id": "mh0J-2OPzpxjeww97",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Enhancement Modifiers.adm",
+								"id": "mBGfUgwdVmDu-JkEa"
+							},
+							"name": "10x Increased 1/2 D Range",
+							"reference": "B106",
+							"cost_adj": "15%"
+						},
+						{
+							"id": "m74FDkKCX60KUe5-9",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Enhancement Modifiers.adm",
+								"id": "mVP0kyIRXqPj6Gt7X"
+							},
+							"name": "Accurate",
+							"reference": "B102,P99",
+							"cost_adj": "5%",
+							"levels": 3
+						}
+					],
+					"points_per_level": 5,
+					"weapons": [
+						{
+							"id": "WogWRhprnLkeke7Jo",
+							"sv": 1,
+							"damage": {
+								"type": "cr",
+								"base_leveled": "1d"
+							},
+							"usage": "Magic Missile",
+							"usage_notes": "Aim Maneuver (Unmodified Artillery check) -\u003e 10 + ACC attack roll with no range penalites",
+							"accuracy": "6",
+							"range": "50",
+							"recoil": "1",
+							"defaults": [
+								{
+									"type": "10"
+								}
+							],
+							"calc": {
+								"damage": "1d per level  cr"
+							}
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 8,
+						"current_level": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 27
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "SsBSOkNTojtI20wNX",
+			"name": "Wand of Magic Missiles",
+			"children": [
+				{
+					"id": "svSdrQdsa51XFs5Wh",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "siUwhUBcqrDAPgud8"
+					},
+					"name": "Artillery",
+					"reference": "B178",
+					"tags": [
+						"Combat",
+						"Ranged Combat",
+						"Weapon"
+					],
+					"specialization": "Guided Missile",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Wand of Magic Missiles"
+								}
+							}
+						]
+					},
+					"tech_level": "",
+					"points": 12
+				}
+			]
+		}
+	],
+	"equipment": [
+		{
+			"id": "e-zv0grgx92Z-2rhy",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "efiIjq_0j63wql3Cd"
+			},
+			"description": "Wand of Magic Missiles",
+			"reference": "DFA118",
+			"local_notes": "Extends a wizard's reach by 1 yard when casting; Is a Complex Item; Recharges 1d6+1 uses/day; Critical failure to aim or at 0 charges left disintegrates.",
+			"tags": [
+				"Melee Weapon"
+			],
+			"base_value": "5000",
+			"base_weight": "1 lb",
+			"max_uses": 7,
+			"weapons": [
+				{
+					"id": "w1KhUwFvaC8DdSgFC",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "sw"
+					},
+					"strength": "6",
+					"usage": "Swung",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword"
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Jitte/Sai",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Knife",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Smallsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Tonfa",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					],
+					"calc": {
+						"damage": "sw cr"
+					}
+				},
+				{
+					"id": "wGx37mrnE9WIZJQpQ",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrust",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword"
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Jitte/Sai",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Knife",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Smallsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Tonfa",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					],
+					"calc": {
+						"damage": "thr cr"
+					}
+				}
+			],
+			"features": [
+				{
+					"type": "skill_point_bonus",
+					"name": {
+						"compare": "is",
+						"qualifier": "Innate Attack"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Projectile"
+					},
+					"amount": 1
+				}
+			],
+			"quantity": 1,
+			"uses": 7,
+			"equipped": true,
+			"calc": {
+				"value": 5000,
+				"extended_value": 5000,
+				"weight": "1 lb",
+				"extended_weight": "1 lb"
+			}
+		}
+	]
+}

@@ -1,0 +1,575 @@
+{
+	"version": 5,
+	"rows": [
+		{
+			"id": "THuu3gpT1XYyDOzXD",
+			"name": "Boots of Striding and Springing",
+			"children": [
+				{
+					"id": "tSvAauPV47HrdvKe2",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tCgsJ0W9A8mHTtc-e"
+					},
+					"name": "Increased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t2uAdi5t_msPB5KX8",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t6krAE1uo6M0oDJFL"
+					},
+					"name": "Lifting ST",
+					"reference": "B65,P58",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mqOx-ICHW5ELW7MUN",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_adj": "-40%",
+							"disabled": true
+						},
+						{
+							"id": "mi0LN9XRQARga_VTk",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "m2AmnGzvnkcuCUqJk",
+							"name": "Super-Effort",
+							"reference": "P58",
+							"cost_adj": "400%",
+							"disabled": true
+						},
+						{
+							"id": "mkBHFMJ6b1GUsp6ZV",
+							"name": "Know Your Own Strength Variant Price",
+							"reference": "PY83:18",
+							"cost_adj": "4",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mQIHz4EqLYM5fqyai",
+							"name": "@Limb@ Grip ST",
+							"reference": "MATG28",
+							"cost_adj": "-70%",
+							"disabled": true
+						},
+						{
+							"id": "mhmFxlGdGXrf57JZd",
+							"name": "Bite ST",
+							"reference": "MATG28",
+							"cost_adj": "-70%",
+							"disabled": true
+						}
+					],
+					"points_per_level": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"limitation": "lifting_only",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 15,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "ttAgy5qf-7ei9d2Jz",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tejp-a5e9aT3X-4i0"
+					},
+					"name": "Super Jump",
+					"reference": "B89,P79",
+					"local_notes": "Jump Move as Basic Move x2",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mZC5yCb9E8-HrpM5W",
+							"name": "Bouncing",
+							"reference": "P80",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "mIA9wnYxyU_XPE6Pd",
+							"name": "Maneuverable",
+							"reference": "P80",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "m6p47YeVO20aYt-p_",
+							"name": "Full Power Only",
+							"reference": "P80",
+							"cost_adj": "-10%",
+							"disabled": true
+						},
+						{
+							"id": "m3L50Y9H4bm8kZp3M",
+							"name": "Horizontal Only",
+							"reference": "P80",
+							"cost_adj": "-25%",
+							"disabled": true
+						},
+						{
+							"id": "m7VsEzM57bn8GPYhz",
+							"name": "Lighter Than Air",
+							"reference": "P80",
+							"cost_adj": "-10%",
+							"disabled": true
+						},
+						{
+							"id": "m3vAeHY5H5LC0s7oi",
+							"name": "Planetary",
+							"reference": "P80",
+							"cost_adj": "-5%",
+							"disabled": true
+						},
+						{
+							"id": "mB2KRjQVfl10a4HhF",
+							"name": "Projectile",
+							"reference": "P80",
+							"cost_adj": "-20%",
+							"disabled": true
+						},
+						{
+							"id": "mooLvsje0ZRycXthK",
+							"name": "Vertical Only",
+							"reference": "P80",
+							"cost_adj": "-25%",
+							"disabled": true
+						},
+						{
+							"id": "mNuhE8AAJlFl_mJSz",
+							"name": "Bouncing Only",
+							"reference": "SU28",
+							"cost_adj": "-50%",
+							"disabled": true
+						}
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 30
+			}
+		},
+		{
+			"id": "TkNeeklDrwJRBt4Gz",
+			"name": "Gauntlets of Ogre Power",
+			"children": [
+				{
+					"id": "t-7bo7JZRFIx4Wq4P",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tqha9GlDBU9P-Wg-6"
+					},
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "meLrlhrPOUKDJJsql",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_adj": "-40%",
+							"disabled": true
+						},
+						{
+							"id": "mzTYgSOPnabXi06-e",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "m2m3puliuVbOZYnUN",
+							"name": "Super-Effort",
+							"reference": "SU24",
+							"cost_adj": "300%",
+							"disabled": true
+						}
+					],
+					"points_per_level": 10,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 30,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "TsbHJGTUMpPvLcMOU",
+					"name": "Trait Container",
+					"calc": {
+						"points": 0
+					}
+				}
+			],
+			"calc": {
+				"points": 30
+			}
+		},
+		{
+			"id": "TOS-gFTN0poHzcPjX",
+			"name": "Ring of Protection",
+			"children": [
+				{
+					"id": "tBBLmtxQiulEtOmb0",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tvH8CndwPkEmF4Z6t"
+					},
+					"name": "Magic Resistance",
+					"reference": "B67",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mJtA2Xt2FvixDrXhV",
+							"name": "Improved",
+							"reference": "B67",
+							"cost_adj": "150%"
+						}
+					],
+					"points_per_level": 2,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist spells",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to skill for others to cast a spell on you",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tQxm3ZNb_ArBJbpPm",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tBmSJ3pNE53c4IRUU"
+					},
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "M-pGeKKocw0fHL0RZ",
+							"name": "Special Enhancements",
+							"children": [
+								{
+									"id": "mgemf03j_ofyEyjDl",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Enhances @Trait@",
+									"cost_adj": "80%",
+									"disabled": true
+								},
+								{
+									"id": "mW2MGoXjKTDU51yy2",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Healing only",
+									"cost_adj": "80%",
+									"disabled": true
+								},
+								{
+									"id": "mT36pgVmqUegPPQqx",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Enhances any trait",
+									"cost_adj": "100%",
+									"disabled": true
+								},
+								{
+									"id": "mFTyxCDcGT_Z5tsD3",
+									"name": "Force Field",
+									"reference": "B47",
+									"cost_adj": "20%",
+									"disabled": true
+								},
+								{
+									"id": "mEEVFPm1mduFs6qsP",
+									"name": "Hardened",
+									"reference": "B47",
+									"local_notes": "Reduces armor divisor by @Hardened level@ step(s): \"ignores DR\"→100→10→5→3→2→\"no divisor\"",
+									"cost_adj": "20%",
+									"levels": 1,
+									"disabled": true
+								},
+								{
+									"id": "mswEPudGJXyKcSP88",
+									"name": "Laminate",
+									"reference": "RSWL18",
+									"cost_adj": "10%",
+									"disabled": true
+								},
+								{
+									"id": "mQFuoa98USELeNdMZ",
+									"name": "Malediction-Proof",
+									"reference": "PSI14",
+									"cost_adj": "50%",
+									"disabled": true
+								},
+								{
+									"id": "mfw28Uswg_5S50JKu",
+									"name": "Maledictions Only",
+									"reference": "PSI14",
+									"disabled": true
+								},
+								{
+									"id": "mUrGIxgvzvR6GEMcF",
+									"name": "Reflection",
+									"reference": "B47",
+									"cost_adj": "100%",
+									"disabled": true
+								}
+							]
+						},
+						{
+							"id": "MqkhEIYyobTWalaC7",
+							"name": "Special Limitations",
+							"children": [
+								{
+									"id": "m7Ykufn3FUzNksEG8",
+									"name": "Ablative",
+									"reference": "B47",
+									"cost_adj": "-80%",
+									"disabled": true
+								},
+								{
+									"id": "muEHtboLgL1AHU5ls",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Very Common@",
+									"cost_adj": "-15%",
+									"disabled": true
+								},
+								{
+									"id": "mURDHI36efGQhy3ws",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Common@",
+									"cost_adj": "-10%",
+									"disabled": true
+								},
+								{
+									"id": "m2JNyxibfwKIkZatE",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Occasional@",
+									"cost_adj": "-5%",
+									"disabled": true
+								},
+								{
+									"id": "mF_KSso8gj3qS5xlj",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Rare@",
+									"cost_adj": "-1",
+									"disabled": true
+								},
+								{
+									"id": "m40sMfGg65hbbfJZ4",
+									"name": "Can't wear armor",
+									"reference": "B47",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "mBwh-5GAIPeA1Vpxn",
+									"name": "Directional",
+									"reference": "B47",
+									"local_notes": "Front",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mnhVHTnIWEUODqRH8",
+									"name": "Directional",
+									"reference": "B47",
+									"local_notes": "@Direction: Back, Right, Left, Top or Underside@",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "mL3ULC79SIOCMnoly",
+									"name": "Flexible",
+									"reference": "B47",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mDp0rVCWL1XChRfE6",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Very Common Attack Form@",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mRtRO9ABiDV7QI9yc",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Common Attack Form@",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "mk5O0HboBsgjr1SSB",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Occasional Attack Form@",
+									"cost_adj": "-60%",
+									"disabled": true
+								},
+								{
+									"id": "mC9vSdHwBUlDvgWhq",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Rare Attack Form@",
+									"cost_adj": "-80%",
+									"disabled": true
+								},
+								{
+									"id": "mozUc9OFhBySeRsRz",
+									"name": "Partial (@Location, 1 level per -1 Per Hit Modifier, Torso is -10% thus level 1@)",
+									"reference": "B47",
+									"cost_adj": "-10%",
+									"disabled": true
+								},
+								{
+									"id": "mGaQZ61v6bt-3U7wI",
+									"name": "Semi-Ablative",
+									"reference": "B47",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mj0v9bPQzeF-EHq7k",
+									"name": "Tough Skin",
+									"reference": "B47",
+									"local_notes": "Effects that just require skin contact or a scratch ignore this DR",
+									"cost_adj": "-40%",
+									"disabled": true
+								}
+							]
+						}
+					],
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 10
+			}
+		}
+	]
+}

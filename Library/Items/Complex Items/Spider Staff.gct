@@ -1,0 +1,397 @@
+{
+	"version": 5,
+	"id": "BPjzdxsPN16BxCNXH",
+	"traits": [
+		{
+			"id": "T9F2nQduEIvaMuq4f",
+			"name": "Spider Staff",
+			"children": [
+				{
+					"id": "tcnP-B6ay1IlPMGXY",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "twvmiGFkU_Fw0FuZF"
+					},
+					"name": "Extra Fatigue Points",
+					"reference": "B16",
+					"local_notes": "Spider Staff spells only",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Spider Staff"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "msb9DVX_Dl6DmE6hb",
+							"name": "Magic Only",
+							"local_notes": "Subject to involuntary FP drain",
+							"cost_adj": "-10%"
+						}
+					],
+					"points_per_level": 3,
+					"can_level": true,
+					"levels": 10,
+					"calc": {
+						"points": 27,
+						"current_level": 10
+					}
+				},
+				{
+					"id": "tLLjVVFvyPodZ8K9t",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tpnv8EEpAS6Er2pwK"
+					},
+					"name": "Magery",
+					"reference": "B66",
+					"local_notes": "Spider Staff spells only",
+					"tags": [
+						"Advantage",
+						"Mental",
+						"Supernatural"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Spider Staff"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "mSESUJSqdYxZqQDE_",
+							"name": "Dance",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "m6dwwtSNsKKigy9l3",
+							"name": "Dark-Aspected",
+							"cost_adj": "-50%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mFbC4JeZGO5HCtmdk",
+							"name": "Day-Aspected",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "m7zYhvnG9Ed_hvqyq",
+							"name": "Musical",
+							"cost_adj": "-50%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mzS6jyBjnWsuJA8av",
+							"name": "Night-Aspected",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "m67n3Pw1AWWh1WwCc",
+							"name": "One College",
+							"local_notes": "@College@",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "m_UOZZgKbEU3UcWpT",
+							"name": "Solitary",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mBJ4MavG0ICscApVG",
+							"name": "Song",
+							"cost_adj": "-40%",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mdqv6HGlF7ye6EoBl",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Limitation Modifiers.adm",
+								"id": "mlh_0hHKF2oeickUF"
+							},
+							"name": "Limited Use",
+							"reference": "B112,P103",
+							"local_notes": "10 uses per day",
+							"cost_adj": "-10%"
+						}
+					],
+					"base_points": 5,
+					"points_per_level": 10,
+					"features": [
+						{
+							"type": "spell_bonus",
+							"match": "spell_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Climbing"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "spell_bonus",
+							"match": "spell_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Glue"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "thaumatology"
+							},
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 14,
+						"current_level": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 41
+			}
+		}
+	],
+	"spells": [
+		{
+			"id": "PFylPEYR3gYlkDrcu",
+			"name": "Spider Staff",
+			"children": [
+				{
+					"id": "p7Icy614BXFHfu1AK",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "pp9lQfEl6gkqrBSCC"
+					},
+					"name": "Climbing",
+					"reference": "M35",
+					"tags": [
+						"Body Control"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Body Control"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Regular",
+					"casting_cost": "1-3",
+					"maintenance_cost": "Same",
+					"casting_time": "1 sec",
+					"duration": "1 min",
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Spider Staff"
+								}
+							}
+						]
+					},
+					"points": 16
+				},
+				{
+					"id": "pNbMPU1bhijpzN7OY",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Spells.spl",
+						"id": "p4RNIOfhPR6CKIZ8l"
+					},
+					"name": "Glue",
+					"reference": "M142",
+					"tags": [
+						"Movement"
+					],
+					"difficulty": "iq/h",
+					"college": [
+						"Movement"
+					],
+					"power_source": "Arcane",
+					"spell_class": "Area",
+					"casting_cost": "3",
+					"maintenance_cost": "Same",
+					"casting_time": "1 sec",
+					"duration": "10 min",
+					"prereq_count": 1,
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Spider Staff"
+								}
+							}
+						]
+					},
+					"points": 16
+				}
+			]
+		}
+	],
+	"equipment": [
+		{
+			"id": "ee6TworuEvYZZSP8B",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "el3Sq4j8drjABJ4yx"
+			},
+			"description": "Spider Staff",
+			"reference": "DFA118",
+			"local_notes": "Extends a wizard's reach by 2 yards when casting; Is a Complex Item; Recharges 1d6+4 uses/day; Critical failure to cast a spell or at 0 charges left disintegrates.",
+			"tags": [
+				"Melee Weapon"
+			],
+			"base_value": "4000",
+			"base_weight": "4 lb",
+			"max_uses": 10,
+			"weapons": [
+				{
+					"id": "wSLmrpDsYJ9g8mcp0",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "sw",
+						"base": "2"
+					},
+					"strength": "7†",
+					"usage": "Swung",
+					"reach": "1-2",
+					"parry": "2",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Staff"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "sw+2 cr"
+					}
+				},
+				{
+					"id": "wVfjivDey6hF_CK9v",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "2"
+					},
+					"strength": "7†",
+					"usage": "Thrust",
+					"reach": "1-2",
+					"parry": "2",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Staff"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "thr+2 cr"
+					}
+				},
+				{
+					"id": "wfhVFy3dSIgODDaKG",
+					"sv": 1,
+					"damage": {
+						"type": "tox",
+						"base": "1d-2"
+					},
+					"usage": "Follow-Up Poison",
+					"reach": "1",
+					"calc": {
+						"damage": "1d-2 tox"
+					}
+				}
+			],
+			"quantity": 1,
+			"uses": 10,
+			"equipped": true,
+			"calc": {
+				"value": 4000,
+				"extended_value": 4000,
+				"weight": "4 lb",
+				"extended_weight": "4 lb"
+			}
+		}
+	]
+}

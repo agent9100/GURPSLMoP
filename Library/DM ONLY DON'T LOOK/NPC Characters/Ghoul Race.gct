@@ -1562,24 +1562,37 @@
 					}
 				},
 				{
-					"id": "tmQhoR59dDcOL2V7d",
+					"id": "tvtlCUC3ag60lwzmp",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
 						"path": "Basic Set/Basic Set Traits.adq",
-						"id": "tk0ZKpvgqpE35AZcM"
+						"id": "tEFtRoCNBxTe9vjsG"
 					},
-					"name": "Night Vision",
-					"reference": "B71,P87",
+					"name": "Dark Vision",
+					"reference": "B47,P46",
 					"tags": [
 						"Advantage",
+						"Exotic",
 						"Physical"
 					],
-					"points_per_level": 1,
-					"can_level": true,
-					"levels": 9,
+					"modifiers": [
+						{
+							"id": "m3Ixq83hyrBIpSVBI",
+							"name": "Can see colors in the dark",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mzntQ2qfg6YV0dMcA",
+							"name": "Hypersensory",
+							"reference": "P46",
+							"cost_adj": "40%",
+							"disabled": true
+						}
+					],
+					"base_points": 25,
 					"calc": {
-						"points": 9,
-						"current_level": 9
+						"points": 25
 					}
 				},
 				{
@@ -2327,7 +2340,7 @@
 				}
 			],
 			"calc": {
-				"points": 31
+				"points": 47
 			}
 		}
 	]

@@ -211,48 +211,49 @@
 					],
 					"modifiers": [
 						{
-							"id": "mORRcqQGl2EzyeXw5",
+							"id": "mKU6_eEnIdKJxdJO5",
 							"name": "Newtonian Space Flight",
 							"reference": "B56",
 							"cost_adj": "25%",
 							"disabled": true
 						},
 						{
-							"id": "m8jom5tWztB7V0mkQ",
+							"id": "m9GQJ5jUWZy9RRlnB",
 							"name": "Space Flight",
 							"reference": "B56",
 							"cost_adj": "50%",
 							"disabled": true
 						},
 						{
-							"id": "msMR-yC0SZvKq5pWr",
+							"id": "mkqb6eJTE0_4AwG3v",
 							"name": "Cannot Hover",
 							"reference": "B56",
-							"cost_adj": "-15%"
+							"cost_adj": "-15%",
+							"disabled": true
 						},
 						{
-							"id": "mzx9A_LRBjrdaWyJy",
+							"id": "mTbyHNrDvuR6u76xZ",
 							"name": "Controlled Gliding",
 							"reference": "B56",
 							"cost_adj": "-45%",
 							"disabled": true
 						},
 						{
-							"id": "m2IM1Q5OahZMFv-sE",
+							"id": "mQmFMXBvTPEgNfoWZ",
 							"name": "Gliding",
 							"reference": "B56",
 							"cost_adj": "-50%",
 							"disabled": true
 						},
 						{
-							"id": "mpih0HL396V-hUzY8",
+							"id": "m6wg6I6vw62HLktme",
 							"name": "Lighter Than Air",
 							"reference": "B56",
 							"cost_adj": "-10%",
 							"disabled": true
 						},
 						{
-							"id": "mup6IHm_pHclEvLBT",
+							"id": "mJRkNjuJA7516WLNr",
 							"name": "Low Ceiling",
 							"reference": "B56",
 							"local_notes": "30'",
@@ -260,7 +261,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mqHjwE3PeI_bCQFBJ",
+							"id": "mdadVzOHN2jUoBBWk",
 							"name": "Low Ceiling",
 							"reference": "B56",
 							"local_notes": "10'",
@@ -268,7 +269,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mU8zs-ApOSYOoR1Ki",
+							"id": "mMx-XcBS7fRWZfxVl",
 							"name": "Low Ceiling",
 							"reference": "B56",
 							"local_notes": "5'",
@@ -276,41 +277,41 @@
 							"disabled": true
 						},
 						{
-							"id": "mkluwGpE-qLEovHVJ",
+							"id": "mnTMWaXW1SRIpFHYg",
 							"name": "Small Wings",
 							"reference": "B56",
 							"cost_adj": "-10%",
 							"disabled": true
 						},
 						{
-							"id": "mDP9hNaZDQihPQHJv",
+							"id": "mB_8ZG1URj36I95G9",
 							"name": "Space Flight Only",
 							"reference": "B56",
 							"cost_adj": "-75%",
 							"disabled": true
 						},
 						{
-							"id": "mml6ZYD7pdExKXWfi",
+							"id": "mQe7W_CBskS6CNcIH",
 							"name": "Winged",
 							"reference": "B56",
 							"cost_adj": "-25%"
 						},
 						{
-							"id": "mBkrtIrlA1SZBNsA8",
+							"id": "mxVh5iXvcwcPrchjL",
 							"name": "Planetary",
 							"reference": "P50",
 							"cost_adj": "-5%",
 							"disabled": true
 						},
 						{
-							"id": "m6BFAUK902NL1zV60",
+							"id": "mkDTrv30v_E17VgBP",
 							"name": "Requires Surface",
 							"reference": "P50",
 							"cost_adj": "-20%",
 							"disabled": true
 						},
 						{
-							"id": "mEIkn6GzLMuz9uo6X",
+							"id": "mPy1n8Bp8puipwG4z",
 							"name": "Slow",
 							"reference": "PSI14",
 							"local_notes": "Basic Speed",
@@ -318,14 +319,14 @@
 							"disabled": true
 						},
 						{
-							"id": "mGnqI77R0K55Ec1bt",
+							"id": "ml6gCxRyt-WYekrCF",
 							"name": "Slow, Move 1",
 							"reference": "PSI14",
 							"cost_adj": "-45%",
 							"disabled": true
 						},
 						{
-							"id": "myDnLNYx67SAMzEGb",
+							"id": "mekNzW3b6AFmwp9tF",
 							"name": "Encumbrance-Limited (No encumbrance)",
 							"reference": "FFWF12",
 							"reference_highlight": "Encumbrance-Limited",
@@ -334,7 +335,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mXIkVb8sOmsV8NaE0",
+							"id": "mVl-0VMiw6zebslf-",
 							"name": "Encumbrance-Limited (Light encumbrance)",
 							"reference": "FFWF12",
 							"reference_highlight": "Encumbrance-Limited",
@@ -342,7 +343,7 @@
 							"cost_adj": "-10%"
 						},
 						{
-							"id": "maRKOjJMTTPqKXCIQ",
+							"id": "mbYYQBkkx0N5nLzaD",
 							"name": "Encumbrance-Limited (Medium encumbrance)",
 							"reference": "FFWF12",
 							"reference_highlight": "Encumbrance-Limited",
@@ -353,7 +354,7 @@
 					],
 					"base_points": 40,
 					"calc": {
-						"points": 20
+						"points": 26
 					}
 				},
 				{
@@ -517,7 +518,7 @@
 				}
 			],
 			"calc": {
-				"points": 32
+				"points": 38
 			}
 		}
 	]

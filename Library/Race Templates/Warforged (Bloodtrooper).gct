@@ -1,0 +1,855 @@
+{
+	"version": 5,
+	"id": "Ba94T7ln5AYSE2LDD",
+	"traits": [
+		{
+			"id": "TnybqYyDCkL4uyobm",
+			"name": "Warforged",
+			"ancestry": "Human",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tnPez9dvAIxduVEzn",
+					"name": "Resistant",
+					"reference": "B81",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mLq8uJrHUe3_6NXVc",
+							"name": "Metabolic Hazards",
+							"reference": "B80",
+							"cost_adj": "30"
+						},
+						{
+							"id": "m_kP6qs56n-XqDFXY",
+							"name": "@Common: Poison, Sickness, etc.@",
+							"reference": "B81",
+							"cost_adj": "15",
+							"disabled": true
+						},
+						{
+							"id": "mBGO0NYeTqQkoqTWB",
+							"name": "@Occasional: Disease, Ingested Poison, etc.@",
+							"reference": "B81",
+							"cost_adj": "10",
+							"disabled": true
+						},
+						{
+							"id": "m_e9SfMp4eWBA1RlD",
+							"name": "@Rare: Acceleration, Altitude Sickness, Bends, Seasickness, Space Sickness, Nanomachines, etc.@",
+							"reference": "B81",
+							"cost_adj": "5",
+							"disabled": true
+						},
+						{
+							"id": "me3O69D5vfwp5Okus",
+							"name": "Immunity",
+							"reference": "B81",
+							"cost_adj": "x1"
+						},
+						{
+							"id": "mS90tBT9V7P2og-hp",
+							"name": "+8 to all HT rolls to resist",
+							"reference": "B81",
+							"cost_adj": "x0.5",
+							"disabled": true
+						},
+						{
+							"id": "mW7ZvRNWn-8uyj9dT",
+							"name": "+3 to all HT rolls to resist",
+							"reference": "B81",
+							"cost_adj": "x0.33",
+							"disabled": true
+						}
+					],
+					"round_down": true,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "tFqQC0ZPVc6sxjBdc",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tVAS4yCBzhDTkfg2T"
+					},
+					"name": "Innate Attack (Cut)",
+					"reference": "B61,P53,MA45",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"replacements": {
+						"C,1 or 1,2 or 2,3": "C,1"
+					},
+					"modifiers": [
+						{
+							"id": "mKws4Q3lAe531hPli",
+							"name": "Double Blunt Trauma",
+							"reference": "B104",
+							"local_notes": "BT as for Crushing",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mBg5lrBfZoY6Qm_Yd",
+							"name": "Explosion",
+							"reference": "B104",
+							"cost_adj": "50%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mFck0iAPEdKMXIexl",
+							"name": "Fragmentation",
+							"reference": "B104",
+							"cost_adj": "15%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mUf9RDdInLz1vXX63",
+							"name": "Fragmentation",
+							"reference": "B104",
+							"local_notes": "Hot",
+							"cost_adj": "15%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mgdw17LcFn0p8HY4p",
+							"name": "Surge",
+							"reference": "B104",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mjxFNa2fs8oan_BVM",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "2",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "mQlzDFaOdNRVCxXiq",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "3",
+							"cost_adj": "100%",
+							"disabled": true
+						},
+						{
+							"id": "m2z5M7WkI3QkpABH3",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "5",
+							"cost_adj": "150%",
+							"disabled": true
+						},
+						{
+							"id": "m6ME7zEQO-EX-kQgh",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "10",
+							"cost_adj": "200%",
+							"disabled": true
+						},
+						{
+							"id": "mXOZMQa9TzwobQdSi",
+							"name": "Side Effect",
+							"reference": "B109",
+							"local_notes": "@Effect@",
+							"disabled": true
+						},
+						{
+							"id": "mtdICR1J6GpMo3gA2",
+							"name": "Symptoms",
+							"reference": "B109",
+							"local_notes": "@Effect@",
+							"disabled": true
+						},
+						{
+							"id": "mDWC4Vxe08mT-BNJB",
+							"name": "Armor Divisor",
+							"reference": "B110",
+							"local_notes": "0.5",
+							"cost_adj": "-30%",
+							"disabled": true
+						},
+						{
+							"id": "mKja2GQdkSN9TQeq8",
+							"name": "Armor Divisor",
+							"reference": "B110",
+							"local_notes": "0.2",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "m2b4aoKXPpwxIJip2",
+							"name": "Armor Divisor",
+							"reference": "B110",
+							"local_notes": "0.1",
+							"cost_adj": "-70%",
+							"disabled": true
+						},
+						{
+							"id": "mOF_2kuLQmgcNRG5j",
+							"name": "No Blunt Trauma",
+							"reference": "B111",
+							"cost_adj": "-20%",
+							"disabled": true
+						},
+						{
+							"id": "m_xoMvLFrAOJpXrvc",
+							"name": "No Knockback",
+							"reference": "B111",
+							"cost_adj": "-10%",
+							"disabled": true
+						},
+						{
+							"id": "mXFmoCN_E_mE0YG7B",
+							"name": "No Wounding",
+							"reference": "B111",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "m2Xa5NY7qlws9hnGq",
+							"name": "Incendiary",
+							"reference": "B104",
+							"cost_adj": "10%",
+							"disabled": true
+						},
+						{
+							"id": "mkpPW6dpi8YpbP0SK",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Limitation Modifiers.adm",
+								"id": "m2K4CGDNP6jatsFym"
+							},
+							"name": "Melee Attack",
+							"reference": "B112,P103",
+							"local_notes": "Reach @C,1 or 1,2 or 2,3@",
+							"cost_adj": "-20%",
+							"calc": {
+								"resolved_notes": "Reach C,1"
+							}
+						}
+					],
+					"points_per_level": 7,
+					"weapons": [
+						{
+							"id": "w9vBPR410oxdWlkYV",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"base_leveled": "1d"
+							},
+							"reach": "1",
+							"parry": "0",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Broadsword"
+								}
+							],
+							"calc": {
+								"damage": "1d per level  cut"
+							}
+						}
+					],
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 12,
+						"current_level": 2
+					}
+				},
+				{
+					"id": "to2ym5nehZzq8z1J_",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tBmSJ3pNE53c4IRUU"
+					},
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "MIQHFi89b9rwlJHgh",
+							"name": "Special Enhancements",
+							"children": [
+								{
+									"id": "mR_1rzJMZlc5orVQ9",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Enhances @Trait@",
+									"cost_adj": "80%",
+									"disabled": true
+								},
+								{
+									"id": "mHLHphBWZlYzRInN8",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Healing only",
+									"cost_adj": "80%",
+									"disabled": true
+								},
+								{
+									"id": "mGwia23w3Lg6vnH2g",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Enhances any trait",
+									"cost_adj": "100%",
+									"disabled": true
+								},
+								{
+									"id": "mWwRhmEazuyWT_-yg",
+									"name": "Force Field",
+									"reference": "B47",
+									"cost_adj": "20%",
+									"disabled": true
+								},
+								{
+									"id": "mgT7AadgVBQwb7VTy",
+									"name": "Hardened",
+									"reference": "B47",
+									"local_notes": "Reduces armor divisor by @Hardened level@ step(s): \"ignores DR\"→100→10→5→3→2→\"no divisor\"",
+									"cost_adj": "20%",
+									"levels": 1,
+									"disabled": true
+								},
+								{
+									"id": "mUcpuSDXcHDxYI6eD",
+									"name": "Laminate",
+									"reference": "RSWL18",
+									"cost_adj": "10%",
+									"disabled": true
+								},
+								{
+									"id": "mBgcsPy6p94QuH_tY",
+									"name": "Malediction-Proof",
+									"reference": "PSI14",
+									"cost_adj": "50%",
+									"disabled": true
+								},
+								{
+									"id": "mdq36faYnQ5lgdhTT",
+									"name": "Maledictions Only",
+									"reference": "PSI14",
+									"disabled": true
+								},
+								{
+									"id": "mOHPKs3FhwkUQMYhR",
+									"name": "Reflection",
+									"reference": "B47",
+									"cost_adj": "100%",
+									"disabled": true
+								}
+							]
+						},
+						{
+							"id": "MU6yDr_-6UGeeqX23",
+							"name": "Special Limitations",
+							"children": [
+								{
+									"id": "m9M6yi7Uq7Fx2d6nn",
+									"name": "Ablative",
+									"reference": "B47",
+									"cost_adj": "-80%",
+									"disabled": true
+								},
+								{
+									"id": "muPx5rvTcd23eJu95",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Very Common@",
+									"cost_adj": "-15%",
+									"disabled": true
+								},
+								{
+									"id": "mQcm1twpxt0nmh4M8",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Common@",
+									"cost_adj": "-10%",
+									"disabled": true
+								},
+								{
+									"id": "mtLe7UHbT_s-eA4Xh",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Occasional@",
+									"cost_adj": "-5%",
+									"disabled": true
+								},
+								{
+									"id": "mvVn5aLuM0LNJp7mj",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Rare@",
+									"cost_adj": "-1",
+									"disabled": true
+								},
+								{
+									"id": "mV8RVxL71IKpgvOQ0",
+									"name": "Can't wear armor",
+									"reference": "B47",
+									"cost_adj": "-40%"
+								},
+								{
+									"id": "maiqN_RibucaCMXZn",
+									"name": "Directional",
+									"reference": "B47",
+									"local_notes": "Front",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mqq1AUdADyIJsCVO-",
+									"name": "Directional",
+									"reference": "B47",
+									"local_notes": "@Direction: Back, Right, Left, Top or Underside@",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "m61RFLXa-1l4YmasW",
+									"name": "Flexible",
+									"reference": "B47",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mJyeYXR6ZDDclXGvp",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Very Common Attack Form@",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mEtvQ4jDRZ2JQBwIU",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Common Attack Form@",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "mEPOdwae_mlrKnhjc",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Occasional Attack Form@",
+									"cost_adj": "-60%",
+									"disabled": true
+								},
+								{
+									"id": "mn63nB1mObiFqpzLU",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Rare Attack Form@",
+									"cost_adj": "-80%",
+									"disabled": true
+								},
+								{
+									"id": "mukhBEfYplPbSFR7k",
+									"name": "Partial (@Location, 1 level per -1 Per Hit Modifier, Torso is -10% thus level 1@)",
+									"reference": "B47",
+									"cost_adj": "-10%",
+									"disabled": true
+								},
+								{
+									"id": "mPKSoi3rThBxp9OJE",
+									"name": "Semi-Ablative",
+									"reference": "B47",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mgp8jHOsB-Y5fQ6Wc",
+									"name": "Tough Skin",
+									"reference": "B47",
+									"local_notes": "Effects that just require skin contact or a scratch ignore this DR",
+									"cost_adj": "-40%",
+									"disabled": true
+								}
+							]
+						}
+					],
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 3,
+					"calc": {
+						"points": 9,
+						"current_level": 3
+					}
+				},
+				{
+					"id": "txjnT9R-ajKnKYD5P",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tBCf_8fhi4efG2liK"
+					},
+					"name": "Innate Attack (Piercing)",
+					"reference": "B62,P53,MA45",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mYa1zMYI764owowDi",
+							"name": "AP Ammo",
+							"reference": "PU4:18",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mgQGg66IPYTRWYoK5",
+							"name": "Armor Divisor",
+							"reference": "B110",
+							"local_notes": "0.1",
+							"cost_adj": "-70%",
+							"disabled": true
+						},
+						{
+							"id": "mHWnrHLMiu7z4EDCo",
+							"name": "Armor Divisor",
+							"reference": "B110",
+							"local_notes": "0.2",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "m0fQW-fsjCUkaIVk6",
+							"name": "Armor Divisor",
+							"reference": "B110",
+							"local_notes": "0.5",
+							"cost_adj": "-30%",
+							"disabled": true
+						},
+						{
+							"id": "m-fU49Q-9pA-67LQE",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "2",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "mq1vPBXqAMkJ2ZMOl",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "3",
+							"cost_adj": "100%",
+							"disabled": true
+						},
+						{
+							"id": "mzTAFkwW50fGv4KRX",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "5",
+							"cost_adj": "150%",
+							"disabled": true
+						},
+						{
+							"id": "m5nPkyqZRqS42xKUh",
+							"name": "Armor Divisor",
+							"reference": "B102",
+							"local_notes": "10",
+							"cost_adj": "200%",
+							"disabled": true
+						},
+						{
+							"id": "mXlgYGNRu2cqQIVPi",
+							"name": "Double Blunt Trauma",
+							"reference": "B104",
+							"local_notes": "1HP per 10 dmg",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mMOpzUJcTdU4wl5lF",
+							"name": "Explosion",
+							"reference": "B104",
+							"cost_adj": "50%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mZ6myA04f8z9UCKOS",
+							"name": "Fragmentation",
+							"reference": "B104",
+							"cost_adj": "15%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mysjmLAUVdEHe9uuz",
+							"name": "Fragmentation",
+							"reference": "B104",
+							"local_notes": "Hot",
+							"cost_adj": "15%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mAsePlda3uu4I8PnH",
+							"name": "HP Ammo",
+							"reference": "PU4:18",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mqXXC4GVb2YTG0pOO",
+							"name": "Incendiary",
+							"reference": "B104",
+							"cost_adj": "10%",
+							"disabled": true
+						},
+						{
+							"id": "mBelz1U_-E6IKLAh0",
+							"name": "Multi-Ammo",
+							"reference": "PU4:18",
+							"cost_adj": "40%",
+							"disabled": true
+						},
+						{
+							"id": "mdrZJxL7dTUwdskft",
+							"name": "No Blunt Trauma",
+							"reference": "B111",
+							"cost_adj": "-20%",
+							"disabled": true
+						},
+						{
+							"id": "mrar-baWwaJyfaqC8",
+							"name": "No Wounding",
+							"reference": "B111",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "m17hI2w0nbo6CNV8e",
+							"name": "Side Effect",
+							"reference": "B109",
+							"local_notes": "@Effect@",
+							"disabled": true
+						},
+						{
+							"id": "moJ3t2bo3UKWNyO3V",
+							"name": "Surge",
+							"reference": "B104",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mdKlHGLmhA0KIzB-7",
+							"name": "Symptoms",
+							"reference": "B109",
+							"local_notes": "@Effect@",
+							"disabled": true
+						},
+						{
+							"id": "myz026RoQpp6PpG5o",
+							"name": "Alt",
+							"cost_adj": "-80%"
+						}
+					],
+					"points_per_level": 5,
+					"weapons": [
+						{
+							"id": "WPQylzo5wGnE9m26h",
+							"sv": 1,
+							"damage": {
+								"type": "pi",
+								"base_leveled": "1d"
+							},
+							"accuracy": "3",
+							"range": "10/100",
+							"rate_of_fire": "1",
+							"recoil": "1",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Innate Attack",
+									"specialization": "Projectile"
+								},
+								{
+									"type": "skill",
+									"name": "Innate Attack",
+									"modifier": -2
+								},
+								{
+									"type": "dx",
+									"modifier": -4
+								}
+							],
+							"calc": {
+								"damage": "1d per level  pi"
+							}
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 1,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "t8S-ySQJCnPQQlOrB",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tzk8xRWG-00Yzdsjm"
+					},
+					"name": "Flashbacks",
+					"reference": "B136",
+					"local_notes": "In any situation that the GM feels is stressful, he will roll 3d. On a 6 or less, you have a flashback. The GM will roll whenever you miss a Fright Check or make the roll exactly, and whenever you fail a self-control roll for another stress-related disadvantage.",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "miSwG4evrshv4A6BW",
+							"name": "Mild",
+							"reference": "B136",
+							"local_notes": "Duration: 2d seconds; -2 on all skill rolls",
+							"cost_adj": "-5"
+						},
+						{
+							"id": "mP9rq_uEouXp92FOH",
+							"name": "Severe",
+							"reference": "B136",
+							"local_notes": "Duration: 1d minutes; -5 on all skill rolls",
+							"cost_adj": "-10",
+							"disabled": true
+						},
+						{
+							"id": "m0hPib8OoAtg1zSkz",
+							"name": "Crippling",
+							"local_notes": "Duration: 3d minutes; Precludes all skill use",
+							"cost_adj": "-20",
+							"disabled": true
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "t5zUvCjsjqBarAorD",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t8duh7FJvBdSs4NOb"
+					},
+					"name": "Restricted Diet (@Food@)",
+					"reference": "B151",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"replacements": {
+						"Food": "Fresh Blood"
+					},
+					"modifiers": [
+						{
+							"id": "mfk2KQ4nIu6J5mFdJ",
+							"name": "Substitution",
+							"reference": "B151",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "m5gxICGkFEfFqxGCD",
+							"name": "Very Common",
+							"reference": "B151",
+							"cost_adj": "-10"
+						},
+						{
+							"id": "m2gm9PdSP45uA22bW",
+							"name": "Common",
+							"reference": "B151",
+							"cost_adj": "-20",
+							"disabled": true
+						},
+						{
+							"id": "muvCMZUExlmaQt1G1",
+							"name": "Occasional",
+							"reference": "B151",
+							"cost_adj": "-30",
+							"disabled": true
+						},
+						{
+							"id": "mfRWHK2YFn0JaMA0H",
+							"name": "Rare",
+							"reference": "B151",
+							"cost_adj": "-40",
+							"disabled": true
+						}
+					],
+					"calc": {
+						"points": -10
+					}
+				},
+				{
+					"id": "tXDhHhr5Nas5x1VVc",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tmRX0o0iO20zWIVyo"
+					},
+					"name": "Bloodlust",
+					"reference": "B125",
+					"local_notes": "You must make a self-control roll whenever you need to accept a surrender, evade a sentry, take a prisoner, etc.",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"cr": 9,
+					"base_points": -10,
+					"calc": {
+						"points": -15
+					}
+				}
+			],
+			"calc": {
+				"points": 22
+			}
+		}
+	]
+}

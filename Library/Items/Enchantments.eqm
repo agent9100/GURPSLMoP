@@ -1,0 +1,103 @@
+{
+	"version": 5,
+	"rows": [
+		{
+			"id": "f6XamwLJsWRcj59BR",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+				"id": "f6AGS6-gyzQEe6hBL"
+			},
+			"name": "+1 Armour",
+			"reference": "DFA118",
+			"tags": [
+				"Magic"
+			],
+			"cost_type": "to_base_cost",
+			"cost": "+3 CF",
+			"weight": "+0 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"amount": 1
+				}
+			]
+		},
+		{
+			"id": "FuJdM-KTBEosZJV08",
+			"name": "+1 Weapon",
+			"children": [
+				{
+					"id": "fN73WPkSs4t_AM6T2",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+						"id": "fKjyFElgjrJAsvLYl"
+					},
+					"name": "Accuracy 1",
+					"reference": "DFA118",
+					"tags": [
+						"Magic",
+						"Weapons"
+					],
+					"cost_type": "to_base_cost",
+					"cost": "+50 CF",
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "this_weapon",
+							"name": {
+								"compare": "is"
+							},
+							"amount": 1
+						}
+					]
+				},
+				{
+					"id": "fziHLI0v0oiWr6GwU",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+						"id": "fIYmX0InF7_DM_oGw"
+					},
+					"name": "Puissance 1",
+					"reference": "DFA118",
+					"tags": [
+						"Magic"
+					],
+					"cost_type": "to_base_cost",
+					"cost": "+50 CF",
+					"features": [
+						{
+							"type": "weapon_bonus",
+							"selection_type": "this_weapon",
+							"name": {
+								"compare": "is"
+							},
+							"level": {
+								"compare": "at_least"
+							},
+							"amount": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "fiwciQWjOJwb6IqvX",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+				"id": "fn3mfKJ7pXUhfEiR0"
+			},
+			"name": "Continual Light",
+			"reference": "DFA118",
+			"local_notes": "Emits light equal to a torch",
+			"tags": [
+				"Magic"
+			],
+			"cost_type": "to_base_cost",
+			"cost": "+3 CF"
+		}
+	]
+}
