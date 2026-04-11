@@ -2,155 +2,658 @@
 	"version": 5,
 	"rows": [
 		{
+			"id": "euSFwMQVRhPIB0CB5",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Equipment.eqp",
+				"id": "ent8q2lZqbUdrahUk"
+			},
+			"description": "Potion: Healing",
+			"reference": "M217",
+			"local_notes": "Heals 1d HP, or FP if full",
+			"tags": [
+				"Potion"
+			],
+			"base_value": "120",
+			"base_weight": "0.25 lb",
+			"quantity": 1,
+			"calc": {
+				"value": 120,
+				"extended_value": 120,
+				"weight": "0.25 lb",
+				"extended_weight": "0.25 lb"
+			}
+		},
+		{
+			"id": "efCMPHV7lyDL33MSg",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Equipment.eqp",
+				"id": "emgUmpVjloNQ58bi5"
+			},
+			"description": "Potion: Health",
+			"reference": "M217",
+			"tags": [
+				"Potion"
+			],
+			"base_value": "750",
+			"base_weight": "0.25 lb",
+			"quantity": 1,
+			"calc": {
+				"value": 750,
+				"extended_value": 750,
+				"weight": "0.25 lb",
+				"extended_weight": "0.25 lb"
+			}
+		},
+		{
+			"id": "eVL5DNdpJXMQDSYJE",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Equipment.eqp",
+				"id": "erZ1vOvdxFlSHclQY"
+			},
+			"description": "Potion: Flight",
+			"reference": "M216",
+			"local_notes": "Lasts 1 hour",
+			"tags": [
+				"Potion"
+			],
+			"base_value": "3000",
+			"base_weight": "0.25 lb",
+			"quantity": 1,
+			"calc": {
+				"value": 3000,
+				"extended_value": 3000,
+				"weight": "0.25 lb",
+				"extended_weight": "0.25 lb"
+			}
+		},
+		{
+			"id": "enkcfXZGqM6c2RXJZ",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Equipment.eqp",
+				"id": "e1c5o-7bTH0HJAcww"
+			},
+			"description": "Potion: Invisibility",
+			"reference": "M216",
+			"tags": [
+				"Potion"
+			],
+			"base_value": "3000",
+			"base_weight": "0.25 lb",
+			"quantity": 1,
+			"calc": {
+				"value": 3000,
+				"extended_value": 3000,
+				"weight": "0.25 lb",
+				"extended_weight": "0.25 lb"
+			}
+		},
+		{
+			"id": "eYMgdVgPy-IKMJosj",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Low Tech/Low Tech Equipment.eqp",
+				"id": "e1qNhxVaWxj1qvrwx"
+			},
+			"description": "Ring of Protection",
+			"reference": "LT38",
+			"local_notes": "Has an Item Power",
+			"tech_level": "0",
+			"tags": [
+				"Jewelry"
+			],
+			"base_value": "12000",
+			"base_weight": "0.12 lb",
+			"modifiers": [
+				{
+					"id": "fR64N4mdETdIun077",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+						"id": "f6AGS6-gyzQEe6hBL"
+					},
+					"name": "+1 Armour (whole body)",
+					"reference": "DFA118",
+					"tags": [
+						"Magic"
+					],
+					"cost_type": "to_base_cost",
+					"cost": "+3 CF",
+					"weight": "+0 lb",
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1
+						}
+					],
+					"disabled": true
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 12000,
+				"extended_value": 12000,
+				"weight": "0.12 lb",
+				"extended_weight": "0.12 lb"
+			}
+		},
+		{
+			"id": "egur7NRJNr-64Qttq",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "eqU-tdtIiaP--4L46"
+			},
+			"description": "Scroll of @Spell Name@ (@FP Cost@ FP)",
+			"reference": "DFA117",
+			"local_notes": "Costs @FP Cost@ x $20 — once spell FP cost is known, edit this entry's Value field and remove this note",
+			"tags": [
+				"Magic Items",
+				"Scrolls"
+			],
+			"base_weight": "0.05 lb",
+			"modifiers": [
+				{
+					"id": "f6cBEnH2BEkaZQjJt",
+					"name": "Charged",
+					"reference": "DFA117",
+					"cost_type": "to_base_cost",
+					"cost": "+1.5 CF",
+					"disabled": true
+				},
+				{
+					"id": "F7LT-DQ2pW8u65BUD",
+					"name": "Pick one:",
+					"children": [
+						{
+							"id": "fWWgTIWr1qcuqNs0A",
+							"name": "Universal",
+							"reference": "DFA117",
+							"cost_type": "to_base_cost",
+							"cost": "+1 CF",
+							"disabled": true
+						},
+						{
+							"id": "fkgyJqMBGaYWaP_dY",
+							"name": "Clerical",
+							"disabled": true
+						},
+						{
+							"id": "f8uADlDFpZMWmxB8K",
+							"name": "Druidic",
+							"disabled": true
+						},
+						{
+							"id": "f7q4L9HIM4DCxntId",
+							"name": "Wizardly",
+							"disabled": true
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 0,
+				"extended_value": 0,
+				"weight": "0.05 lb",
+				"extended_weight": "0.05 lb"
+			}
+		},
+		{
+			"id": "e3Ao0jL0jjFMXLEyy",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "ezwqeEl3lnP3rb-t-"
+			},
+			"description": "Blinding Powder",
+			"reference": "DFA116",
+			"tags": [
+				"Chemicals",
+				"Concoctions",
+				"Grenade"
+			],
+			"base_value": "300",
+			"base_weight": "1 lb",
+			"weapons": [
+				{
+					"id": "WH2AwVcDxL_n5TJd8",
+					"sv": 1,
+					"damage": {
+						"type": "Special"
+					},
+					"usage": "Grenade",
+					"usage_notes": "2 yard radius; Living creatures must make immediate HT-2 roll or be blind for 1d minutes; Washing out the eyes with water for 5 seconds ends this effect",
+					"range": "x2",
+					"bulk": "-2",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Throwing"
+						},
+						{
+							"type": "dx",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Dropping",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"damage": "Special"
+					}
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 300,
+				"extended_value": 300,
+				"weight": "1 lb",
+				"extended_weight": "1 lb"
+			}
+		},
+		{
+			"id": "e5ESnrbX9kDMvnMVs",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "egvqpME3CwvjlfJ29"
+			},
+			"description": "Monster Drool",
+			"reference": "DFA116",
+			"local_notes": "Immediate HT roll or take 2 damage",
+			"tags": [
+				"Concoctions",
+				"Poisons",
+				"Utility"
+			],
+			"base_value": "20",
+			"base_weight": "0.5 lb",
+			"quantity": 1,
+			"calc": {
+				"value": 20,
+				"extended_value": 20,
+				"weight": "0.5 lb",
+				"extended_weight": "0.5 lb"
+			}
+		},
+		{
+			"id": "e5t_xQvc8cLPd-mHG",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "ey9oPBcs7OdRfinlh"
+			},
+			"description": "Alchemist’s Fire",
+			"reference": "DFA115",
+			"local_notes": "Burns for 30 seconds",
+			"tags": [
+				"Chemicals",
+				"Concoctions",
+				"Grenade"
+			],
+			"base_value": "100",
+			"base_weight": "1 lb",
+			"weapons": [
+				{
+					"id": "WvX0zkikYZjTDP6Yj",
+					"sv": 1,
+					"damage": {
+						"type": "burn",
+						"base": "1d",
+						"armor_divisor": 5
+					},
+					"usage": "Grenade (Direct Hit)",
+					"usage_notes": "Sticks to target and does listed damage every turn until target drops \u0026 rolls, jumps into water, etc.",
+					"range": "x2",
+					"bulk": "-2",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Throwing"
+						},
+						{
+							"type": "dx",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Dropping",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"damage": "1d(5) burn"
+					}
+				},
+				{
+					"id": "W1FVT_SyizHWDHEsm",
+					"sv": 1,
+					"damage": {
+						"type": "burn",
+						"base": "1d",
+						"armor_divisor": 5,
+						"modifier_per_die": -1
+					},
+					"usage": "Grenade (Area)",
+					"usage_notes": "Covers a 2 yard radius",
+					"range": "x2",
+					"bulk": "-2",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Throwing"
+						},
+						{
+							"type": "dx",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Dropping",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"damage": "1d(5) (-1 per die) burn"
+					}
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 100,
+				"extended_value": 100,
+				"weight": "1 lb",
+				"extended_weight": "1 lb"
+			}
+		},
+		{
+			"id": "eGqh_nk7BqNweOcjL",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "esCZhwZkZweggWNVz"
+			},
+			"description": "Glue",
+			"reference": "DFA115",
+			"tags": [
+				"Chemicals",
+				"Concoctions",
+				"Grenade"
+			],
+			"base_value": "60",
+			"base_weight": "1 lb",
+			"weapons": [
+				{
+					"id": "Wk9i_RbsreMEZnb0w",
+					"sv": 1,
+					"damage": {
+						"type": "Special"
+					},
+					"usage": "Grenade (Direct Hit)",
+					"usage_notes": "Roll vs ST to pull items from belts, pouches, quivers, or scabbards, or to drop or throw anything; Mail and Plate armor stiffen up: -2 to DX; Takes 30 minutes to chip off",
+					"range": "x2",
+					"bulk": "-2",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Throwing"
+						},
+						{
+							"type": "dx",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Dropping",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"damage": "Special"
+					}
+				},
+				{
+					"id": "Wf3PHM2Eb3-aSmmg0",
+					"sv": 1,
+					"damage": {
+						"type": "Special"
+					},
+					"usage": "Grenade (Area)",
+					"usage_notes": "Leaves 2 yard sticky spot for 30 seconds; crossing each hex costs +1 Move",
+					"range": "x2",
+					"bulk": "-2",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Throwing"
+						},
+						{
+							"type": "dx",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Dropping",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"damage": "Special"
+					}
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 60,
+				"extended_value": 60,
+				"weight": "1 lb",
+				"extended_weight": "1 lb"
+			}
+		},
+		{
+			"id": "eO6lS642OqGBRumUf",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "edqgAxs_acz04qF99"
+			},
+			"description": "Visibility Dust",
+			"reference": "DFA115",
+			"tags": [
+				"Chemicals",
+				"Concoctions",
+				"Grenade"
+			],
+			"base_value": "50",
+			"base_weight": "1 lb",
+			"weapons": [
+				{
+					"id": "WwNP8TxTXyXQP1oyj",
+					"sv": 1,
+					"damage": {
+						"type": "Special"
+					},
+					"usage": "Grenade",
+					"usage_notes": "2 yard radius; Invisible entities become partially visible: attacks on them are only at -3 and defenses against them have no penalty until they rinse it off",
+					"range": "x2",
+					"bulk": "-2",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Throwing"
+						},
+						{
+							"type": "dx",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Dropping",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"damage": "Special"
+					}
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 50,
+				"extended_value": 50,
+				"weight": "1 lb",
+				"extended_weight": "1 lb"
+			}
+		},
+		{
+			"id": "eXtf9k9xinnZhONaj",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "eS19tqLWb0stFL03I"
+			},
+			"description": "Acid",
+			"reference": "DFA114",
+			"local_notes": "3d min to eat through a mundane lock",
+			"tags": [
+				"Chemicals",
+				"Concoctions",
+				"Grenade"
+			],
+			"base_value": "10",
+			"base_weight": "1 lb",
+			"weapons": [
+				{
+					"id": "WWWlThoBpit--1HVZ",
+					"sv": 1,
+					"damage": {
+						"type": "cor",
+						"base": "1d-3"
+					},
+					"usage": "Grenade",
+					"range": "x2",
+					"bulk": "-2",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Throwing"
+						},
+						{
+							"type": "dx",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Dropping",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"damage": "1d-3 cor"
+					}
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 10,
+				"extended_value": 10,
+				"weight": "1 lb",
+				"extended_weight": "1 lb"
+			}
+		},
+		{
+			"id": "eSfKuhe2h5JrkTqMz",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "e2aCum4Em-phMWpWS"
+			},
+			"description": "Boots of Striding and Springing",
+			"reference": "B284",
+			"local_notes": "Flexible; Concealable; Has an Item Power",
+			"tech_level": "2",
+			"tags": [
+				"Footwear"
+			],
+			"base_value": "8000",
+			"base_weight": "3 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"foot"
+					],
+					"amount": 2
+				},
+				{
+					"type": "weapon_bonus",
+					"selection_type": "weapons_with_name",
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Kick"
+					},
+					"amount": 1
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 8000,
+				"extended_value": 8000,
+				"weight": "3 lb",
+				"extended_weight": "3 lb"
+			}
+		},
+		{
+			"id": "etdKNhyxvtE3WLIcE",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "eFqdI-UNxfahg1aKi"
+			},
+			"description": "Gauntlets of Ogre Power",
+			"reference": "B284",
+			"local_notes": "Has an Item Power",
+			"tech_level": "2",
+			"tags": [
+				"Gloves"
+			],
+			"base_value": "10000",
+			"base_weight": "2 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"hand"
+					],
+					"amount": 4
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 10000,
+				"extended_value": 10000,
+				"weight": "2 lb",
+				"extended_weight": "2 lb"
+			}
+		},
+		{
 			"id": "EUS-0sZ9P65ElBAMP",
 			"description": "Alchemy Components",
 			"legality_class": "4",
 			"quantity": 1,
 			"equipped": true,
 			"children": [
-				{
-					"id": "ekuONrlPv2x_yxbbO",
-					"description": "Lizard Eye",
-					"local_notes": "2/body",
-					"legality_class": "4",
-					"tags": [
-						"Hostile Elixirs",
-						"Magical Abilities"
-					],
-					"base_value": "2000",
-					"base_weight": "20",
-					"quantity": 2,
-					"equipped": true,
-					"calc": {
-						"value": 2000,
-						"extended_value": 4000,
-						"weight": "20 lb",
-						"extended_weight": "40 lb"
-					}
-				},
-				{
-					"id": "eDppBKjZ2sRgkhfAK",
-					"description": "Lizard Scale",
-					"local_notes": "100/body",
-					"legality_class": "4",
-					"tags": [
-						"Combat Abilities",
-						"Magical Abilities"
-					],
-					"base_value": "50",
-					"base_weight": "1",
-					"quantity": 100,
-					"equipped": true,
-					"calc": {
-						"value": 50,
-						"extended_value": 5000,
-						"weight": "1 lb",
-						"extended_weight": "100 lb"
-					}
-				},
-				{
-					"id": "eHoGj4lQ_uH34TMUM",
-					"description": "Lizard Wing",
-					"local_notes": "2/body",
-					"legality_class": "4",
-					"tags": [
-						"Combat Abilities",
-						"Hostile Elixirs"
-					],
-					"base_value": "3000",
-					"base_weight": "30",
-					"quantity": 2,
-					"equipped": true,
-					"calc": {
-						"value": 3000,
-						"extended_value": 6000,
-						"weight": "30 lb",
-						"extended_weight": "60 lb"
-					}
-				},
-				{
-					"id": "eIe-YvE92_6yjp-KF",
-					"description": "Lizard Heart",
-					"local_notes": "1/body",
-					"legality_class": "4",
-					"tags": [
-						"Magical Abilities"
-					],
-					"base_value": "3500",
-					"base_weight": "35",
-					"quantity": 1,
-					"equipped": true,
-					"calc": {
-						"value": 3500,
-						"extended_value": 3500,
-						"weight": "35 lb",
-						"extended_weight": "35 lb"
-					}
-				},
-				{
-					"id": "esKjLBUb-VcwxpE0Q",
-					"description": "Lizard Bone",
-					"local_notes": "10/body",
-					"legality_class": "4",
-					"tags": [
-						"Combat Abilities"
-					],
-					"base_value": "250",
-					"base_weight": "5",
-					"quantity": 10,
-					"equipped": true,
-					"calc": {
-						"value": 250,
-						"extended_value": 2500,
-						"weight": "5 lb",
-						"extended_weight": "50 lb"
-					}
-				},
-				{
-					"id": "eDwg5exscn1BDn4be",
-					"description": "Lizard Blood",
-					"local_notes": "10/body",
-					"legality_class": "4",
-					"tags": [
-						"Animal Control",
-						"Combat Abilities",
-						"Hostile Elixirs",
-						"Magical Abilities",
-						"Medical Elixirs",
-						"Mental Abilities",
-						"Mental Control",
-						"Skills and Physical Abilities"
-					],
-					"base_value": "800",
-					"base_weight": "8",
-					"quantity": 10,
-					"equipped": true,
-					"calc": {
-						"value": 800,
-						"extended_value": 8000,
-						"weight": "8 lb",
-						"extended_weight": "80 lb"
-					}
-				},
-				{
-					"id": "e0UENSEuWmypizdZE",
-					"description": "Lizard Fang",
-					"local_notes": "4/body",
-					"legality_class": "4",
-					"tags": [
-						"Hostile Elixirs"
-					],
-					"base_value": "750",
-					"base_weight": "15",
-					"quantity": 4,
-					"equipped": true,
-					"calc": {
-						"value": 750,
-						"extended_value": 3000,
-						"weight": "15 lb",
-						"extended_weight": "60 lb"
-					}
-				},
 				{
 					"id": "e5PEVHIdDJHSFUDDG",
 					"description": "Ash Zombie Powder",
@@ -473,26 +976,6 @@
 					}
 				},
 				{
-					"id": "eCkoihfAfjZIswwSP",
-					"description": "Wraith Ectoplasm",
-					"legality_class": "4",
-					"tags": [
-						"Magical Abilities",
-						"Mental Abilities",
-						"Mental Control"
-					],
-					"base_value": "270",
-					"base_weight": "0.01",
-					"quantity": 10,
-					"equipped": true,
-					"calc": {
-						"value": 270,
-						"extended_value": 2700,
-						"weight": "0.01 lb",
-						"extended_weight": "0.1 lb"
-					}
-				},
-				{
 					"id": "el6cxtG73g4_BIJG9",
 					"description": "Flameskull Bonemeal",
 					"local_notes": "10/body",
@@ -733,6 +1216,32 @@
 					}
 				},
 				{
+					"id": "ewspUsVCxo55mGdYk",
+					"description": "Herb",
+					"local_notes": "MoS # of units per 30 minutes",
+					"legality_class": "4",
+					"tags": [
+						"Animal Control",
+						"Combat Abilities",
+						"Hostile Elixirs",
+						"Magical Abilities",
+						"Medical Elixirs",
+						"Mental Abilities",
+						"Mental Control",
+						"Skills and Physical Abilities"
+					],
+					"base_value": "10",
+					"base_weight": "0.1",
+					"quantity": 1,
+					"equipped": true,
+					"calc": {
+						"value": 10,
+						"extended_value": 10,
+						"weight": "0.1 lb",
+						"extended_weight": "0.1 lb"
+					}
+				},
+				{
 					"id": "eqCwethNGScpvhwc0",
 					"description": "Hobgoblin Ear",
 					"local_notes": "2/body",
@@ -790,6 +1299,66 @@
 						"extended_value": 90,
 						"weight": "0.01 lb",
 						"extended_weight": "0.3 lb"
+					}
+				},
+				{
+					"id": "e3a98xd6g409lgd1x",
+					"description": "Horse Ear",
+					"local_notes": "2/body",
+					"legality_class": "4",
+					"tags": [
+						"Medical Elixirs",
+						"Mental Abilities"
+					],
+					"base_value": "25",
+					"base_weight": "0.2",
+					"quantity": 2,
+					"equipped": true,
+					"calc": {
+						"value": 25,
+						"extended_value": 50,
+						"weight": "0.2 lb",
+						"extended_weight": "0.4 lb"
+					}
+				},
+				{
+					"id": "exyu53kWe8kghGX32",
+					"description": "Horse Hide",
+					"local_notes": "10/body",
+					"legality_class": "4",
+					"tags": [
+						"Animal Control",
+						"Mental Abilities"
+					],
+					"base_value": "3",
+					"base_weight": "0.2",
+					"quantity": 10,
+					"equipped": true,
+					"calc": {
+						"value": 3,
+						"extended_value": 30,
+						"weight": "0.2 lb",
+						"extended_weight": "2 lb"
+					}
+				},
+				{
+					"id": "eHmPQQlG7nkxcoE2G",
+					"description": "Horse Hoof",
+					"local_notes": "4/body",
+					"legality_class": "4",
+					"tags": [
+						"Animal Control",
+						"Medical Elixirs"
+					],
+					"base_value": "20",
+					"base_weight": "0.5",
+					"quantity": 4,
+					"equipped": true,
+					"calc": {
+						"value": 20,
+						"extended_value": 80,
+						"weight": "0.5 lb",
+						"extended_weight": "2 lb"
 					}
 				},
 				{
@@ -970,6 +1539,149 @@
 						"extended_value": 150,
 						"weight": "0.1 lb",
 						"extended_weight": "1 lb"
+					}
+				},
+				{
+					"id": "eDwg5exscn1BDn4be",
+					"description": "Lizard Blood",
+					"local_notes": "10/body",
+					"legality_class": "4",
+					"tags": [
+						"Animal Control",
+						"Combat Abilities",
+						"Hostile Elixirs",
+						"Magical Abilities",
+						"Medical Elixirs",
+						"Mental Abilities",
+						"Mental Control",
+						"Skills and Physical Abilities"
+					],
+					"base_value": "800",
+					"base_weight": "8",
+					"quantity": 10,
+					"equipped": true,
+					"calc": {
+						"value": 800,
+						"extended_value": 8000,
+						"weight": "8 lb",
+						"extended_weight": "80 lb"
+					}
+				},
+				{
+					"id": "esKjLBUb-VcwxpE0Q",
+					"description": "Lizard Bone",
+					"local_notes": "10/body",
+					"legality_class": "4",
+					"tags": [
+						"Combat Abilities"
+					],
+					"base_value": "250",
+					"base_weight": "5",
+					"quantity": 10,
+					"equipped": true,
+					"calc": {
+						"value": 250,
+						"extended_value": 2500,
+						"weight": "5 lb",
+						"extended_weight": "50 lb"
+					}
+				},
+				{
+					"id": "ekuONrlPv2x_yxbbO",
+					"description": "Lizard Eye",
+					"local_notes": "2/body",
+					"legality_class": "4",
+					"tags": [
+						"Hostile Elixirs",
+						"Magical Abilities"
+					],
+					"base_value": "2000",
+					"base_weight": "20",
+					"quantity": 2,
+					"equipped": true,
+					"calc": {
+						"value": 2000,
+						"extended_value": 4000,
+						"weight": "20 lb",
+						"extended_weight": "40 lb"
+					}
+				},
+				{
+					"id": "e0UENSEuWmypizdZE",
+					"description": "Lizard Fang",
+					"local_notes": "4/body",
+					"legality_class": "4",
+					"tags": [
+						"Hostile Elixirs"
+					],
+					"base_value": "750",
+					"base_weight": "15",
+					"quantity": 4,
+					"equipped": true,
+					"calc": {
+						"value": 750,
+						"extended_value": 3000,
+						"weight": "15 lb",
+						"extended_weight": "60 lb"
+					}
+				},
+				{
+					"id": "eIe-YvE92_6yjp-KF",
+					"description": "Lizard Heart",
+					"local_notes": "1/body",
+					"legality_class": "4",
+					"tags": [
+						"Magical Abilities"
+					],
+					"base_value": "3500",
+					"base_weight": "35",
+					"quantity": 1,
+					"equipped": true,
+					"calc": {
+						"value": 3500,
+						"extended_value": 3500,
+						"weight": "35 lb",
+						"extended_weight": "35 lb"
+					}
+				},
+				{
+					"id": "eDppBKjZ2sRgkhfAK",
+					"description": "Lizard Scale",
+					"local_notes": "100/body",
+					"legality_class": "4",
+					"tags": [
+						"Combat Abilities",
+						"Magical Abilities"
+					],
+					"base_value": "50",
+					"base_weight": "1",
+					"quantity": 100,
+					"equipped": true,
+					"calc": {
+						"value": 50,
+						"extended_value": 5000,
+						"weight": "1 lb",
+						"extended_weight": "100 lb"
+					}
+				},
+				{
+					"id": "eHoGj4lQ_uH34TMUM",
+					"description": "Lizard Wing",
+					"local_notes": "2/body",
+					"legality_class": "4",
+					"tags": [
+						"Combat Abilities",
+						"Hostile Elixirs"
+					],
+					"base_value": "3000",
+					"base_weight": "30",
+					"quantity": 2,
+					"equipped": true,
+					"calc": {
+						"value": 3000,
+						"extended_value": 6000,
+						"weight": "30 lb",
+						"extended_weight": "60 lb"
 					}
 				},
 				{
@@ -1611,7 +2323,8 @@
 					"local_notes": "10/body",
 					"legality_class": "4",
 					"tags": [
-						"Combat Abilities Skills and Physical Abilities"
+						"Combat Abilities",
+						"Skills and Physical Abilities"
 					],
 					"base_value": "10",
 					"base_weight": "0.2",
@@ -1705,6 +2418,26 @@
 					}
 				},
 				{
+					"id": "eCkoihfAfjZIswwSP",
+					"description": "Wraith Ectoplasm",
+					"legality_class": "4",
+					"tags": [
+						"Magical Abilities",
+						"Mental Abilities",
+						"Mental Control"
+					],
+					"base_value": "270",
+					"base_weight": "0.01",
+					"quantity": 10,
+					"equipped": true,
+					"calc": {
+						"value": 270,
+						"extended_value": 2700,
+						"weight": "0.01 lb",
+						"extended_weight": "0.1 lb"
+					}
+				},
+				{
 					"id": "eCL2YWZnTpiHrMA0u",
 					"description": "Zombie Bile",
 					"local_notes": "1/body",
@@ -1767,655 +2500,9 @@
 			],
 			"calc": {
 				"value": 0,
-				"extended_value": 54918,
+				"extended_value": 55088,
 				"weight": "0 lb",
-				"extended_weight": "645.91 lb"
-			}
-		},
-		{
-			"id": "eSfKuhe2h5JrkTqMz",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "e2aCum4Em-phMWpWS"
-			},
-			"description": "Boots of Striding and Springing",
-			"reference": "B284",
-			"local_notes": "Flexible; Concealable; Has an Item Power",
-			"tech_level": "2",
-			"tags": [
-				"Footwear"
-			],
-			"base_value": "8000",
-			"base_weight": "3 lb",
-			"features": [
-				{
-					"type": "dr_bonus",
-					"locations": [
-						"foot"
-					],
-					"amount": 2
-				},
-				{
-					"type": "weapon_bonus",
-					"selection_type": "weapons_with_name",
-					"specialization": {
-						"compare": "is",
-						"qualifier": "Kick"
-					},
-					"amount": 1
-				}
-			],
-			"quantity": 1,
-			"calc": {
-				"value": 8000,
-				"extended_value": 8000,
-				"weight": "3 lb",
-				"extended_weight": "3 lb"
-			}
-		},
-		{
-			"id": "etdKNhyxvtE3WLIcE",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "eFqdI-UNxfahg1aKi"
-			},
-			"description": "Gauntlets of Ogre Power",
-			"reference": "B284",
-			"local_notes": "Has an Item Power",
-			"tech_level": "2",
-			"tags": [
-				"Gloves"
-			],
-			"base_value": "10000",
-			"base_weight": "2 lb",
-			"features": [
-				{
-					"type": "dr_bonus",
-					"locations": [
-						"hand"
-					],
-					"amount": 4
-				}
-			],
-			"quantity": 1,
-			"calc": {
-				"value": 10000,
-				"extended_value": 10000,
-				"weight": "2 lb",
-				"extended_weight": "2 lb"
-			}
-		},
-		{
-			"id": "eXtf9k9xinnZhONaj",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
-				"id": "eS19tqLWb0stFL03I"
-			},
-			"description": "Acid",
-			"reference": "DFA114",
-			"local_notes": "3d min to eat through a mundane lock",
-			"tags": [
-				"Chemicals",
-				"Concoctions",
-				"Grenade"
-			],
-			"base_value": "10",
-			"base_weight": "1 lb",
-			"weapons": [
-				{
-					"id": "WWWlThoBpit--1HVZ",
-					"sv": 1,
-					"damage": {
-						"type": "cor",
-						"base": "1d-3"
-					},
-					"usage": "Grenade",
-					"range": "x2",
-					"bulk": "-2",
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "Throwing"
-						},
-						{
-							"type": "dx",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Dropping",
-							"modifier": -4
-						}
-					],
-					"calc": {
-						"damage": "1d-3 cor"
-					}
-				}
-			],
-			"quantity": 1,
-			"equipped": true,
-			"calc": {
-				"value": 10,
-				"extended_value": 10,
-				"weight": "1 lb",
-				"extended_weight": "1 lb"
-			}
-		},
-		{
-			"id": "e5t_xQvc8cLPd-mHG",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
-				"id": "ey9oPBcs7OdRfinlh"
-			},
-			"description": "Alchemist’s Fire",
-			"reference": "DFA115",
-			"local_notes": "Burns for 30 seconds",
-			"tags": [
-				"Chemicals",
-				"Concoctions",
-				"Grenade"
-			],
-			"base_value": "100",
-			"base_weight": "1 lb",
-			"weapons": [
-				{
-					"id": "WvX0zkikYZjTDP6Yj",
-					"sv": 1,
-					"damage": {
-						"type": "burn",
-						"base": "1d",
-						"armor_divisor": 5
-					},
-					"usage": "Grenade (Direct Hit)",
-					"usage_notes": "Sticks to target and does listed damage every turn until target drops \u0026 rolls, jumps into water, etc.",
-					"range": "x2",
-					"bulk": "-2",
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "Throwing"
-						},
-						{
-							"type": "dx",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Dropping",
-							"modifier": -4
-						}
-					],
-					"calc": {
-						"damage": "1d(5) burn"
-					}
-				},
-				{
-					"id": "W1FVT_SyizHWDHEsm",
-					"sv": 1,
-					"damage": {
-						"type": "burn",
-						"base": "1d",
-						"armor_divisor": 5,
-						"modifier_per_die": -1
-					},
-					"usage": "Grenade (Area)",
-					"usage_notes": "Covers a 2 yard radius",
-					"range": "x2",
-					"bulk": "-2",
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "Throwing"
-						},
-						{
-							"type": "dx",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Dropping",
-							"modifier": -4
-						}
-					],
-					"calc": {
-						"damage": "1d(5) (-1 per die) burn"
-					}
-				}
-			],
-			"quantity": 1,
-			"equipped": true,
-			"calc": {
-				"value": 100,
-				"extended_value": 100,
-				"weight": "1 lb",
-				"extended_weight": "1 lb"
-			}
-		},
-		{
-			"id": "eGqh_nk7BqNweOcjL",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
-				"id": "esCZhwZkZweggWNVz"
-			},
-			"description": "Glue",
-			"reference": "DFA115",
-			"tags": [
-				"Chemicals",
-				"Concoctions",
-				"Grenade"
-			],
-			"base_value": "60",
-			"base_weight": "1 lb",
-			"weapons": [
-				{
-					"id": "Wk9i_RbsreMEZnb0w",
-					"sv": 1,
-					"damage": {
-						"type": "Special"
-					},
-					"usage": "Grenade (Direct Hit)",
-					"usage_notes": "Roll vs ST to pull items from belts, pouches, quivers, or scabbards, or to drop or throw anything; Mail and Plate armor stiffen up: -2 to DX; Takes 30 minutes to chip off",
-					"range": "x2",
-					"bulk": "-2",
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "Throwing"
-						},
-						{
-							"type": "dx",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Dropping",
-							"modifier": -4
-						}
-					],
-					"calc": {
-						"damage": "Special"
-					}
-				},
-				{
-					"id": "Wf3PHM2Eb3-aSmmg0",
-					"sv": 1,
-					"damage": {
-						"type": "Special"
-					},
-					"usage": "Grenade (Area)",
-					"usage_notes": "Leaves 2 yard sticky spot for 30 seconds; crossing each hex costs +1 Move",
-					"range": "x2",
-					"bulk": "-2",
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "Throwing"
-						},
-						{
-							"type": "dx",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Dropping",
-							"modifier": -4
-						}
-					],
-					"calc": {
-						"damage": "Special"
-					}
-				}
-			],
-			"quantity": 1,
-			"calc": {
-				"value": 60,
-				"extended_value": 60,
-				"weight": "1 lb",
-				"extended_weight": "1 lb"
-			}
-		},
-		{
-			"id": "eO6lS642OqGBRumUf",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
-				"id": "edqgAxs_acz04qF99"
-			},
-			"description": "Visibility Dust",
-			"reference": "DFA115",
-			"tags": [
-				"Chemicals",
-				"Concoctions",
-				"Grenade"
-			],
-			"base_value": "50",
-			"base_weight": "1 lb",
-			"weapons": [
-				{
-					"id": "WwNP8TxTXyXQP1oyj",
-					"sv": 1,
-					"damage": {
-						"type": "Special"
-					},
-					"usage": "Grenade",
-					"usage_notes": "2 yard radius; Invisible entities become partially visible: attacks on them are only at -3 and defenses against them have no penalty until they rinse it off",
-					"range": "x2",
-					"bulk": "-2",
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "Throwing"
-						},
-						{
-							"type": "dx",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Dropping",
-							"modifier": -4
-						}
-					],
-					"calc": {
-						"damage": "Special"
-					}
-				}
-			],
-			"quantity": 1,
-			"calc": {
-				"value": 50,
-				"extended_value": 50,
-				"weight": "1 lb",
-				"extended_weight": "1 lb"
-			}
-		},
-		{
-			"id": "e3Ao0jL0jjFMXLEyy",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
-				"id": "ezwqeEl3lnP3rb-t-"
-			},
-			"description": "Blinding Powder",
-			"reference": "DFA116",
-			"tags": [
-				"Chemicals",
-				"Concoctions",
-				"Grenade"
-			],
-			"base_value": "300",
-			"base_weight": "1 lb",
-			"weapons": [
-				{
-					"id": "WH2AwVcDxL_n5TJd8",
-					"sv": 1,
-					"damage": {
-						"type": "Special"
-					},
-					"usage": "Grenade",
-					"usage_notes": "2 yard radius; Living creatures must make immediate HT-2 roll or be blind for 1d minutes; Washing out the eyes with water for 5 seconds ends this effect",
-					"range": "x2",
-					"bulk": "-2",
-					"defaults": [
-						{
-							"type": "skill",
-							"name": "Throwing"
-						},
-						{
-							"type": "dx",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Dropping",
-							"modifier": -4
-						}
-					],
-					"calc": {
-						"damage": "Special"
-					}
-				}
-			],
-			"quantity": 1,
-			"calc": {
-				"value": 300,
-				"extended_value": 300,
-				"weight": "1 lb",
-				"extended_weight": "1 lb"
-			}
-		},
-		{
-			"id": "e5ESnrbX9kDMvnMVs",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
-				"id": "egvqpME3CwvjlfJ29"
-			},
-			"description": "Monster Drool",
-			"reference": "DFA116",
-			"local_notes": "Immediate HT roll or take 2 damage",
-			"tags": [
-				"Concoctions",
-				"Poisons",
-				"Utility"
-			],
-			"base_value": "20",
-			"base_weight": "0.5 lb",
-			"quantity": 1,
-			"calc": {
-				"value": 20,
-				"extended_value": 20,
-				"weight": "0.5 lb",
-				"extended_weight": "0.5 lb"
-			}
-		},
-		{
-			"id": "egur7NRJNr-64Qttq",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
-				"id": "eqU-tdtIiaP--4L46"
-			},
-			"description": "Scroll of @Spell Name@ (@FP Cost@ FP)",
-			"reference": "DFA117",
-			"local_notes": "Costs @FP Cost@ x $20 — once spell FP cost is known, edit this entry's Value field and remove this note",
-			"tags": [
-				"Magic Items",
-				"Scrolls"
-			],
-			"base_weight": "0.05 lb",
-			"modifiers": [
-				{
-					"id": "f6cBEnH2BEkaZQjJt",
-					"name": "Charged",
-					"reference": "DFA117",
-					"cost_type": "to_base_cost",
-					"cost": "+1.5 CF",
-					"disabled": true
-				},
-				{
-					"id": "F7LT-DQ2pW8u65BUD",
-					"name": "Pick one:",
-					"children": [
-						{
-							"id": "fWWgTIWr1qcuqNs0A",
-							"name": "Universal",
-							"reference": "DFA117",
-							"cost_type": "to_base_cost",
-							"cost": "+1 CF",
-							"disabled": true
-						},
-						{
-							"id": "fkgyJqMBGaYWaP_dY",
-							"name": "Clerical",
-							"disabled": true
-						},
-						{
-							"id": "f8uADlDFpZMWmxB8K",
-							"name": "Druidic",
-							"disabled": true
-						},
-						{
-							"id": "f7q4L9HIM4DCxntId",
-							"name": "Wizardly",
-							"disabled": true
-						}
-					]
-				}
-			],
-			"quantity": 1,
-			"calc": {
-				"value": 0,
-				"extended_value": 0,
-				"weight": "0.05 lb",
-				"extended_weight": "0.05 lb"
-			}
-		},
-		{
-			"id": "eYMgdVgPy-IKMJosj",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Low Tech/Low Tech Equipment.eqp",
-				"id": "e1qNhxVaWxj1qvrwx"
-			},
-			"description": "Ring of Protection",
-			"reference": "LT38",
-			"local_notes": "Has an Item Power",
-			"tech_level": "0",
-			"tags": [
-				"Jewelry"
-			],
-			"base_value": "12000",
-			"base_weight": "0.12 lb",
-			"modifiers": [
-				{
-					"id": "fR64N4mdETdIun077",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
-						"id": "f6AGS6-gyzQEe6hBL"
-					},
-					"name": "+1 Armour (whole body)",
-					"reference": "DFA118",
-					"tags": [
-						"Magic"
-					],
-					"cost_type": "to_base_cost",
-					"cost": "+3 CF",
-					"weight": "+0 lb",
-					"features": [
-						{
-							"type": "dr_bonus",
-							"locations": [
-								"all"
-							],
-							"amount": 1
-						}
-					],
-					"disabled": true
-				}
-			],
-			"quantity": 1,
-			"calc": {
-				"value": 12000,
-				"extended_value": 12000,
-				"weight": "0.12 lb",
-				"extended_weight": "0.12 lb"
-			}
-		},
-		{
-			"id": "eVL5DNdpJXMQDSYJE",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Equipment.eqp",
-				"id": "erZ1vOvdxFlSHclQY"
-			},
-			"description": "Potion: Flight",
-			"reference": "M216",
-			"local_notes": "Lasts 1 hour",
-			"tags": [
-				"Potion"
-			],
-			"base_value": "3000",
-			"base_weight": "0.25 lb",
-			"quantity": 1,
-			"calc": {
-				"value": 3000,
-				"extended_value": 3000,
-				"weight": "0.25 lb",
-				"extended_weight": "0.25 lb"
-			}
-		},
-		{
-			"id": "enkcfXZGqM6c2RXJZ",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Equipment.eqp",
-				"id": "e1c5o-7bTH0HJAcww"
-			},
-			"description": "Potion: Invisibility",
-			"reference": "M216",
-			"tags": [
-				"Potion"
-			],
-			"base_value": "3000",
-			"base_weight": "0.25 lb",
-			"quantity": 1,
-			"calc": {
-				"value": 3000,
-				"extended_value": 3000,
-				"weight": "0.25 lb",
-				"extended_weight": "0.25 lb"
-			}
-		},
-		{
-			"id": "euSFwMQVRhPIB0CB5",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Equipment.eqp",
-				"id": "ent8q2lZqbUdrahUk"
-			},
-			"description": "Potion: Healing",
-			"reference": "M217",
-			"local_notes": "Heals 1d HP, or FP if full",
-			"tags": [
-				"Potion"
-			],
-			"base_value": "120",
-			"base_weight": "0.25 lb",
-			"quantity": 1,
-			"calc": {
-				"value": 120,
-				"extended_value": 120,
-				"weight": "0.25 lb",
-				"extended_weight": "0.25 lb"
-			}
-		},
-		{
-			"id": "efCMPHV7lyDL33MSg",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Equipment.eqp",
-				"id": "emgUmpVjloNQ58bi5"
-			},
-			"description": "Potion: Health",
-			"reference": "M217",
-			"tags": [
-				"Potion"
-			],
-			"base_value": "750",
-			"base_weight": "0.25 lb",
-			"quantity": 1,
-			"calc": {
-				"value": 750,
-				"extended_value": 750,
-				"weight": "0.25 lb",
-				"extended_weight": "0.25 lb"
+				"extended_weight": "650.41 lb"
 			}
 		}
 	]
