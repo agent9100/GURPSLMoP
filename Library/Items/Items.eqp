@@ -2590,6 +2590,71 @@
 			}
 		},
 		{
+			"id": "ephLBX4h83PM5To_g",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Low Tech/Low Tech Equipment.eqp",
+				"id": "enVXfe7QwG72pZKDV"
+			},
+			"description": "Gambler's Fortitude",
+			"reference": "LT99",
+			"local_notes": "Leather Cloak",
+			"tech_level": "1",
+			"tags": [
+				"Clothing"
+			],
+			"base_value": "60",
+			"base_weight": "3 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"torso"
+					],
+					"amount": 1
+				},
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"vitals"
+					],
+					"amount": 1
+				}
+			],
+			"modifiers": [
+				{
+					"id": "fzXmctTXb5w94GeJl",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+						"id": "fiMvQjlMN0qzMm-ph"
+					},
+					"name": "Fortify 2",
+					"reference": "DFA118",
+					"tags": [
+						"Magic"
+					],
+					"cost_type": "to_final_cost",
+					"cost": "+1400",
+					"weight": "+0 lb",
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 2
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 1460,
+				"extended_value": 1460,
+				"weight": "3 lb",
+				"extended_weight": "3 lb"
+			}
+		},
+		{
 			"id": "eO6lS642OqGBRumUf",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
