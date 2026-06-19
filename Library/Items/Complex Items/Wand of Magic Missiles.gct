@@ -7,49 +7,6 @@
 			"name": "Wand of Magic Missiles",
 			"children": [
 				{
-					"id": "t2ssTv1R2oeCklD6j",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Traits.adq",
-						"id": "twvmiGFkU_Fw0FuZF"
-					},
-					"name": "Extra Fatigue Points",
-					"reference": "B16",
-					"tags": [
-						"Advantage",
-						"Attribute",
-						"Physical"
-					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "equipped_equipment",
-								"name": {
-									"compare": "is",
-									"qualifier": "Wand of Magic Missiles"
-								}
-							}
-						]
-					},
-					"modifiers": [
-						{
-							"id": "mvWXSf_3EXKxvjYJ7",
-							"name": "Magic Only",
-							"local_notes": "Subject to involuntary FP drain",
-							"cost_adj": "-10%"
-						}
-					],
-					"points_per_level": 3,
-					"can_level": true,
-					"levels": 7,
-					"calc": {
-						"points": 19,
-						"current_level": 7
-					}
-				},
-				{
 					"id": "tJzVzeu0uGOumpisI",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
@@ -78,28 +35,28 @@
 					},
 					"modifiers": [
 						{
-							"id": "mfhG7HM58RpWpZrj9",
+							"id": "mNqRGGJJlxo2lkgGE",
 							"name": "Symptoms",
 							"reference": "B109",
 							"local_notes": "@Effect@",
 							"disabled": true
 						},
 						{
-							"id": "mR6HuzNNNOidROoLn",
+							"id": "mk3DJEF_fos9DvoFT",
 							"name": "Side Effect",
 							"reference": "B109",
 							"local_notes": "@Effect@",
 							"disabled": true
 						},
 						{
-							"id": "mamnTm8P6mNHiv8qB",
+							"id": "mcjjMymA3epNeqcW0",
 							"name": "Incendiary",
 							"reference": "B104",
 							"cost_adj": "10%",
 							"disabled": true
 						},
 						{
-							"id": "mCk3h_-L0Will7uuj",
+							"id": "mUoZd9IF4yeTu3vd9",
 							"name": "Fragmentation",
 							"reference": "B104",
 							"cost_adj": "15%",
@@ -107,7 +64,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mKxpXwn0ZyanfPLap",
+							"id": "mn45kCUc-dKGyJooa",
 							"name": "Fragmentation",
 							"reference": "B104",
 							"local_notes": "Hot",
@@ -116,21 +73,21 @@
 							"disabled": true
 						},
 						{
-							"id": "mBTzLp20q5mJGaDK7",
+							"id": "mgIbngUb9ia6LdNoC",
 							"name": "Surge",
 							"reference": "B104",
 							"cost_adj": "20%",
 							"disabled": true
 						},
 						{
-							"id": "m0bzuoDmWSfnOXM04",
+							"id": "mtA5YP66vKBJJPjzz",
 							"name": "Double Knockback",
 							"reference": "B104",
 							"cost_adj": "20%",
 							"disabled": true
 						},
 						{
-							"id": "mL7GhZettrSicvCNC",
+							"id": "m8H81yoikBZ370OOE",
 							"name": "Armor Divisor",
 							"reference": "B102",
 							"local_notes": "2",
@@ -138,7 +95,7 @@
 							"disabled": true
 						},
 						{
-							"id": "m8Vufyq-0rxWyrLp9",
+							"id": "mr6QS-1uS87PR9o04",
 							"name": "Explosion",
 							"reference": "B104",
 							"cost_adj": "50%",
@@ -146,7 +103,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mZl5AHMaxr8EDYyOs",
+							"id": "mqkP3YpZIi_EvvJiJ",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
 								"path": "Basic Set/Basic Set Enhancement Modifiers.adm",
@@ -157,7 +114,7 @@
 							"cost_adj": "+75%"
 						},
 						{
-							"id": "mH3aMgavvhKsa-DiZ",
+							"id": "m0QTx_qhA_RuOw0TJ",
 							"name": "Armor Divisor",
 							"reference": "B102",
 							"local_notes": "3",
@@ -165,7 +122,7 @@
 							"disabled": true
 						},
 						{
-							"id": "m5bUeYqeQAmyTGryA",
+							"id": "mfnL9-D6sYMo6x_sN",
 							"name": "Armor Divisor",
 							"reference": "B102",
 							"local_notes": "5",
@@ -173,7 +130,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mpR2aY6f9YkuP3snb",
+							"id": "mI3ss1Ugy0wBSnpJ6",
 							"name": "Armor Divisor",
 							"reference": "B102",
 							"local_notes": "10",
@@ -181,7 +138,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mwrNooVOTVwMG3t-M",
+							"id": "mUuaX3pnmqMbgzYzl",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
 								"path": "Basic Set/Basic Set Limitation Modifiers.adm",
@@ -193,19 +150,21 @@
 							"levels": 1
 						},
 						{
-							"id": "m_36y-hDIybMDahhS",
+							"id": "madK9obPUMNW5IFNA",
 							"name": "No Knockback",
 							"reference": "B111",
-							"cost_adj": "-10%"
+							"cost_adj": "-10%",
+							"disabled": true
 						},
 						{
-							"id": "mcsp9gfOyJZIBb-P6",
+							"id": "mBc5dVfXTRR0Zaqvp",
 							"name": "No Blunt Trauma",
 							"reference": "B111",
-							"cost_adj": "-20%"
+							"cost_adj": "-20%",
+							"disabled": true
 						},
 						{
-							"id": "mh3xC9zhTAf4y5vCG",
+							"id": "mXCejhIbuQn5E8EZW",
 							"name": "Armor Divisor",
 							"reference": "B110",
 							"local_notes": "0.5",
@@ -213,14 +172,14 @@
 							"disabled": true
 						},
 						{
-							"id": "meILoVPuMxIq4360J",
+							"id": "mK62CF0ZKGjXUw1oA",
 							"name": "No Wounding",
 							"reference": "B111",
 							"cost_adj": "-50%",
 							"disabled": true
 						},
 						{
-							"id": "mtUUW-sEAJFtAbKJy",
+							"id": "mxSICpPB_ItM4WlHs",
 							"name": "Armor Divisor",
 							"reference": "B110",
 							"local_notes": "0.2",
@@ -228,7 +187,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mLmLGT4tUb5XyTG-6",
+							"id": "msp7jOLseqy9eRE4L",
 							"name": "Armor Divisor",
 							"reference": "B110",
 							"local_notes": "0.1",
@@ -236,7 +195,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mp-RCSD6NAFDQ41fy",
+							"id": "mOZ9H4bZxcnRVzppg",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
 								"path": "Basic Set/Basic Set Limitation Modifiers.adm",
@@ -248,7 +207,7 @@
 							"cost_adj": "-10%"
 						},
 						{
-							"id": "mh0J-2OPzpxjeww97",
+							"id": "mHvWJ0ikhq_ypIlT6",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
 								"path": "Basic Set/Basic Set Enhancement Modifiers.adm",
@@ -259,35 +218,37 @@
 							"cost_adj": "15%"
 						},
 						{
-							"id": "m74FDkKCX60KUe5-9",
+							"id": "msYn5oR0cjTRSUhYX",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
 								"path": "Basic Set/Basic Set Enhancement Modifiers.adm",
-								"id": "mVP0kyIRXqPj6Gt7X"
+								"id": "mmt5fNJE9id8AS9Vs"
 							},
-							"name": "Accurate",
-							"reference": "B102,P99",
-							"cost_adj": "5%",
-							"levels": 3
+							"name": "Rapid Fire",
+							"reference": "B108,P105",
+							"local_notes": "RoF 7",
+							"cost_adj": "70%"
 						}
 					],
 					"points_per_level": 5,
 					"weapons": [
 						{
-							"id": "WogWRhprnLkeke7Jo",
+							"id": "WuaCJ0PYs-X4-ihwR",
 							"sv": 1,
 							"damage": {
 								"type": "cr",
 								"base_leveled": "1d"
 							},
 							"usage": "Magic Missile",
-							"usage_notes": "Aim Maneuver (Unmodified Artillery check) -\u003e 10 + ACC attack roll with no range penalites",
-							"accuracy": "6",
+							"usage_notes": "Aim Maneuver (Unmodified Artillery check) -\u003e 10 + ACC (+RoF) attack roll with no range penalites",
+							"accuracy": "3",
 							"range": "50",
+							"rate_of_fire": "7",
 							"recoil": "1",
 							"defaults": [
 								{
-									"type": "10"
+									"type": "skill",
+									"name": "Artillery"
 								}
 							],
 							"calc": {
@@ -298,13 +259,13 @@
 					"can_level": true,
 					"levels": 1,
 					"calc": {
-						"points": 8,
+						"points": 13,
 						"current_level": 1
 					}
 				}
 			],
 			"calc": {
-				"points": 27
+				"points": 13
 			}
 		}
 	],
@@ -349,14 +310,14 @@
 						]
 					},
 					"tech_level": "",
-					"points": 12
+					"points": 16
 				}
 			]
 		}
 	],
 	"equipment": [
 		{
-			"id": "e-zv0grgx92Z-2rhy",
+			"id": "E-zv0grgx92Z-2rhy",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
 				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
@@ -364,16 +325,15 @@
 			},
 			"description": "Wand of Magic Missiles",
 			"reference": "DFA118",
-			"local_notes": "Extends a wizard's reach by 1 yard when casting; Is a Complex Item; Recharges 1d6+1 uses/day; Critical failure to aim or at 0 charges left disintegrates.",
+			"local_notes": "Extends a wizard's reach by 1 yard when casting; Is a Complex Item.",
 			"tags": [
 				"Melee Weapon"
 			],
 			"base_value": "5000",
 			"base_weight": "1 lb",
-			"max_uses": 7,
 			"weapons": [
 				{
-					"id": "w1KhUwFvaC8DdSgFC",
+					"id": "wstj2ddJ_z5eGivua",
 					"sv": 1,
 					"damage": {
 						"type": "cr",
@@ -437,7 +397,7 @@
 					}
 				},
 				{
-					"id": "wGx37mrnE9WIZJQpQ",
+					"id": "wxcxxbqF1FfK2sQbM",
 					"sv": 1,
 					"damage": {
 						"type": "cr",
@@ -516,13 +476,40 @@
 				}
 			],
 			"quantity": 1,
-			"uses": 7,
 			"equipped": true,
+			"children": [
+				{
+					"id": "enxQtQHsrKD-wJe1D",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Equipment.eqp",
+						"id": "ewLTWvamS_fLHD3dY"
+					},
+					"description": "7 pt Dedicated Powerstone",
+					"reference": "M20",
+					"local_notes": "Uses (Charges) are FP for this item; Critical failure to cast a spell or at 0 charges left disintegrates.",
+					"tags": [
+						"Powerstone"
+					],
+					"base_value": "0",
+					"base_weight": "0.003 lb",
+					"max_uses": 7,
+					"quantity": 1,
+					"uses": 7,
+					"equipped": true,
+					"calc": {
+						"value": 0,
+						"extended_value": 0,
+						"weight": "0.003 lb",
+						"extended_weight": "0.003 lb"
+					}
+				}
+			],
 			"calc": {
 				"value": 5000,
 				"extended_value": 5000,
 				"weight": "1 lb",
-				"extended_weight": "1 lb"
+				"extended_weight": "1.003 lb"
 			}
 		}
 	]

@@ -2130,6 +2130,273 @@
 			}
 		},
 		{
+			"id": "enUYdbrx90kuAN7TV",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "eT91Kw-sURBn7M7Li"
+			},
+			"description": "Broadsword, 'Talon'",
+			"reference": "B271",
+			"tech_level": "2",
+			"tags": [
+				"Melee Weapon"
+			],
+			"base_value": "500",
+			"base_weight": "3 lb",
+			"weapons": [
+				{
+					"id": "wZJ5Goxi48py-Nuh4",
+					"sv": 1,
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "1"
+					},
+					"strength": "10",
+					"usage": "Swung",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword"
+						},
+						{
+							"type": "skill",
+							"name": "Rapier",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					],
+					"calc": {
+						"damage": "sw+1 cut"
+					}
+				},
+				{
+					"id": "wwqyQnyfkY5nY1qx8",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "1"
+					},
+					"strength": "10",
+					"usage": "Thrust",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword"
+						},
+						{
+							"type": "skill",
+							"name": "Rapier",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					],
+					"calc": {
+						"damage": "thr+1 cr"
+					}
+				}
+			],
+			"modifiers": [
+				{
+					"id": "F15_ylZigJjrplm3x",
+					"source": {
+						"library": "/gcs_user_library",
+						"path": "Library/Items/Enchantments.eqm",
+						"id": "FuJdM-KTBEosZJV08"
+					},
+					"name": "+1 Weapon",
+					"children": [
+						{
+							"id": "fTZkL18Jo5DicapLG",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fKjyFElgjrJAsvLYl"
+							},
+							"name": "Accuracy 1",
+							"reference": "DFA118",
+							"tags": [
+								"Magic",
+								"Weapons"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+50 CF",
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"amount": 1
+								}
+							]
+						},
+						{
+							"id": "fwHFsl8xZ-OyKvJJY",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fIYmX0InF7_DM_oGw"
+							},
+							"name": "Puissance 1",
+							"reference": "DFA118",
+							"tags": [
+								"Magic"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+50 CF",
+							"features": [
+								{
+									"type": "weapon_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"level": {
+										"compare": "at_least"
+									},
+									"amount": 1
+								}
+							]
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 50500,
+				"extended_value": 50500,
+				"weight": "3 lb",
+				"extended_weight": "3 lb"
+			}
+		},
+		{
+			"id": "ephLBX4h83PM5To_g",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Low Tech/Low Tech Equipment.eqp",
+				"id": "enVXfe7QwG72pZKDV"
+			},
+			"description": "Gambler's Fortitude",
+			"reference": "LT99",
+			"local_notes": "Leather Cloak",
+			"tech_level": "1",
+			"tags": [
+				"Clothing"
+			],
+			"base_value": "60",
+			"base_weight": "3 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"torso"
+					],
+					"amount": 1
+				},
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"vitals"
+					],
+					"amount": 1
+				}
+			],
+			"modifiers": [
+				{
+					"id": "fzXmctTXb5w94GeJl",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+						"id": "fiMvQjlMN0qzMm-ph"
+					},
+					"name": "Fortify 2",
+					"reference": "DFA118",
+					"tags": [
+						"Magic"
+					],
+					"cost_type": "to_final_cost",
+					"cost": "+1400",
+					"weight": "+0 lb",
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 2
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 1460,
+				"extended_value": 1460,
+				"weight": "3 lb",
+				"extended_weight": "3 lb"
+			}
+		},
+		{
 			"id": "etdKNhyxvtE3WLIcE",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -2426,34 +2693,6 @@
 			],
 			"base_value": "12000",
 			"base_weight": "0.12 lb",
-			"modifiers": [
-				{
-					"id": "fR64N4mdETdIun077",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
-						"id": "f6AGS6-gyzQEe6hBL"
-					},
-					"name": "+1 Armour (whole body)",
-					"reference": "DFA118",
-					"tags": [
-						"Magic"
-					],
-					"cost_type": "to_base_cost",
-					"cost": "+3 CF",
-					"weight": "+0 lb",
-					"features": [
-						{
-							"type": "dr_bonus",
-							"locations": [
-								"all"
-							],
-							"amount": 1
-						}
-					],
-					"disabled": true
-				}
-			],
 			"quantity": 1,
 			"calc": {
 				"value": 12000,
@@ -2525,6 +2764,189 @@
 			}
 		},
 		{
+			"id": "e9mLBNt_4P0svrLUf",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "eqU-tdtIiaP--4L46"
+			},
+			"description": "Scroll of Charm (6 FP)",
+			"reference": "DFA117",
+			"local_notes": "Effective Skill 15",
+			"tags": [
+				"Magic Items",
+				"Scrolls"
+			],
+			"base_value": "120",
+			"base_weight": "0.05 lb",
+			"modifiers": [
+				{
+					"id": "fvjSS_fKsoUOt_K0c",
+					"name": "Charged",
+					"reference": "DFA117",
+					"cost_type": "to_base_cost",
+					"cost": "+1.5 CF"
+				},
+				{
+					"id": "Fh1F6cJl1y9bOrNAC",
+					"name": "Pick one:",
+					"children": [
+						{
+							"id": "fF9pdjxfB3M3HHqm0",
+							"name": "Universal",
+							"reference": "DFA117",
+							"cost_type": "to_base_cost",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fo7XotvGsf8hoow_0",
+							"name": "Clerical",
+							"disabled": true
+						},
+						{
+							"id": "fp3Ek2Ouce0TLeNTs",
+							"name": "Druidic",
+							"disabled": true
+						},
+						{
+							"id": "fgE9RZiKrWyZcII7p",
+							"name": "Wizardly",
+							"disabled": true
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 420,
+				"extended_value": 420,
+				"weight": "0.05 lb",
+				"extended_weight": "0.05 lb"
+			}
+		},
+		{
+			"id": "eeu9I06BcAPtkrG3c",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "eqU-tdtIiaP--4L46"
+			},
+			"description": "Scroll of Divination: Augury (10 FP)",
+			"reference": "DFA117",
+			"local_notes": "Effective Skill 15",
+			"tags": [
+				"Magic Items",
+				"Scrolls"
+			],
+			"base_value": "200",
+			"base_weight": "0.05 lb",
+			"modifiers": [
+				{
+					"id": "fdCKWzta_QAM8UeuA",
+					"name": "Charged",
+					"reference": "DFA117",
+					"cost_type": "to_base_cost",
+					"cost": "+1.5 CF"
+				},
+				{
+					"id": "FAJ7AKFsAULnUWHBJ",
+					"name": "Pick one:",
+					"children": [
+						{
+							"id": "f-kiDgYxzQD8311kV",
+							"name": "Universal",
+							"reference": "DFA117",
+							"cost_type": "to_base_cost",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fyqZqH4o2yTqlxz5W",
+							"name": "Clerical",
+							"disabled": true
+						},
+						{
+							"id": "fcskYLdWW3LHv84Ve",
+							"name": "Druidic",
+							"disabled": true
+						},
+						{
+							"id": "fLRQkrsYQO8Ig9wY5",
+							"name": "Wizardly",
+							"disabled": true
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 700,
+				"extended_value": 700,
+				"weight": "0.05 lb",
+				"extended_weight": "0.05 lb"
+			}
+		},
+		{
+			"id": "eooKZ0wsTidjZXntO",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "eqU-tdtIiaP--4L46"
+			},
+			"description": "Scroll of Explosive Fireball (8 FP)",
+			"reference": "DFA117",
+			"local_notes": "Effective Skill 15",
+			"tags": [
+				"Magic Items",
+				"Scrolls"
+			],
+			"base_value": "160",
+			"base_weight": "0.05 lb",
+			"modifiers": [
+				{
+					"id": "fFCfMEBcnTQzVfk1b",
+					"name": "Charged",
+					"reference": "DFA117",
+					"cost_type": "to_base_cost",
+					"cost": "+1.5 CF"
+				},
+				{
+					"id": "FwHeoulOTVJc1P4kI",
+					"name": "Pick one:",
+					"children": [
+						{
+							"id": "f0kPVm2kwQSFqS2H4",
+							"name": "Universal",
+							"reference": "DFA117",
+							"cost_type": "to_base_cost",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fw_hYqNgol1-iVMBT",
+							"name": "Clerical",
+							"disabled": true
+						},
+						{
+							"id": "f_YNZQ8XTvZmUAX4-",
+							"name": "Druidic",
+							"disabled": true
+						},
+						{
+							"id": "f4t6rckU16gMEH_gi",
+							"name": "Wizardly",
+							"disabled": true
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 560,
+				"extended_value": 560,
+				"weight": "0.05 lb",
+				"extended_weight": "0.05 lb"
+			}
+		},
+		{
 			"id": "ef_Y31AspAb5ZrMUl",
 			"description": "Sister Garaele's Charm",
 			"local_notes": "Affects Swindlestones. If you play at the same table as an ally, once per table at the start of a round you both may reroll one die of your choosing from your hand.",
@@ -2587,71 +3009,6 @@
 				"extended_value": 750,
 				"weight": "0.5 lb",
 				"extended_weight": "0.5 lb"
-			}
-		},
-		{
-			"id": "ephLBX4h83PM5To_g",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Low Tech/Low Tech Equipment.eqp",
-				"id": "enVXfe7QwG72pZKDV"
-			},
-			"description": "Gambler's Fortitude",
-			"reference": "LT99",
-			"local_notes": "Leather Cloak",
-			"tech_level": "1",
-			"tags": [
-				"Clothing"
-			],
-			"base_value": "60",
-			"base_weight": "3 lb",
-			"features": [
-				{
-					"type": "dr_bonus",
-					"locations": [
-						"torso"
-					],
-					"amount": 1
-				},
-				{
-					"type": "dr_bonus",
-					"locations": [
-						"vitals"
-					],
-					"amount": 1
-				}
-			],
-			"modifiers": [
-				{
-					"id": "fzXmctTXb5w94GeJl",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
-						"id": "fiMvQjlMN0qzMm-ph"
-					},
-					"name": "Fortify 2",
-					"reference": "DFA118",
-					"tags": [
-						"Magic"
-					],
-					"cost_type": "to_final_cost",
-					"cost": "+1400",
-					"weight": "+0 lb",
-					"features": [
-						{
-							"type": "dr_bonus",
-							"amount": 2
-						}
-					]
-				}
-			],
-			"quantity": 1,
-			"equipped": true,
-			"calc": {
-				"value": 1460,
-				"extended_value": 1460,
-				"weight": "3 lb",
-				"extended_weight": "3 lb"
 			}
 		},
 		{

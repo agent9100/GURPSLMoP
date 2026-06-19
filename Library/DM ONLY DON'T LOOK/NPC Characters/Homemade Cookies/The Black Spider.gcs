@@ -1192,199 +1192,6 @@
 			}
 		},
 		{
-			"id": "TGn4ts4jCbS7Vss7u",
-			"name": "Spider Staff",
-			"children": [
-				{
-					"id": "tqgpGR6RkfpSsaQTd",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Traits.adq",
-						"id": "twvmiGFkU_Fw0FuZF"
-					},
-					"name": "Extra Fatigue Points",
-					"reference": "B16",
-					"local_notes": "Spider Staff spells only",
-					"tags": [
-						"Advantage",
-						"Attribute",
-						"Physical"
-					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "equipped_equipment",
-								"name": {
-									"compare": "is",
-									"qualifier": "Spider Staff"
-								}
-							}
-						]
-					},
-					"modifiers": [
-						{
-							"id": "mPRqKMu7zGDTcsxwJ",
-							"name": "Magic Only",
-							"local_notes": "Subject to involuntary FP drain",
-							"cost_adj": "-10%"
-						}
-					],
-					"points_per_level": 3,
-					"can_level": true,
-					"levels": 10,
-					"calc": {
-						"points": 27,
-						"current_level": 10
-					}
-				},
-				{
-					"id": "tzImcyPz7SpzRsZ2g",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Traits.adq",
-						"id": "tpnv8EEpAS6Er2pwK"
-					},
-					"name": "Magery",
-					"reference": "B66",
-					"local_notes": "Spider Staff spells only",
-					"tags": [
-						"Advantage",
-						"Mental",
-						"Supernatural"
-					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "equipped_equipment",
-								"name": {
-									"compare": "is",
-									"qualifier": "Spider Staff"
-								}
-							}
-						]
-					},
-					"modifiers": [
-						{
-							"id": "m0bHP9ZA0zTNiIqJP",
-							"name": "Dance",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "m0GYfQyZt_hEQPNjf",
-							"name": "Dark-Aspected",
-							"cost_adj": "-50%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "mg06HNrno6RHIlIcR",
-							"name": "Day-Aspected",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "msYkMY3NpXSZng_3g",
-							"name": "Musical",
-							"cost_adj": "-50%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "mSSWAYyFGGf9HBISo",
-							"name": "Night-Aspected",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "mg6l3Sn8iiVIyBxJ-",
-							"name": "One College",
-							"local_notes": "@College@",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "mPX5MbEYOm4zsZfmF",
-							"name": "Solitary",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "ma6JyhrPXKw2QVGzl",
-							"name": "Song",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "mXIuOtRyCEa68Paeb",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set/Basic Set Limitation Modifiers.adm",
-								"id": "mlh_0hHKF2oeickUF"
-							},
-							"name": "Limited Use",
-							"reference": "B112,P103",
-							"local_notes": "10 uses per day",
-							"cost_adj": "-10%"
-						}
-					],
-					"base_points": 5,
-					"points_per_level": 10,
-					"features": [
-						{
-							"type": "spell_bonus",
-							"match": "spell_name",
-							"name": {
-								"compare": "is",
-								"qualifier": "Climbing"
-							},
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "spell_bonus",
-							"match": "spell_name",
-							"name": {
-								"compare": "is",
-								"qualifier": "Glue"
-							},
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "skill_bonus",
-							"selection_type": "skills_with_name",
-							"name": {
-								"compare": "is",
-								"qualifier": "thaumatology"
-							},
-							"amount": 1,
-							"per_level": true
-						}
-					],
-					"can_level": true,
-					"levels": 1,
-					"calc": {
-						"points": 14,
-						"current_level": 1
-					}
-				}
-			],
-			"calc": {
-				"points": 41
-			}
-		},
-		{
 			"id": "t4Vlqk0aqzEeL6WjR",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -1646,6 +1453,89 @@
 			}
 		},
 		{
+			"id": "T4ywPdJqpk6J0FR7e",
+			"name": "Spider Staff",
+			"children": [
+				{
+					"id": "t5c5UJmNTRp4LnvPw",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "thR91RlonCb2vGKR4"
+					},
+					"name": "Speak With Animals",
+					"reference": "B87,P77",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Mental"
+					],
+					"modifiers": [
+						{
+							"id": "m3BGdNOzZyYue1cx0",
+							"name": "Specialized",
+							"reference": "B87",
+							"local_notes": "All aquatic animals",
+							"cost_adj": "-40%",
+							"disabled": true
+						},
+						{
+							"id": "mmRWUeviZBKxBAEW2",
+							"name": "Specialized",
+							"reference": "B87",
+							"local_notes": "All land animals",
+							"cost_adj": "-40%",
+							"disabled": true
+						},
+						{
+							"id": "mBs6VHWPF0J4GDqeJ",
+							"name": "Specialized",
+							"reference": "B87",
+							"local_notes": "@One class: Mammals, Birds, etc.@",
+							"cost_adj": "-50%",
+							"disabled": true
+						},
+						{
+							"id": "mXKSZdRCLTNJC8AOU",
+							"name": "Specialized",
+							"reference": "B87",
+							"local_notes": "@One family: Felines, Parrots, etc.@",
+							"cost_adj": "-60%",
+							"disabled": true
+						},
+						{
+							"id": "mF7l0aCJiQUhLDlDC",
+							"name": "Specialized",
+							"reference": "B87",
+							"local_notes": "One species: Giant Spiders",
+							"cost_adj": "-80%"
+						},
+						{
+							"id": "mkOwiyeT8YU1aTBuJ",
+							"name": "Sapience",
+							"reference": "P77",
+							"cost_adj": "40%",
+							"disabled": true
+						},
+						{
+							"id": "mYSWcVvw_xsTFgCdL",
+							"name": "Universal",
+							"reference": "P77",
+							"cost_adj": "20%",
+							"disabled": true
+						}
+					],
+					"base_points": 25,
+					"calc": {
+						"points": 5
+					}
+				}
+			],
+			"calc": {
+				"points": 5
+			}
+		},
+		{
 			"id": "tA9xAFj4uGfywBoua",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -1686,112 +1576,6 @@
 			"calc": {
 				"points": 5,
 				"current_level": 1
-			}
-		},
-		{
-			"id": "tm3UttdnaTCfUaeR5",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Traits.adq",
-				"id": "tw1Ad0oSMw2ATM4X1"
-			},
-			"name": "Language: @Language@",
-			"reference": "B24",
-			"tags": [
-				"Advantage",
-				"Language",
-				"Mental"
-			],
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "trait_prereq",
-						"has": false,
-						"name": {
-							"compare": "is",
-							"qualifier": "Language Talent"
-						},
-						"level": {
-							"compare": "at_least"
-						}
-					}
-				]
-			},
-			"replacements": {
-				"Language": "Elvish"
-			},
-			"modifiers": [
-				{
-					"id": "m-W7fbg8_x6CeBwao",
-					"name": "Native",
-					"reference": "B23",
-					"cost_adj": "-6"
-				},
-				{
-					"id": "mLYU2GP7ivsO5qmDy",
-					"name": "Spoken",
-					"reference": "B24",
-					"local_notes": "None",
-					"disabled": true
-				},
-				{
-					"id": "mIJa3WMWUPZ5bW4vC",
-					"name": "Spoken",
-					"reference": "B24",
-					"local_notes": "Broken",
-					"cost_adj": "1",
-					"disabled": true
-				},
-				{
-					"id": "mG0gvnJsQP3IidAXg",
-					"name": "Spoken",
-					"reference": "B24",
-					"local_notes": "Accented",
-					"cost_adj": "2",
-					"disabled": true
-				},
-				{
-					"id": "mr28XanK7DZUShY2O",
-					"name": "Spoken",
-					"reference": "B24",
-					"local_notes": "Native",
-					"cost_adj": "3"
-				},
-				{
-					"id": "mSwgZF8Wv_9YVFhKf",
-					"name": "Written",
-					"reference": "B24",
-					"local_notes": "None",
-					"disabled": true
-				},
-				{
-					"id": "mRPF7oWWqVYSy8zsh",
-					"name": "Written",
-					"reference": "B24",
-					"local_notes": "Broken",
-					"cost_adj": "1",
-					"disabled": true
-				},
-				{
-					"id": "mZM530WT-MWnn8NI3",
-					"name": "Written",
-					"reference": "B24",
-					"local_notes": "Accented",
-					"cost_adj": "2",
-					"disabled": true
-				},
-				{
-					"id": "mxSwUzSpUQQwm226D",
-					"name": "Written",
-					"reference": "B24",
-					"local_notes": "Native",
-					"cost_adj": "3"
-				}
-			],
-			"calc": {
-				"points": 0
 			}
 		},
 		{
@@ -1996,6 +1780,112 @@
 						"level": 10,
 						"damage": "1d cr"
 					}
+				}
+			],
+			"calc": {
+				"points": 0
+			}
+		},
+		{
+			"id": "tm3UttdnaTCfUaeR5",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Traits.adq",
+				"id": "tw1Ad0oSMw2ATM4X1"
+			},
+			"name": "Language: @Language@",
+			"reference": "B24",
+			"tags": [
+				"Advantage",
+				"Language",
+				"Mental"
+			],
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": false,
+						"name": {
+							"compare": "is",
+							"qualifier": "Language Talent"
+						},
+						"level": {
+							"compare": "at_least"
+						}
+					}
+				]
+			},
+			"replacements": {
+				"Language": "Elvish"
+			},
+			"modifiers": [
+				{
+					"id": "m-W7fbg8_x6CeBwao",
+					"name": "Native",
+					"reference": "B23",
+					"cost_adj": "-6"
+				},
+				{
+					"id": "mLYU2GP7ivsO5qmDy",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "None",
+					"disabled": true
+				},
+				{
+					"id": "mIJa3WMWUPZ5bW4vC",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Broken",
+					"cost_adj": "1",
+					"disabled": true
+				},
+				{
+					"id": "mG0gvnJsQP3IidAXg",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Accented",
+					"cost_adj": "2",
+					"disabled": true
+				},
+				{
+					"id": "mr28XanK7DZUShY2O",
+					"name": "Spoken",
+					"reference": "B24",
+					"local_notes": "Native",
+					"cost_adj": "3"
+				},
+				{
+					"id": "mSwgZF8Wv_9YVFhKf",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "None",
+					"disabled": true
+				},
+				{
+					"id": "mRPF7oWWqVYSy8zsh",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Broken",
+					"cost_adj": "1",
+					"disabled": true
+				},
+				{
+					"id": "mZM530WT-MWnn8NI3",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Accented",
+					"cost_adj": "2",
+					"disabled": true
+				},
+				{
+					"id": "mxSwUzSpUQQwm226D",
+					"name": "Written",
+					"reference": "B24",
+					"local_notes": "Native",
+					"cost_adj": "3"
 				}
 			],
 			"calc": {
@@ -2567,8 +2457,8 @@
 				"points": -5
 			},
 			"calc": {
-				"level": 13,
-				"rsl": "IQ+1"
+				"level": 12,
+				"rsl": "IQ+0"
 			}
 		}
 	],
@@ -2679,644 +2569,6 @@
 						"qualifier": {
 							"compare": "is",
 							"qualifier": "shield"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"points": 1,
-			"calc": {
-				"level": 12,
-				"rsl": "IQ+0"
-			}
-		},
-		{
-			"id": "pNOOj7tkk0PMShVf9",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Spells.spl",
-				"id": "pCEEU_ipOrJTqolKV"
-			},
-			"name": "Continual Light",
-			"reference": "M110",
-			"tags": [
-				"Light \u0026 Darkness"
-			],
-			"difficulty": "iq/h",
-			"college": [
-				"Light \u0026 Darkness"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "2 moon, 4 torch, 6 day",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "2d days",
-			"prereq_count": 1,
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"sub_type": "name",
-						"has": true,
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "light"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"points": 8,
-			"calc": {
-				"level": 15,
-				"rsl": "IQ+3"
-			}
-		},
-		{
-			"id": "p7-jSycJXHkLrLBUx",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Spells.spl",
-				"id": "pKGJZVJ7s4fbG8j-k"
-			},
-			"name": "Darkness",
-			"reference": "M111",
-			"tags": [
-				"Light \u0026 Darkness"
-			],
-			"difficulty": "iq/h",
-			"college": [
-				"Light \u0026 Darkness"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "2",
-			"maintenance_cost": "1",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"prereq_count": 2,
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"sub_type": "name",
-						"has": true,
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "continual light"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"points": 8,
-			"calc": {
-				"level": 15,
-				"rsl": "IQ+3"
-			}
-		},
-		{
-			"id": "pzf0w1BzVEJVF_cde",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Spells.spl",
-				"id": "pVN4sxGbV5XENcxGe"
-			},
-			"name": "Glow",
-			"reference": "M112",
-			"tags": [
-				"Light \u0026 Darkness"
-			],
-			"difficulty": "iq/h",
-			"college": [
-				"Light \u0026 Darkness"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Area",
-			"casting_cost": "Varies",
-			"maintenance_cost": "-",
-			"casting_time": "Varies",
-			"duration": "2d days",
-			"prereq_count": 2,
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"sub_type": "name",
-						"has": true,
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "continual light"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"points": 8,
-			"calc": {
-				"level": 15,
-				"rsl": "IQ+3"
-			}
-		},
-		{
-			"id": "p2INvgv3rMKOWXMIJ",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Spells.spl",
-				"id": "pVMuxhesAfXqxaGX8"
-			},
-			"name": "Ice Dagger",
-			"reference": "M188",
-			"tags": [
-				"Water"
-			],
-			"difficulty": "iq/h",
-			"college": [
-				"Water"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Missile",
-			"casting_cost": "1-Magery",
-			"maintenance_cost": "-",
-			"casting_time": "1-3 sec",
-			"duration": "Instant",
-			"prereq_count": 5,
-			"prereqs": {
-				"type": "prereq_list",
-				"all": false,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"sub_type": "name",
-						"has": true,
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "water jet"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					},
-					{
-						"type": "spell_prereq",
-						"sub_type": "name",
-						"has": true,
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "ice sphere"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"weapons": [
-				{
-					"id": "WifkZsIHeRWJevPcB",
-					"sv": 1,
-					"damage": {
-						"type": "imp/point",
-						"base": "1d-1"
-					},
-					"accuracy": "3",
-					"range": "30/60",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Innate Attack",
-							"specialization": "Projectile"
-						}
-					],
-					"calc": {
-						"level": 12,
-						"damage": "1d-1 imp/point"
-					}
-				}
-			],
-			"points": 1,
-			"calc": {
-				"level": 12,
-				"rsl": "IQ+0"
-			}
-		},
-		{
-			"id": "pIAB1Om9w_DVPoPqc",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Spells.spl",
-				"id": "ppngIyR2U7nPA6sEj"
-			},
-			"name": "Invisibility",
-			"reference": "M114",
-			"tags": [
-				"Light \u0026 Darkness"
-			],
-			"difficulty": "iq/h",
-			"college": [
-				"Light \u0026 Darkness"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "5",
-			"maintenance_cost": "3",
-			"casting_time": "3 sec",
-			"duration": "1 min",
-			"prereq_count": 6,
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"sub_type": "college",
-						"has": true,
-						"qualifier": {
-							"compare": "contains",
-							"qualifier": "Light \u0026 Darkness"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 6
-						}
-					},
-					{
-						"type": "spell_prereq",
-						"sub_type": "name",
-						"has": true,
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "blur"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"points": 1,
-			"calc": {
-				"level": 12,
-				"rsl": "IQ+0"
-			}
-		},
-		{
-			"id": "pIGLzSo9QXZ4Riixk",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Spells.spl",
-				"id": "prnkk9Zj1f_vCE4z2"
-			},
-			"name": "Lightning",
-			"reference": "M196",
-			"tags": [
-				"Air",
-				"Weather"
-			],
-			"difficulty": "iq/h",
-			"college": [
-				"Air",
-				"Weather"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Missile",
-			"casting_cost": "1-Magery",
-			"maintenance_cost": "-",
-			"casting_time": "1-3 sec",
-			"duration": "Instant",
-			"prereq_count": 6,
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "prereq_list",
-						"all": false,
-						"prereqs": [
-							{
-								"type": "trait_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "does_not_contain",
-									"qualifier": "one college"
-								}
-							},
-							{
-								"type": "trait_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "contains",
-									"qualifier": "one college (air)"
-								}
-							},
-							{
-								"type": "trait_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "magery"
-								},
-								"level": {
-									"compare": "at_least",
-									"qualifier": 1
-								},
-								"notes": {
-									"compare": "contains",
-									"qualifier": "one college (weather)"
-								}
-							}
-						]
-					},
-					{
-						"type": "spell_prereq",
-						"sub_type": "college",
-						"has": true,
-						"qualifier": {
-							"compare": "contains",
-							"qualifier": "Air"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 6
-						}
-					}
-				]
-			},
-			"weapons": [
-				{
-					"id": "WANAEllKvg7kjtsVk",
-					"sv": 1,
-					"damage": {
-						"type": "burn/point",
-						"base": "1d-1"
-					},
-					"accuracy": "3",
-					"range": "50/100",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Innate Attack",
-							"specialization": "Projectile"
-						}
-					],
-					"calc": {
-						"level": 12,
-						"damage": "1d-1 burn/point"
-					}
-				}
-			],
-			"points": 1,
-			"calc": {
-				"level": 12,
-				"rsl": "IQ+0"
-			}
-		},
-		{
-			"id": "pqvlEjKlYA6jtyN3t",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Spells.spl",
-				"id": "pVi4rrOd43moPZlqm"
-			},
-			"name": "Shield",
-			"reference": "M167",
-			"tags": [
-				"Protection \u0026 Warning"
-			],
-			"difficulty": "iq/h",
-			"college": [
-				"Protection \u0026 Warning"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"casting_cost": "2 per DB",
-			"maintenance_cost": "Half",
-			"casting_time": "1 sec",
-			"duration": "1 min",
-			"prereqs": {
-				"type": "prereq_list",
-				"all": false,
-				"prereqs": [
-					{
-						"type": "trait_prereq",
-						"has": true,
-						"name": {
-							"compare": "is",
-							"qualifier": "magery"
-						},
-						"level": {
-							"compare": "at_least",
-							"qualifier": 2
-						},
-						"notes": {
-							"compare": "does_not_contain",
-							"qualifier": "one college"
-						}
-					},
-					{
-						"type": "trait_prereq",
-						"has": true,
-						"name": {
-							"compare": "is",
-							"qualifier": "magery"
-						},
-						"level": {
-							"compare": "at_least",
-							"qualifier": 2
-						},
-						"notes": {
-							"compare": "contains",
-							"qualifier": "one college (protection \u0026 warning)"
-						}
-					}
-				]
-			},
-			"points": 1,
-			"calc": {
-				"level": 12,
-				"rsl": "IQ+0"
-			}
-		},
-		{
-			"id": "prYxzuJdmOq2Fyj8A",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Spells.spl",
-				"id": "pY70taLLub6swp4iN"
-			},
-			"name": "Shocking Touch",
-			"reference": "M196",
-			"tags": [
-				"Air",
-				"Weather"
-			],
-			"difficulty": "iq/h",
-			"college": [
-				"Air",
-				"Weather"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Melee",
-			"casting_cost": "1-3",
-			"maintenance_cost": "-",
-			"casting_time": "1 sec",
-			"duration": "Instant",
-			"prereq_count": 7,
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"sub_type": "name",
-						"has": true,
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "lightning"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					}
-				]
-			},
-			"weapons": [
-				{
-					"id": "wc8SOo97L-ikLLSWB",
-					"sv": 1,
-					"damage": {
-						"type": "cr +1d+1 burn/point",
-						"st": "thr",
-						"base": "-1"
-					},
-					"usage": "Punch",
-					"reach": "C",
-					"parry": "0",
-					"defaults": [
-						{
-							"type": "dx"
-						},
-						{
-							"type": "skill",
-							"name": "Brawling"
-						},
-						{
-							"type": "skill",
-							"name": "Boxing"
-						},
-						{
-							"type": "skill",
-							"name": "Karate"
-						}
-					],
-					"calc": {
-						"level": 12,
-						"damage": "1d-1 cr +1d+1 burn/point",
-						"parry": "10"
-					}
-				}
-			],
-			"points": 1,
-			"calc": {
-				"level": 12,
-				"rsl": "IQ+0"
-			}
-		},
-		{
-			"id": "plB-c6dOfaUzm5sFc",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Magic/Magic Spells.spl",
-				"id": "pWhGbZcNAsboUEGAi"
-			},
-			"name": "Suggestion",
-			"reference": "M140",
-			"tags": [
-				"Mind Control"
-			],
-			"difficulty": "iq/h",
-			"college": [
-				"Mind Control"
-			],
-			"power_source": "Arcane",
-			"spell_class": "Regular",
-			"resist": "Will",
-			"casting_cost": "4",
-			"maintenance_cost": "3",
-			"casting_time": "10 sec",
-			"duration": "10 min",
-			"prereq_count": 5,
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "spell_prereq",
-						"sub_type": "name",
-						"has": true,
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "emotion control"
-						},
-						"quantity": {
-							"compare": "at_least",
-							"qualifier": 1
-						}
-					},
-					{
-						"type": "spell_prereq",
-						"sub_type": "name",
-						"has": true,
-						"qualifier": {
-							"compare": "is",
-							"qualifier": "forgetfulness"
 						},
 						"quantity": {
 							"compare": "at_least",
@@ -4350,11 +3602,587 @@
 			]
 		},
 		{
-			"id": "PoDzhAg7ZAy3hQQsv",
+			"id": "pNOOj7tkk0PMShVf9",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pCEEU_ipOrJTqolKV"
+			},
+			"name": "Continual Light",
+			"reference": "M110",
+			"tags": [
+				"Light \u0026 Darkness"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Light \u0026 Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"casting_cost": "2 moon, 4 torch, 6 day",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "2d days",
+			"prereq_count": 1,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "light"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"points": 8,
+			"calc": {
+				"level": 15,
+				"rsl": "IQ+3"
+			}
+		},
+		{
+			"id": "p7-jSycJXHkLrLBUx",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pKGJZVJ7s4fbG8j-k"
+			},
+			"name": "Darkness",
+			"reference": "M111",
+			"tags": [
+				"Light \u0026 Darkness"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Light \u0026 Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Area",
+			"casting_cost": "2",
+			"maintenance_cost": "1",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"prereq_count": 2,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "continual light"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"points": 8,
+			"calc": {
+				"level": 15,
+				"rsl": "IQ+3"
+			}
+		},
+		{
+			"id": "pzf0w1BzVEJVF_cde",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pVN4sxGbV5XENcxGe"
+			},
+			"name": "Glow",
+			"reference": "M112",
+			"tags": [
+				"Light \u0026 Darkness"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Light \u0026 Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Area",
+			"casting_cost": "Varies",
+			"maintenance_cost": "-",
+			"casting_time": "Varies",
+			"duration": "2d days",
+			"prereq_count": 2,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "continual light"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"points": 8,
+			"calc": {
+				"level": 15,
+				"rsl": "IQ+3"
+			}
+		},
+		{
+			"id": "p2INvgv3rMKOWXMIJ",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pVMuxhesAfXqxaGX8"
+			},
+			"name": "Ice Dagger",
+			"reference": "M188",
+			"tags": [
+				"Water"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Water"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Missile",
+			"casting_cost": "1-Magery",
+			"maintenance_cost": "-",
+			"casting_time": "1-3 sec",
+			"duration": "Instant",
+			"prereq_count": 5,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "water jet"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					},
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "ice sphere"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"weapons": [
+				{
+					"id": "WifkZsIHeRWJevPcB",
+					"sv": 1,
+					"damage": {
+						"type": "imp/point",
+						"base": "1d-1"
+					},
+					"accuracy": "3",
+					"range": "30/60",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Innate Attack",
+							"specialization": "Projectile"
+						}
+					],
+					"calc": {
+						"level": 12,
+						"damage": "1d-1 imp/point"
+					}
+				}
+			],
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "pIAB1Om9w_DVPoPqc",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "ppngIyR2U7nPA6sEj"
+			},
+			"name": "Invisibility",
+			"reference": "M114",
+			"tags": [
+				"Light \u0026 Darkness"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Light \u0026 Darkness"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"casting_cost": "5",
+			"maintenance_cost": "3",
+			"casting_time": "3 sec",
+			"duration": "1 min",
+			"prereq_count": 6,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "college",
+						"has": true,
+						"qualifier": {
+							"compare": "contains",
+							"qualifier": "Light \u0026 Darkness"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 6
+						}
+					},
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "blur"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "pIGLzSo9QXZ4Riixk",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "prnkk9Zj1f_vCE4z2"
+			},
+			"name": "Lightning",
+			"reference": "M196",
+			"tags": [
+				"Air",
+				"Weather"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Air",
+				"Weather"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Missile",
+			"casting_cost": "1-Magery",
+			"maintenance_cost": "-",
+			"casting_time": "1-3 sec",
+			"duration": "Instant",
+			"prereq_count": 6,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "does_not_contain",
+									"qualifier": "one college"
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "one college (air)"
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "one college (weather)"
+								}
+							}
+						]
+					},
+					{
+						"type": "spell_prereq",
+						"sub_type": "college",
+						"has": true,
+						"qualifier": {
+							"compare": "contains",
+							"qualifier": "Air"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 6
+						}
+					}
+				]
+			},
+			"weapons": [
+				{
+					"id": "WANAEllKvg7kjtsVk",
+					"sv": 1,
+					"damage": {
+						"type": "burn/point",
+						"base": "1d-1"
+					},
+					"accuracy": "3",
+					"range": "50/100",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Innate Attack",
+							"specialization": "Projectile"
+						}
+					],
+					"calc": {
+						"level": 12,
+						"damage": "1d-1 burn/point"
+					}
+				}
+			],
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "pqvlEjKlYA6jtyN3t",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pVi4rrOd43moPZlqm"
+			},
+			"name": "Shield",
+			"reference": "M167",
+			"tags": [
+				"Protection \u0026 Warning"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Protection \u0026 Warning"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"casting_cost": "2 per DB",
+			"maintenance_cost": "Half",
+			"casting_time": "1 sec",
+			"duration": "1 min",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "magery"
+						},
+						"level": {
+							"compare": "at_least",
+							"qualifier": 2
+						},
+						"notes": {
+							"compare": "does_not_contain",
+							"qualifier": "one college"
+						}
+					},
+					{
+						"type": "trait_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "magery"
+						},
+						"level": {
+							"compare": "at_least",
+							"qualifier": 2
+						},
+						"notes": {
+							"compare": "contains",
+							"qualifier": "one college (protection \u0026 warning)"
+						}
+					}
+				]
+			},
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "prYxzuJdmOq2Fyj8A",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pY70taLLub6swp4iN"
+			},
+			"name": "Shocking Touch",
+			"reference": "M196",
+			"tags": [
+				"Air",
+				"Weather"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Air",
+				"Weather"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Melee",
+			"casting_cost": "1-3",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "Instant",
+			"prereq_count": 7,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "lightning"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"weapons": [
+				{
+					"id": "wc8SOo97L-ikLLSWB",
+					"sv": 1,
+					"damage": {
+						"type": "cr +1d+1 burn/point",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					],
+					"calc": {
+						"level": 12,
+						"damage": "1d-1 cr +1d+1 burn/point",
+						"parry": "10"
+					}
+				}
+			],
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
+		},
+		{
+			"id": "P7rXbF-vT5G1d4oq0",
 			"name": "Spider Staff",
 			"children": [
 				{
-					"id": "p8JjqSvVk3lH75aFP",
+					"id": "p6a3cQaDi1g1t2CaX",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
 						"path": "Magic/Magic Spells.spl",
@@ -4388,14 +4216,14 @@
 							}
 						]
 					},
-					"points": 16,
+					"points": 12,
 					"calc": {
-						"level": 18,
-						"rsl": "IQ+6"
+						"level": 16,
+						"rsl": "IQ+4"
 					}
 				},
 				{
-					"id": "p84AAL0QcLk0FL5Ft",
+					"id": "pER7PSrF6ZWi2q-w1",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
 						"path": "Magic/Magic Spells.spl",
@@ -4430,18 +4258,80 @@
 							}
 						]
 					},
-					"points": 16,
+					"points": 12,
 					"calc": {
-						"level": 18,
-						"rsl": "IQ+6"
+						"level": 16,
+						"rsl": "IQ+4"
 					}
 				}
 			]
+		},
+		{
+			"id": "plB-c6dOfaUzm5sFc",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pWhGbZcNAsboUEGAi"
+			},
+			"name": "Suggestion",
+			"reference": "M140",
+			"tags": [
+				"Mind Control"
+			],
+			"difficulty": "iq/h",
+			"college": [
+				"Mind Control"
+			],
+			"power_source": "Arcane",
+			"spell_class": "Regular",
+			"resist": "Will",
+			"casting_cost": "4",
+			"maintenance_cost": "3",
+			"casting_time": "10 sec",
+			"duration": "10 min",
+			"prereq_count": 5,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "emotion control"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					},
+					{
+						"type": "spell_prereq",
+						"sub_type": "name",
+						"has": true,
+						"qualifier": {
+							"compare": "is",
+							"qualifier": "forgetfulness"
+						},
+						"quantity": {
+							"compare": "at_least",
+							"qualifier": 1
+						}
+					}
+				]
+			},
+			"points": 1,
+			"calc": {
+				"level": 12,
+				"rsl": "IQ+0"
+			}
 		}
 	],
 	"equipment": [
 		{
-			"id": "eO-ciVlVarZtNqgdd",
+			"id": "EBI-2UJumvaPTkdPo",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
 				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
@@ -4449,16 +4339,15 @@
 			},
 			"description": "Spider Staff",
 			"reference": "DFA118",
-			"local_notes": "Extends a wizard's reach by 2 yards when casting; Is a Complex Item; Recharges 1d6+4 uses/day; Critical failure to cast a spell or at 0 charges left disintegrates.",
+			"local_notes": "Extends a wizard's reach by 2 yards when casting; Is a Complex Item.",
 			"tags": [
 				"Melee Weapon"
 			],
 			"base_value": "4000",
 			"base_weight": "4 lb",
-			"max_uses": 10,
 			"weapons": [
 				{
-					"id": "w2xDd7tXRMgobxVo1",
+					"id": "wyLF3xTlvqNgskyHk",
 					"sv": 1,
 					"damage": {
 						"type": "cr",
@@ -4496,7 +4385,7 @@
 					}
 				},
 				{
-					"id": "wwsxrdY2hznld5_PD",
+					"id": "wwSw3x2lMNT3cB3W2",
 					"sv": 1,
 					"damage": {
 						"type": "cr",
@@ -4534,7 +4423,7 @@
 					}
 				},
 				{
-					"id": "wuMKbPpWy5OKNw42K",
+					"id": "wN5PmwwDevTJ7cGQY",
 					"sv": 1,
 					"damage": {
 						"type": "tox",
@@ -4548,13 +4437,40 @@
 				}
 			],
 			"quantity": 1,
-			"uses": 10,
 			"equipped": true,
+			"children": [
+				{
+					"id": "eQgkJpcAhanBnxd04",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Equipment.eqp",
+						"id": "en3K5VAj04gPAJcc0"
+					},
+					"description": "10 pt Dedicated Powerstone",
+					"reference": "M20",
+					"local_notes": "Uses (Charges) are FP for this item; Critical failure to cast a spell or at 0 charges left disintegrates.",
+					"tags": [
+						"Powerstone"
+					],
+					"base_value": "0",
+					"base_weight": "0.004 lb",
+					"max_uses": 10,
+					"quantity": 1,
+					"uses": 10,
+					"equipped": true,
+					"calc": {
+						"value": 0,
+						"extended_value": 0,
+						"weight": "0.004 lb",
+						"extended_weight": "0.004 lb"
+					}
+				}
+			],
 			"calc": {
 				"value": 4000,
 				"extended_value": 4000,
 				"weight": "4 lb",
-				"extended_weight": "4 lb"
+				"extended_weight": "4.004 lb"
 			}
 		},
 		{

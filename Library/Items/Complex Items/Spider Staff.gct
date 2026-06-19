@@ -3,196 +3,86 @@
 	"id": "BPjzdxsPN16BxCNXH",
 	"traits": [
 		{
-			"id": "T9F2nQduEIvaMuq4f",
+			"id": "TXI1t8lA0yDogaxXl",
 			"name": "Spider Staff",
 			"children": [
 				{
-					"id": "tcnP-B6ay1IlPMGXY",
+					"id": "t35bqLTNBj2R4LyJ9",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
 						"path": "Basic Set/Basic Set Traits.adq",
-						"id": "twvmiGFkU_Fw0FuZF"
+						"id": "thR91RlonCb2vGKR4"
 					},
-					"name": "Extra Fatigue Points",
-					"reference": "B16",
-					"local_notes": "Spider Staff spells only",
+					"name": "Speak With Animals",
+					"reference": "B87,P77",
 					"tags": [
 						"Advantage",
-						"Attribute",
-						"Physical"
+						"Exotic",
+						"Mental"
 					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "equipped_equipment",
-								"name": {
-									"compare": "is",
-									"qualifier": "Spider Staff"
-								}
-							}
-						]
-					},
 					"modifiers": [
 						{
-							"id": "msb9DVX_Dl6DmE6hb",
-							"name": "Magic Only",
-							"local_notes": "Subject to involuntary FP drain",
-							"cost_adj": "-10%"
-						}
-					],
-					"points_per_level": 3,
-					"can_level": true,
-					"levels": 10,
-					"calc": {
-						"points": 27,
-						"current_level": 10
-					}
-				},
-				{
-					"id": "tLLjVVFvyPodZ8K9t",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Traits.adq",
-						"id": "tpnv8EEpAS6Er2pwK"
-					},
-					"name": "Magery",
-					"reference": "B66",
-					"local_notes": "Spider Staff spells only",
-					"tags": [
-						"Advantage",
-						"Mental",
-						"Supernatural"
-					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "equipped_equipment",
-								"name": {
-									"compare": "is",
-									"qualifier": "Spider Staff"
-								}
-							}
-						]
-					},
-					"modifiers": [
-						{
-							"id": "mSESUJSqdYxZqQDE_",
-							"name": "Dance",
+							"id": "mvXvX2DqSEcexGPmX",
+							"name": "Specialized",
+							"reference": "B87",
+							"local_notes": "All aquatic animals",
 							"cost_adj": "-40%",
-							"affects": "levels_only",
 							"disabled": true
 						},
 						{
-							"id": "m6dwwtSNsKKigy9l3",
-							"name": "Dark-Aspected",
+							"id": "mGH6aXNsX_m-YfoSS",
+							"name": "Specialized",
+							"reference": "B87",
+							"local_notes": "All land animals",
+							"cost_adj": "-40%",
+							"disabled": true
+						},
+						{
+							"id": "moFN1IT9uoTcnidoQ",
+							"name": "Specialized",
+							"reference": "B87",
+							"local_notes": "@One class: Mammals, Birds, etc.@",
 							"cost_adj": "-50%",
-							"affects": "levels_only",
 							"disabled": true
 						},
 						{
-							"id": "mFbC4JeZGO5HCtmdk",
-							"name": "Day-Aspected",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
+							"id": "mzHSOxVHCW3t7OAUp",
+							"name": "Specialized",
+							"reference": "B87",
+							"local_notes": "@One family: Felines, Parrots, etc.@",
+							"cost_adj": "-60%",
 							"disabled": true
 						},
 						{
-							"id": "m7zYhvnG9Ed_hvqyq",
-							"name": "Musical",
-							"cost_adj": "-50%",
-							"affects": "levels_only",
+							"id": "mO1TymzdZFzOJmH1j",
+							"name": "Specialized",
+							"reference": "B87",
+							"local_notes": "One species: Giant Spiders",
+							"cost_adj": "-80%"
+						},
+						{
+							"id": "m0nI3A1aydr4dDsBN",
+							"name": "Sapience",
+							"reference": "P77",
+							"cost_adj": "40%",
 							"disabled": true
 						},
 						{
-							"id": "mzS6jyBjnWsuJA8av",
-							"name": "Night-Aspected",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
+							"id": "mQQopQHVwP0jr88xa",
+							"name": "Universal",
+							"reference": "P77",
+							"cost_adj": "20%",
 							"disabled": true
-						},
-						{
-							"id": "m67n3Pw1AWWh1WwCc",
-							"name": "One College",
-							"local_notes": "@College@",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "m_UOZZgKbEU3UcWpT",
-							"name": "Solitary",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "mBJ4MavG0ICscApVG",
-							"name": "Song",
-							"cost_adj": "-40%",
-							"affects": "levels_only",
-							"disabled": true
-						},
-						{
-							"id": "mdqv6HGlF7ye6EoBl",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set/Basic Set Limitation Modifiers.adm",
-								"id": "mlh_0hHKF2oeickUF"
-							},
-							"name": "Limited Use",
-							"reference": "B112,P103",
-							"local_notes": "10 uses per day",
-							"cost_adj": "-10%"
 						}
 					],
-					"base_points": 5,
-					"points_per_level": 10,
-					"features": [
-						{
-							"type": "spell_bonus",
-							"match": "spell_name",
-							"name": {
-								"compare": "is",
-								"qualifier": "Climbing"
-							},
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "spell_bonus",
-							"match": "spell_name",
-							"name": {
-								"compare": "is",
-								"qualifier": "Glue"
-							},
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "skill_bonus",
-							"selection_type": "skills_with_name",
-							"name": {
-								"compare": "is",
-								"qualifier": "thaumatology"
-							},
-							"amount": 1,
-							"per_level": true
-						}
-					],
-					"can_level": true,
-					"levels": 1,
+					"base_points": 25,
 					"calc": {
-						"points": 14,
-						"current_level": 1
+						"points": 5
 					}
 				}
 			],
 			"calc": {
-				"points": 41
+				"points": 5
 			}
 		}
 	],
@@ -236,7 +126,7 @@
 							}
 						]
 					},
-					"points": 16
+					"points": 12
 				},
 				{
 					"id": "pNbMPU1bhijpzN7OY",
@@ -274,14 +164,14 @@
 							}
 						]
 					},
-					"points": 16
+					"points": 12
 				}
 			]
 		}
 	],
 	"equipment": [
 		{
-			"id": "ee6TworuEvYZZSP8B",
+			"id": "ECcXEEvym0wX4nlY2",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
 				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
@@ -289,16 +179,15 @@
 			},
 			"description": "Spider Staff",
 			"reference": "DFA118",
-			"local_notes": "Extends a wizard's reach by 2 yards when casting; Is a Complex Item; Recharges 1d6+4 uses/day; Critical failure to cast a spell or at 0 charges left disintegrates.",
+			"local_notes": "Extends a wizard's reach by 2 yards when casting; Is a Complex Item.",
 			"tags": [
 				"Melee Weapon"
 			],
 			"base_value": "4000",
 			"base_weight": "4 lb",
-			"max_uses": 10,
 			"weapons": [
 				{
-					"id": "wSLmrpDsYJ9g8mcp0",
+					"id": "wMd_VYaW6pFoTthiP",
 					"sv": 1,
 					"damage": {
 						"type": "cr",
@@ -334,7 +223,7 @@
 					}
 				},
 				{
-					"id": "wVfjivDey6hF_CK9v",
+					"id": "wljcsBASfrwoopR5I",
 					"sv": 1,
 					"damage": {
 						"type": "cr",
@@ -370,7 +259,7 @@
 					}
 				},
 				{
-					"id": "wfhVFy3dSIgODDaKG",
+					"id": "w1zVje5Oycf51h0Pv",
 					"sv": 1,
 					"damage": {
 						"type": "tox",
@@ -384,13 +273,40 @@
 				}
 			],
 			"quantity": 1,
-			"uses": 10,
 			"equipped": true,
+			"children": [
+				{
+					"id": "educ22D4d0XW6wgP1",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Equipment.eqp",
+						"id": "en3K5VAj04gPAJcc0"
+					},
+					"description": "10 pt Dedicated Powerstone",
+					"reference": "M20",
+					"local_notes": "Uses (Charges) are FP for this item; Critical failure to cast a spell or at 0 charges left disintegrates.",
+					"tags": [
+						"Powerstone"
+					],
+					"base_value": "0",
+					"base_weight": "0.004 lb",
+					"max_uses": 10,
+					"quantity": 1,
+					"uses": 10,
+					"equipped": true,
+					"calc": {
+						"value": 0,
+						"extended_value": 0,
+						"weight": "0.004 lb",
+						"extended_weight": "0.004 lb"
+					}
+				}
+			],
 			"calc": {
 				"value": 4000,
 				"extended_value": 4000,
 				"weight": "4 lb",
-				"extended_weight": "4 lb"
+				"extended_weight": "4.004 lb"
 			}
 		}
 	]

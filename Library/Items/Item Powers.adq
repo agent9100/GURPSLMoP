@@ -273,49 +273,6 @@
 			"name": "Ring of Protection",
 			"children": [
 				{
-					"id": "tBBLmtxQiulEtOmb0",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Traits.adq",
-						"id": "tvH8CndwPkEmF4Z6t"
-					},
-					"name": "Magic Resistance",
-					"reference": "B67",
-					"tags": [
-						"Advantage",
-						"Physical"
-					],
-					"modifiers": [
-						{
-							"id": "mJtA2Xt2FvixDrXhV",
-							"name": "Improved",
-							"reference": "B67",
-							"cost_adj": "150%"
-						}
-					],
-					"points_per_level": 2,
-					"features": [
-						{
-							"type": "conditional_modifier",
-							"situation": "to resist spells",
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "conditional_modifier",
-							"situation": "to skill for others to cast a spell on you",
-							"amount": -1,
-							"per_level": true
-						}
-					],
-					"can_level": true,
-					"levels": 1,
-					"calc": {
-						"points": 5,
-						"current_level": 1
-					}
-				},
-				{
 					"id": "tQxm3ZNb_ArBJbpPm",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
@@ -558,10 +515,111 @@
 						"points": 5,
 						"current_level": 1
 					}
+				},
+				{
+					"id": "t8oqiXym5K3xxkFhQ",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t2YeWtLsS-544fGdt"
+					},
+					"name": "Enhanced Block",
+					"reference": "B51,MA43",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "block",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tweauBUWuTVZJwv8U",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tVyvGlX-r5_Svydpa"
+					},
+					"name": "Enhanced Parry (All parries)",
+					"reference": "B51,MA43",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"points_per_level": 10,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "parry",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tBBLmtxQiulEtOmb0",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tvH8CndwPkEmF4Z6t"
+					},
+					"name": "Magic Resistance",
+					"reference": "B67",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mncOtsbfTs6pQk7jj",
+							"name": "Improved",
+							"reference": "B67",
+							"cost_adj": "150%"
+						}
+					],
+					"points_per_level": 2,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist spells",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to skill for others to cast a spell on you",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
 				}
 			],
 			"calc": {
-				"points": 10
+				"points": 30
 			}
 		}
 	]
