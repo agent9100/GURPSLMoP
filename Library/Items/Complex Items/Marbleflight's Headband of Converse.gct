@@ -1,0 +1,116 @@
+{
+	"version": 5,
+	"id": "BePvpgSRDUhtjn8AS",
+	"spells": [
+		{
+			"id": "ppHTwF3uC4U5SwYS_",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pag_8KhyVk1RKRZJK"
+			},
+			"name": "Converse (from Marbleflight's Headband)",
+			"reference": "M173",
+			"tags": [
+				"Sound"
+			],
+			"difficulty": "10/e",
+			"college": [
+				"Sound"
+			],
+			"power_source": "Magic Item",
+			"spell_class": "Regular",
+			"casting_cost": "2",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "Indefinite #",
+			"prereq_count": 4,
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "magery"
+								},
+								"level": {
+									"compare": "at_least"
+								}
+							}
+						]
+					}
+				]
+			},
+			"points": 20
+		}
+	],
+	"equipment": [
+		{
+			"id": "EMdFU0gQfsvsNE0QS",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "egzGQdbexQ0la75Y7"
+			},
+			"description": "Marbleflight's Headband of Converse",
+			"reference": "B284",
+			"local_notes": "Flexible, concealable; Is a Complex Item",
+			"tech_level": "1",
+			"tags": [
+				"Headgear"
+			],
+			"base_value": "5230",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"skull"
+					],
+					"amount": 1
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"children": [
+				{
+					"id": "e4kB9E2bZXqo5xexy",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Equipment.eqp",
+						"id": "eM1UE-CVcAAJwqwEA"
+					},
+					"description": "3 pt Dedicated Powerstone",
+					"reference": "M20",
+					"tags": [
+						"Powerstone"
+					],
+					"base_value": "0",
+					"base_weight": "0.001 lb",
+					"max_uses": 3,
+					"quantity": 1,
+					"uses": 3,
+					"equipped": true,
+					"calc": {
+						"value": 0,
+						"extended_value": 0,
+						"weight": "0.001 lb",
+						"extended_weight": "0.001 lb"
+					}
+				}
+			],
+			"calc": {
+				"value": 5230,
+				"extended_value": 5230,
+				"weight": "0 lb",
+				"extended_weight": "0.001 lb"
+			}
+		}
+	]
+}

@@ -1,0 +1,86 @@
+{
+	"version": 5,
+	"id": "B0PGvL25Jxk8G6xbi",
+	"spells": [
+		{
+			"id": "ptv_hkYOgVf4auzrQ",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pDBqpOJAqLzWUid_i"
+			},
+			"name": "Relieve Sickness (from Marbleflight's Ring)",
+			"reference": "M90",
+			"tags": [
+				"Healing"
+			],
+			"difficulty": "10/e",
+			"college": [
+				"Healing"
+			],
+			"power_source": "Magic Item",
+			"spell_class": "Regular",
+			"resist": "Subject spell",
+			"casting_cost": "2",
+			"maintenance_cost": "-",
+			"casting_time": "10 sec",
+			"duration": "10 min",
+			"prereq_count": 2,
+			"points": 20
+		}
+	],
+	"equipment": [
+		{
+			"id": "EWsEZPRdWVMUbcolf",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Low Tech/Low Tech Equipment.eqp",
+				"id": "e1qNhxVaWxj1qvrwx"
+			},
+			"description": "Marbleflight's Ring of Relieve Sickness",
+			"reference": "LT38",
+			"local_notes": "Is a Complex Item",
+			"tech_level": "0",
+			"tags": [
+				"Jewelry"
+			],
+			"base_value": "8960",
+			"base_weight": "0.12 lb",
+			"quantity": 1,
+			"equipped": true,
+			"children": [
+				{
+					"id": "ee8-yQBFawpJ5YGkW",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Equipment.eqp",
+						"id": "ehMCFza9AnnjZl4Jn"
+					},
+					"description": "5 pt Dedicated Powerstone",
+					"reference": "M20",
+					"tags": [
+						"Powerstone"
+					],
+					"base_value": "0",
+					"base_weight": "0.002 lb",
+					"max_uses": 5,
+					"quantity": 1,
+					"uses": 5,
+					"equipped": true,
+					"calc": {
+						"value": 0,
+						"extended_value": 0,
+						"weight": "0.002 lb",
+						"extended_weight": "0.002 lb"
+					}
+				}
+			],
+			"calc": {
+				"value": 8960,
+				"extended_value": 8960,
+				"weight": "0.12 lb",
+				"extended_weight": "0.122 lb"
+			}
+		}
+	]
+}

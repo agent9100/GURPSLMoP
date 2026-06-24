@@ -1,0 +1,230 @@
+{
+	"version": 5,
+	"id": "BDINviz4FO3KGapbZ",
+	"spells": [
+		{
+			"id": "pcctgJFiSQQgH31c1",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pZS-gKursopjtli-7"
+			},
+			"name": "Detect Magic (from Marbleflight's Wand)",
+			"reference": "M101",
+			"tags": [
+				"Knowledge"
+			],
+			"difficulty": "10/e",
+			"college": [
+				"Knowledge"
+			],
+			"power_source": "Magic Item",
+			"spell_class": "Regular",
+			"casting_cost": "2",
+			"maintenance_cost": "-",
+			"casting_time": "5 sec",
+			"duration": "Instant",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "magery"
+						},
+						"level": {
+							"compare": "at_least"
+						}
+					}
+				]
+			},
+			"points": 20
+		}
+	],
+	"equipment": [
+		{
+			"id": "E7QcDr8nfETVXLRQe",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "efiIjq_0j63wql3Cd"
+			},
+			"description": "Marbleflight’s Wand of Detect Magic",
+			"reference": "DFA118",
+			"local_notes": "Extends a wizard's reach by 1 yard when casting; Is a Complex Item.",
+			"tags": [
+				"Melee Weapon"
+			],
+			"base_value": "3450",
+			"base_weight": "1 lb",
+			"weapons": [
+				{
+					"id": "w2NlPlvw8-9kbm6H2",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "sw"
+					},
+					"strength": "6",
+					"usage": "Swung",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword"
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Jitte/Sai",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Knife",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Smallsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Tonfa",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					],
+					"calc": {
+						"damage": "sw cr"
+					}
+				},
+				{
+					"id": "waGrJlwk2nFjnH04i",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"strength": "6",
+					"usage": "Thrust",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword"
+						},
+						{
+							"type": "skill",
+							"name": "Broadsword",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Jitte/Sai",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Knife",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Saber",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Smallsword",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Tonfa",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Sword!"
+						}
+					],
+					"calc": {
+						"damage": "thr cr"
+					}
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"children": [
+				{
+					"id": "ePZoqnFF6SgFKbjhG",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Equipment.eqp",
+						"id": "eGobxDvBWQMwtg66n"
+					},
+					"description": "2 pt Dedicated Powerstone",
+					"reference": "M20",
+					"tags": [
+						"Powerstone"
+					],
+					"base_value": "0",
+					"base_weight": "0.001 lb",
+					"max_uses": 2,
+					"quantity": 1,
+					"uses": 2,
+					"equipped": true,
+					"calc": {
+						"value": 0,
+						"extended_value": 0,
+						"weight": "0.001 lb",
+						"extended_weight": "0.001 lb"
+					}
+				}
+			],
+			"calc": {
+				"value": 3450,
+				"extended_value": 3450,
+				"weight": "1 lb",
+				"extended_weight": "1.001 lb"
+			}
+		}
+	]
+}

@@ -1,0 +1,175 @@
+{
+	"version": 5,
+	"id": "BfzSAAcuLLn0p1HyZ",
+	"spells": [
+		{
+			"id": "pOX5gmePoy6hfUahL",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Magic/Magic Spells.spl",
+				"id": "pKKFr7WQcDZt1dIRn"
+			},
+			"name": "Fear (from Marbleflight's Staff)",
+			"reference": "M134",
+			"tags": [
+				"Mind Control"
+			],
+			"difficulty": "10/e",
+			"college": [
+				"Mind Control"
+			],
+			"power_source": "Magic Item",
+			"spell_class": "Area",
+			"resist": "Will",
+			"casting_cost": "1",
+			"maintenance_cost": "-",
+			"casting_time": "1 sec",
+			"duration": "10 min",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": false,
+				"prereqs": [
+					{
+						"type": "trait_prereq",
+						"has": true,
+						"name": {
+							"compare": "is",
+							"qualifier": "magery"
+						},
+						"level": {
+							"compare": "at_least"
+						}
+					}
+				]
+			},
+			"points": 20
+		}
+	],
+	"equipment": [
+		{
+			"id": "EOfi2GCz3ldhbDpnx",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "el3Sq4j8drjABJ4yx"
+			},
+			"description": "Marbleflight’s Staff of Fear",
+			"reference": "DFA118",
+			"local_notes": "Extends a wizard's reach by 2 yards when casting",
+			"tags": [
+				"Melee Weapon"
+			],
+			"base_value": "10730",
+			"base_weight": "4 lb",
+			"weapons": [
+				{
+					"id": "wDszJNOBg34yjDwev",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "sw",
+						"base": "2"
+					},
+					"strength": "7†",
+					"usage": "Swung",
+					"reach": "1-2",
+					"parry": "2",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Staff"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "sw+2 cr"
+					}
+				},
+				{
+					"id": "wNE2K27GdXlEMePN7",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "2"
+					},
+					"strength": "7†",
+					"usage": "Thrust",
+					"reach": "1-2",
+					"parry": "2",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Staff"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Spear",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "thr+2 cr"
+					}
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"children": [
+				{
+					"id": "evQTXO8JyMdHJo-Be",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Magic/Magic Equipment.eqp",
+						"id": "eBvsVkjE6dGSNoo1u"
+					},
+					"description": "6 pt Dedicated Powerstone",
+					"reference": "M20",
+					"tags": [
+						"Powerstone"
+					],
+					"base_value": "0",
+					"base_weight": "0.002 lb",
+					"max_uses": 6,
+					"quantity": 1,
+					"uses": 6,
+					"equipped": true,
+					"calc": {
+						"value": 0,
+						"extended_value": 0,
+						"weight": "0.002 lb",
+						"extended_weight": "0.002 lb"
+					}
+				}
+			],
+			"calc": {
+				"value": 10730,
+				"extended_value": 10730,
+				"weight": "4 lb",
+				"extended_weight": "4.002 lb"
+			}
+		}
+	]
+}
