@@ -1,0 +1,444 @@
+{
+	"version": 5,
+	"id": "Bw-GuQyOt9jcfbYwj",
+	"traits": [
+		{
+			"id": "TLIl3k70FsLQpp-Hx",
+			"source": {
+				"library": "/gcs_user_library",
+				"path": "Library/Items/Item Powers.adq",
+				"id": "TOS-gFTN0poHzcPjX"
+			},
+			"name": "Ring of Protection",
+			"children": [
+				{
+					"id": "tARg3863JFZgdwU14",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tBmSJ3pNE53c4IRUU"
+					},
+					"name": "Damage Resistance",
+					"reference": "B46,B47,P45,MA43,PSI14",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Ring of Protection"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "McWLWZCUxikrmh9CO",
+							"name": "Special Enhancements",
+							"children": [
+								{
+									"id": "mq3Sh3THAdzcBU5p2",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Enhances @Trait@",
+									"cost_adj": "80%",
+									"disabled": true
+								},
+								{
+									"id": "mCeYBgb_HKp1ayiCZ",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Healing only",
+									"cost_adj": "80%",
+									"disabled": true
+								},
+								{
+									"id": "mF7smJ5_qqrtSG5xj",
+									"name": "Absorption",
+									"reference": "B46",
+									"local_notes": "Enhances any trait",
+									"cost_adj": "100%",
+									"disabled": true
+								},
+								{
+									"id": "micr-OEiu3ANAOuRK",
+									"name": "Force Field",
+									"reference": "B47",
+									"cost_adj": "20%",
+									"disabled": true
+								},
+								{
+									"id": "m6RMm2-mpQo4UVotS",
+									"name": "Hardened",
+									"reference": "B47",
+									"local_notes": "Reduces armor divisor by @Hardened level@ step(s): \"ignores DR\"→100→10→5→3→2→\"no divisor\"",
+									"cost_adj": "20%",
+									"levels": 1,
+									"disabled": true
+								},
+								{
+									"id": "m0qLq-Jmu2UV8Wm0i",
+									"name": "Laminate",
+									"reference": "RSWL18",
+									"cost_adj": "10%",
+									"disabled": true
+								},
+								{
+									"id": "matxxO6JtUsTJtxD_",
+									"name": "Malediction-Proof",
+									"reference": "PSI14",
+									"cost_adj": "50%",
+									"disabled": true
+								},
+								{
+									"id": "mxctRRoO8xlMOeosb",
+									"name": "Maledictions Only",
+									"reference": "PSI14",
+									"disabled": true
+								},
+								{
+									"id": "mXFnWtNNKbg44klY-",
+									"name": "Reflection",
+									"reference": "B47",
+									"cost_adj": "100%",
+									"disabled": true
+								}
+							]
+						},
+						{
+							"id": "Mf5FGeVYfLgM8wTUG",
+							"name": "Special Limitations",
+							"children": [
+								{
+									"id": "mSySfIzzh5G6XuF5L",
+									"name": "Ablative",
+									"reference": "B47",
+									"cost_adj": "-80%",
+									"disabled": true
+								},
+								{
+									"id": "m6M3L8nWFt9Kk-m98",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Very Common@",
+									"cost_adj": "-15%",
+									"disabled": true
+								},
+								{
+									"id": "myKSvvhGls4QmDzEH",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Common@",
+									"cost_adj": "-10%",
+									"disabled": true
+								},
+								{
+									"id": "moTSF8KWfJcVr5A2B",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Occasional@",
+									"cost_adj": "-5%",
+									"disabled": true
+								},
+								{
+									"id": "m0eBaxgPgzDWsWRVB",
+									"name": "Bane",
+									"reference": "H14",
+									"local_notes": "@Rare@",
+									"cost_adj": "-1",
+									"disabled": true
+								},
+								{
+									"id": "mlk9bfyHY2lUK2OvD",
+									"name": "Can't wear armor",
+									"reference": "B47",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "mihy8wVs2-DaJM5Xl",
+									"name": "Directional",
+									"reference": "B47",
+									"local_notes": "Front",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mr9I3LBoOhxytco_A",
+									"name": "Directional",
+									"reference": "B47",
+									"local_notes": "@Direction: Back, Right, Left, Top or Underside@",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "m7RYMZKzdjdUUdc-y",
+									"name": "Flexible",
+									"reference": "B47",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "m5Qd4vQeOSTRs__uI",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Very Common Attack Form@",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mveLWAkrwO3uwDzZR",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Common Attack Form@",
+									"cost_adj": "-40%",
+									"disabled": true
+								},
+								{
+									"id": "m0vXueeY_dvtA0GIL",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Occasional Attack Form@",
+									"cost_adj": "-60%",
+									"disabled": true
+								},
+								{
+									"id": "me0W1-fLWQE1yYk65",
+									"name": "Limited",
+									"reference": "B46",
+									"local_notes": "@Rare Attack Form@",
+									"cost_adj": "-80%",
+									"disabled": true
+								},
+								{
+									"id": "mOOaUdn6VXk0XFPhd",
+									"name": "Partial (@Location, 1 level per -1 Per Hit Modifier, Torso is -10% thus level 1@)",
+									"reference": "B47",
+									"cost_adj": "-10%",
+									"disabled": true
+								},
+								{
+									"id": "mB-Atgm65149KIDJW",
+									"name": "Semi-Ablative",
+									"reference": "B47",
+									"cost_adj": "-20%",
+									"disabled": true
+								},
+								{
+									"id": "mk93rv51CRhqETsyp",
+									"name": "Tough Skin",
+									"reference": "B47",
+									"local_notes": "Effects that just require skin contact or a scratch ignore this DR",
+									"cost_adj": "-40%",
+									"disabled": true
+								}
+							]
+						}
+					],
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"all"
+							],
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye"
+							],
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tQhwvkaVcN0mLa_YB",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t2YeWtLsS-544fGdt"
+					},
+					"name": "Enhanced Block",
+					"reference": "B51,MA43",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Ring of Protection"
+								}
+							}
+						]
+					},
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "block",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tW3GUZClYnp2gf4My",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tVyvGlX-r5_Svydpa"
+					},
+					"name": "Enhanced Parry (All parries)",
+					"reference": "B51,MA43",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Ring of Protection"
+								}
+							}
+						]
+					},
+					"points_per_level": 10,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "parry",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tYyWvi2h0Yz6wkhIq",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tvH8CndwPkEmF4Z6t"
+					},
+					"name": "Magic Resistance",
+					"reference": "B67",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Ring of Protection"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "m7e9ttOGrTdc2FBiC",
+							"name": "Improved",
+							"reference": "B67",
+							"cost_adj": "150%"
+						}
+					],
+					"points_per_level": 2,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "to resist spells",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to skill for others to cast a spell on you",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 10,
+						"current_level": 2
+					}
+				}
+			],
+			"calc": {
+				"points": 30
+			}
+		}
+	],
+	"equipment": [
+		{
+			"id": "eOXPS_Y96qy7QHtEY",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Low Tech/Low Tech Equipment.eqp",
+				"id": "e1qNhxVaWxj1qvrwx"
+			},
+			"description": "Ring of Protection",
+			"reference": "LT38",
+			"local_notes": "Is a Complex Item.",
+			"tech_level": "0",
+			"tags": [
+				"Jewelry"
+			],
+			"base_value": "12000",
+			"base_weight": "0.12 lb",
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 12000,
+				"extended_value": 12000,
+				"weight": "0.12 lb",
+				"extended_weight": "0.12 lb"
+			}
+		}
+	]
+}

@@ -1,0 +1,299 @@
+{
+	"version": 5,
+	"id": "BIf2Nk1vdc-iGwth1",
+	"traits": [
+		{
+			"id": "TLC7VRCEJtCRe2lC3",
+			"source": {
+				"library": "/gcs_user_library",
+				"path": "Library/Items/Item Powers.adq",
+				"id": "THuu3gpT1XYyDOzXD"
+			},
+			"name": "Boots of Striding and Springing",
+			"children": [
+				{
+					"id": "tcyJ649NDEe1Vhrll",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t6krAE1uo6M0oDJFL"
+					},
+					"name": "Lifting ST",
+					"reference": "B65,P58",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Boots of Striding and Springing"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "mEekzlNXMX-RGjGHT",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_adj": "-40%",
+							"disabled": true
+						},
+						{
+							"id": "mv9jrIunH3clftRMY",
+							"name": "Size",
+							"reference": "B15",
+							"cost_adj": "-10%",
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mTmqpAIW69mo98DpL",
+							"name": "Super-Effort",
+							"reference": "P58",
+							"cost_adj": "400%",
+							"disabled": true
+						},
+						{
+							"id": "me4u1G5DdqDqZ4cXL",
+							"name": "Know Your Own Strength Variant Price",
+							"reference": "PY83:18",
+							"cost_adj": "4",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "mZ3hDxeah6_Uw2IsZ",
+							"name": "@Limb@ Grip ST",
+							"reference": "MATG28",
+							"cost_adj": "-70%",
+							"disabled": true
+						},
+						{
+							"id": "mO8gVp882Qlg0QmgR",
+							"name": "Bite ST",
+							"reference": "MATG28",
+							"cost_adj": "-70%",
+							"disabled": true
+						}
+					],
+					"points_per_level": 3,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"limitation": "lifting_only",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 5,
+					"calc": {
+						"points": 15,
+						"current_level": 5
+					}
+				},
+				{
+					"id": "t8m36olntwv1nfGn1",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tCgsJ0W9A8mHTtc-e"
+					},
+					"name": "Increased Basic Move",
+					"reference": "B17",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Boots of Striding and Springing"
+								}
+							}
+						]
+					},
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "basic_move",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5,
+						"current_level": 1
+					}
+				},
+				{
+					"id": "tYiGtfkcYdouRdSam",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tejp-a5e9aT3X-4i0"
+					},
+					"name": "Super Jump",
+					"reference": "B89,P79",
+					"local_notes": "Jump Move as Basic Move x2",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Boots of Striding and Springing"
+								}
+							}
+						]
+					},
+					"modifiers": [
+						{
+							"id": "mp443l2ix4ZIkZthE",
+							"name": "Bouncing",
+							"reference": "P80",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "mUh2_w7-HMFNLge6Y",
+							"name": "Maneuverable",
+							"reference": "P80",
+							"cost_adj": "50%",
+							"disabled": true
+						},
+						{
+							"id": "m6IwhKj_IwBOUqcYE",
+							"name": "Full Power Only",
+							"reference": "P80",
+							"cost_adj": "-10%",
+							"disabled": true
+						},
+						{
+							"id": "mbSiFwiMzkI_yJcc6",
+							"name": "Horizontal Only",
+							"reference": "P80",
+							"cost_adj": "-25%",
+							"disabled": true
+						},
+						{
+							"id": "m-jrk1QeNQwR8qCU9",
+							"name": "Lighter Than Air",
+							"reference": "P80",
+							"cost_adj": "-10%",
+							"disabled": true
+						},
+						{
+							"id": "mAuvsFnObWtTOdMpr",
+							"name": "Planetary",
+							"reference": "P80",
+							"cost_adj": "-5%",
+							"disabled": true
+						},
+						{
+							"id": "mjNuEaemA8mPqiVLU",
+							"name": "Projectile",
+							"reference": "P80",
+							"cost_adj": "-20%",
+							"disabled": true
+						},
+						{
+							"id": "mCvBmJOv0yFH-FhwM",
+							"name": "Vertical Only",
+							"reference": "P80",
+							"cost_adj": "-25%",
+							"disabled": true
+						},
+						{
+							"id": "mPy3zOSmsqsD84sNK",
+							"name": "Bouncing Only",
+							"reference": "SU28",
+							"cost_adj": "-50%",
+							"disabled": true
+						}
+					],
+					"points_per_level": 10,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10,
+						"current_level": 1
+					}
+				}
+			],
+			"calc": {
+				"points": 30
+			}
+		}
+	],
+	"equipment": [
+		{
+			"id": "e3dP35hVEx3GWx4Uh",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "e2aCum4Em-phMWpWS"
+			},
+			"description": "Boots of Striding and Springing",
+			"reference": "B284",
+			"local_notes": "Flexible; Concealable; Is a Complex Item.",
+			"tech_level": "2",
+			"tags": [
+				"Footwear"
+			],
+			"base_value": "8000",
+			"base_weight": "3 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"foot"
+					],
+					"amount": 2
+				},
+				{
+					"type": "weapon_bonus",
+					"selection_type": "weapons_with_name",
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Kick"
+					},
+					"amount": 1
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 8000,
+				"extended_value": 8000,
+				"weight": "3 lb",
+				"extended_weight": "3 lb"
+			}
+		}
+	]
+}

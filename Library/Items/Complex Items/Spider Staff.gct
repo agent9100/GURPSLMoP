@@ -20,9 +20,22 @@
 						"Exotic",
 						"Mental"
 					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "equipped_equipment",
+								"name": {
+									"compare": "is",
+									"qualifier": "Spider Staff"
+								}
+							}
+						]
+					},
 					"modifiers": [
 						{
-							"id": "mvXvX2DqSEcexGPmX",
+							"id": "mutDWTrLK8IBYx8OA",
 							"name": "Specialized",
 							"reference": "B87",
 							"local_notes": "All aquatic animals",
@@ -30,7 +43,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mGH6aXNsX_m-YfoSS",
+							"id": "mrAV90IdGEB1Bk6c9",
 							"name": "Specialized",
 							"reference": "B87",
 							"local_notes": "All land animals",
@@ -38,7 +51,7 @@
 							"disabled": true
 						},
 						{
-							"id": "moFN1IT9uoTcnidoQ",
+							"id": "m4yUxkWqUIpg-VB3z",
 							"name": "Specialized",
 							"reference": "B87",
 							"local_notes": "@One class: Mammals, Birds, etc.@",
@@ -46,7 +59,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mzHSOxVHCW3t7OAUp",
+							"id": "m6pIy6zGCQCjbRvnZ",
 							"name": "Specialized",
 							"reference": "B87",
 							"local_notes": "@One family: Felines, Parrots, etc.@",
@@ -54,21 +67,21 @@
 							"disabled": true
 						},
 						{
-							"id": "mO1TymzdZFzOJmH1j",
+							"id": "mdaoDhO5UgO70hvO7",
 							"name": "Specialized",
 							"reference": "B87",
 							"local_notes": "One species: Giant Spiders",
 							"cost_adj": "-80%"
 						},
 						{
-							"id": "m0nI3A1aydr4dDsBN",
+							"id": "mWxKCcAXeAgvcXD80",
 							"name": "Sapience",
 							"reference": "P77",
 							"cost_adj": "40%",
 							"disabled": true
 						},
 						{
-							"id": "mQQopQHVwP0jr88xa",
+							"id": "mpCuHFrQCfQuMhby-",
 							"name": "Universal",
 							"reference": "P77",
 							"cost_adj": "20%",

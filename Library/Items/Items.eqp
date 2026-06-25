@@ -2088,48 +2088,6 @@
 			}
 		},
 		{
-			"id": "eSfKuhe2h5JrkTqMz",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "e2aCum4Em-phMWpWS"
-			},
-			"description": "Boots of Striding and Springing",
-			"reference": "B284",
-			"local_notes": "Flexible; Concealable; Has an Item Power",
-			"tech_level": "2",
-			"tags": [
-				"Footwear"
-			],
-			"base_value": "8000",
-			"base_weight": "3 lb",
-			"features": [
-				{
-					"type": "dr_bonus",
-					"locations": [
-						"foot"
-					],
-					"amount": 2
-				},
-				{
-					"type": "weapon_bonus",
-					"selection_type": "weapons_with_name",
-					"specialization": {
-						"compare": "is",
-						"qualifier": "Kick"
-					},
-					"amount": 1
-				}
-			],
-			"quantity": 1,
-			"calc": {
-				"value": 8000,
-				"extended_value": 8000,
-				"weight": "3 lb",
-				"extended_weight": "3 lb"
-			}
-		},
-		{
 			"id": "enUYdbrx90kuAN7TV",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -2332,6 +2290,213 @@
 			}
 		},
 		{
+			"id": "e_bla0_cPt0gI-xPE",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "e6qjxZtOg7lCt_TE5"
+			},
+			"description": "Daran's Trusty Spear",
+			"reference": "B273",
+			"tech_level": "0",
+			"tags": [
+				"Melee Weapon",
+				"Missile Weapon"
+			],
+			"base_value": "40",
+			"base_weight": "4 lb",
+			"weapons": [
+				{
+					"id": "wuczExwepSbCsz7d5",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "2"
+					},
+					"strength": "9",
+					"usage": "Thrust",
+					"reach": "1*",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Spear"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Staff",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "thr+2 imp"
+					}
+				},
+				{
+					"id": "wZ-jJ34o8OEb6mT9L",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "3"
+					},
+					"strength": "9†",
+					"usage": "Thrust",
+					"reach": "1-2*",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Spear"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Staff",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "thr+3 imp"
+					}
+				},
+				{
+					"id": "Ws8x5dokBI7tO5Uxg",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "3"
+					},
+					"strength": "9",
+					"usage": "Thrown",
+					"accuracy": "2",
+					"range": "x1/x1.5",
+					"rate_of_fire": "1",
+					"shots": "T",
+					"bulk": "-6",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Spear"
+						},
+						{
+							"type": "skill",
+							"name": "Spear Thrower",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Harpoon",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "thr+3 imp"
+					}
+				}
+			],
+			"modifiers": [
+				{
+					"id": "FdVxe0nbK9MGU-cdN",
+					"source": {
+						"library": "/gcs_user_library",
+						"path": "Library/Items/Enchantments.eqm",
+						"id": "FuJdM-KTBEosZJV08"
+					},
+					"name": "+1 Weapon",
+					"children": [
+						{
+							"id": "fAE_a5xL8hkz7lvHf",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fKjyFElgjrJAsvLYl"
+							},
+							"name": "Accuracy 1",
+							"reference": "DFA118",
+							"tags": [
+								"Magic",
+								"Weapons"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+50 CF",
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"amount": 1
+								}
+							]
+						},
+						{
+							"id": "fzJjU8_J8qvDLYJJt",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fIYmX0InF7_DM_oGw"
+							},
+							"name": "Puissance 1",
+							"reference": "DFA118",
+							"tags": [
+								"Magic"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+50 CF",
+							"features": [
+								{
+									"type": "weapon_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"level": {
+										"compare": "at_least"
+									},
+									"amount": 1
+								}
+							]
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 4040,
+				"extended_value": 4040,
+				"weight": "4 lb",
+				"extended_weight": "4 lb"
+			}
+		},
+		{
 			"id": "ephLBX4h83PM5To_g",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -2394,39 +2559,6 @@
 				"extended_value": 1460,
 				"weight": "3 lb",
 				"extended_weight": "3 lb"
-			}
-		},
-		{
-			"id": "etdKNhyxvtE3WLIcE",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "eFqdI-UNxfahg1aKi"
-			},
-			"description": "Gauntlets of Ogre Power",
-			"reference": "B284",
-			"local_notes": "Has an Item Power",
-			"tech_level": "2",
-			"tags": [
-				"Gloves"
-			],
-			"base_value": "10000",
-			"base_weight": "2 lb",
-			"features": [
-				{
-					"type": "dr_bonus",
-					"locations": [
-						"hand"
-					],
-					"amount": 4
-				}
-			],
-			"quantity": 1,
-			"calc": {
-				"value": 10000,
-				"extended_value": 10000,
-				"weight": "2 lb",
-				"extended_weight": "2 lb"
 			}
 		},
 		{
@@ -2675,30 +2807,6 @@
 				"extended_value": 3000,
 				"weight": "0.25 lb",
 				"extended_weight": "0.25 lb"
-			}
-		},
-		{
-			"id": "eYMgdVgPy-IKMJosj",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Low Tech/Low Tech Equipment.eqp",
-				"id": "e1qNhxVaWxj1qvrwx"
-			},
-			"description": "Ring of Protection",
-			"reference": "LT38",
-			"local_notes": "Has an Item Power",
-			"tech_level": "0",
-			"tags": [
-				"Jewelry"
-			],
-			"base_value": "12000",
-			"base_weight": "0.12 lb",
-			"quantity": 1,
-			"calc": {
-				"value": 12000,
-				"extended_value": 12000,
-				"weight": "0.12 lb",
-				"extended_weight": "0.12 lb"
 			}
 		},
 		{
