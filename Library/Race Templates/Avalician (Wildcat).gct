@@ -1,0 +1,468 @@
+{
+	"version": 5,
+	"id": "B25wTwlQqMBNLo5BP",
+	"traits": [
+		{
+			"id": "T7xxOUVnectnJJSOJ",
+			"name": "Wildcat",
+			"ancestry": "Human",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "tibZVrOmthQ0MtWwZ",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tEFtRoCNBxTe9vjsG"
+					},
+					"name": "Dark Vision",
+					"reference": "B47,P46",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "md6zJ9ZlEofL0yxsG",
+							"name": "Can see colors in the dark",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mG-Za2Rufe9nRveUk",
+							"name": "Hypersensory",
+							"reference": "P46",
+							"cost_adj": "40%",
+							"disabled": true
+						}
+					],
+					"base_points": 25,
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "t80OKSuM5vNYA6h9W",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t2uxXuNNQjGUAFAd0"
+					},
+					"name": "Perfect Balance",
+					"reference": "B74",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 15,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "on DX and DX-based skill rolls to keep your feet or avoid being knocked down in combat",
+							"amount": 4
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "on all rolls to keep your feet if the surface is wet, slippery or unstable",
+							"amount": 6
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "starts_with",
+								"qualifier": "piloting"
+							},
+							"amount": 1
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "acrobatics"
+							},
+							"amount": 1
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "aerobatics"
+							},
+							"amount": 1
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "aquabatics"
+							},
+							"amount": 1
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "climbing"
+							},
+							"amount": 1
+						}
+					],
+					"calc": {
+						"points": 15
+					}
+				},
+				{
+					"id": "th_lzYgTwLgiBV1yd",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tzQQVBRuixCbnRR0w"
+					},
+					"name": "Catfall",
+					"reference": "B41,P43",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mddSFLUEivnoTNOKG",
+							"name": "Feather Fall",
+							"reference": "P43",
+							"cost_adj": "20%",
+							"disabled": true
+						},
+						{
+							"id": "mmI8Lt7-j7_EtGP58",
+							"name": "Parachute",
+							"reference": "P43",
+							"cost_adj": "-30%",
+							"disabled": true
+						}
+					],
+					"base_points": 10,
+					"calc": {
+						"points": 10
+					}
+				},
+				{
+					"id": "tlulyDqPXdpylwUtE",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "ta7LDTJnsrxUu_hpV"
+					},
+					"name": "Flexibility",
+					"reference": "B56,MA44",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "climbing"
+							},
+							"amount": 3
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "escape"
+							},
+							"amount": 3
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "erotic art"
+							},
+							"amount": 3
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "in penalties may be ignored when due to close quarters",
+							"amount": -3
+						}
+					],
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tDm-QZVU-MqWIjGsV",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tj66NHKyO_GObgGsj"
+					},
+					"name": "Sharp Claws",
+					"reference": "B42",
+					"tags": [
+						"Advantage",
+						"Physical"
+					],
+					"base_points": 5,
+					"weapons": [
+						{
+							"id": "whbIHsTiMPX4s9gQi",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Slash",
+							"reach": "C",
+							"parry": "0",
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "skill",
+									"name": "Boxing"
+								},
+								{
+									"type": "skill",
+									"name": "Karate"
+								}
+							],
+							"calc": {
+								"damage": "thr-1 cut"
+							}
+						},
+						{
+							"id": "wmJqspnXvHt2xdf4v",
+							"sv": 1,
+							"damage": {
+								"type": "cut",
+								"st": "thr"
+							},
+							"usage": "Kick",
+							"reach": "C,1",
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								}
+							],
+							"calc": {
+								"damage": "thr cut"
+							}
+						}
+					],
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tr_2DZWStkD0YhPcH",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t2O8gMxbRPpAWLej9"
+					},
+					"name": "Curious",
+					"reference": "B129",
+					"local_notes": "Make a self-control roll when presented with an interesting item or situation",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"cr": 12,
+					"base_points": -5,
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "trLSfApnCbnqy2bVj",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "ttHkLI9zwzfeOIEZc"
+					},
+					"name": "Intolerance (@Class, Ethnicity, Nationality, Religion, Sex, or Species@)",
+					"reference": "B140",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"replacements": {
+						"Class, Ethnicity, Nationality, Religion, Sex, or Species": "Human"
+					},
+					"modifiers": [
+						{
+							"id": "mGbmFCE4NZ_qVkM5u",
+							"name": "Scope: Common",
+							"reference": "B140",
+							"cost_adj": "-5"
+						},
+						{
+							"id": "mybcDwS5ryYU-Hqq3",
+							"name": "Scope: Occasional",
+							"reference": "B140",
+							"cost_adj": "-2",
+							"disabled": true
+						},
+						{
+							"id": "mhM6yqdgNYX56titF",
+							"name": "Scope: Rare",
+							"reference": "B140",
+							"cost_adj": "-1",
+							"disabled": true
+						},
+						{
+							"id": "mUHsryhl2SykWjSIG",
+							"name": "Scope: Anyone unlike you",
+							"reference": "B140",
+							"cost_adj": "-10",
+							"disabled": true
+						}
+					],
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"situation": "from victims of your intolerance (may be as much as -5, at GM's discretion)",
+							"amount": -1
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "ttsr4xv9RSqEbiJm0",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "twYBwZGOG4EPwmpOx"
+					},
+					"name": "Slow Riser",
+					"reference": "B155",
+					"tags": [
+						"Disadvantage",
+						"Physical"
+					],
+					"base_points": -5,
+					"features": [
+						{
+							"type": "conditional_modifier",
+							"situation": "on all self-control rolls one hour after you awaken from any sleep longer than a one-hour nap",
+							"amount": -2
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "to IQ and IQ-based skills one hour after you awaken from any sleep longer than a one-hour nap",
+							"amount": -1
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "additional penalty whenever the GM assesses attribute penalties for missed sleep",
+							"amount": -1
+						}
+					],
+					"calc": {
+						"points": -5
+					}
+				},
+				{
+					"id": "tRX_5zaaHjLeZ4PCH",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "t04cLZ44QvEYdsP3F"
+					},
+					"name": "Sense of Duty",
+					"reference": "B153",
+					"tags": [
+						"Disadvantage",
+						"Mental"
+					],
+					"replacements": {
+						"Entire Race": "Avalician"
+					},
+					"modifiers": [
+						{
+							"id": "mPoSEs9e1eekmD8vm",
+							"name": "Friends and Companions",
+							"reference": "B153",
+							"cost_adj": "-5",
+							"disabled": true
+						},
+						{
+							"id": "mMmDPeAHHh_3GrH7R",
+							"name": "@Small Group@",
+							"reference": "B153",
+							"cost_adj": "-5",
+							"disabled": true
+						},
+						{
+							"id": "mYSUn5sBXWqVRdJ1e",
+							"name": "@Individual@",
+							"reference": "B153",
+							"cost_adj": "-2",
+							"disabled": true
+						},
+						{
+							"id": "m_tm0nSbG-gXKtqI-",
+							"name": "@Large Group@",
+							"reference": "B153",
+							"cost_adj": "-10",
+							"disabled": true
+						},
+						{
+							"id": "mEzgU4TDwrsWclx4a",
+							"name": "@Entire Race@",
+							"reference": "B153",
+							"cost_adj": "-15"
+						},
+						{
+							"id": "mjeaul7B9U1fAbXYY",
+							"name": "Every Living Being",
+							"reference": "B153",
+							"cost_adj": "-20",
+							"disabled": true
+						}
+					],
+					"calc": {
+						"points": -15
+					}
+				}
+			],
+			"calc": {
+				"points": 30
+			}
+		}
+	]
+}

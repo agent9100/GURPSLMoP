@@ -1755,25 +1755,213 @@
 	],
 	"skills": [
 		{
-			"id": "sJbzV1c8B_yALu2uA",
+			"id": "spxoLKhXA-AEkY5zI",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
 				"path": "Basic Set/Basic Set Skills.skl",
-				"id": "sa_ZE2rnayiRCI376"
+				"id": "sJvwPKtI422-KNEiv"
 			},
-			"name": "Alchemy",
-			"reference": "B174",
+			"name": "Innate Attack",
+			"reference": "B201",
+			"tags": [
+				"Combat",
+				"Ranged Combat",
+				"Weapon"
+			],
+			"specialization": "Projectile",
+			"difficulty": "dx/e",
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Innate Attack",
+					"modifier": -2
+				}
+			],
+			"points": 4,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -4,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"calc": {
+				"level": 13,
+				"rsl": "DX+2"
+			}
+		},
+		{
+			"id": "sjk4fyvk2eaZosOIf",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Skills.skl",
+				"id": "soilUSeitMyIlPAtg"
+			},
+			"name": "Staff",
+			"reference": "DFA81",
+			"tags": [
+				"Combat",
+				"Melee Combat",
+				"Weapon"
+			],
+			"difficulty": "dx/a",
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -5
+				},
+				{
+					"type": "skill",
+					"name": "Polearm",
+					"modifier": -4
+				},
+				{
+					"type": "skill",
+					"name": "Spear",
+					"modifier": -2
+				}
+			],
+			"points": 4,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -5,
+				"level": 6,
+				"adjusted_level": 6,
+				"points": -6
+			},
+			"calc": {
+				"level": 12,
+				"rsl": "DX+1"
+			}
+		},
+		{
+			"id": "sIovbc-p1aCDAlS4P",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sziMa9_9xTvR2iiqx"
+			},
+			"name": "Body Sense",
+			"reference": "B181",
+			"tags": [
+				"Athletic"
+			],
+			"difficulty": "dx/h",
+			"defaults": [
+				{
+					"type": "dx",
+					"modifier": -6
+				},
+				{
+					"type": "skill",
+					"name": "Acrobatics",
+					"modifier": -3
+				}
+			],
+			"points": 8,
+			"defaulted_from": {
+				"type": "dx",
+				"modifier": -6,
+				"level": 5,
+				"adjusted_level": 5,
+				"points": -5
+			},
+			"calc": {
+				"level": 12,
+				"rsl": "DX+1"
+			}
+		},
+		{
+			"id": "s-XvKinH2-35Fwk7X",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sIGnp4W_M8XBodpEH"
+			},
+			"name": "Hidden Lore",
+			"reference": "B199,MA57",
+			"tags": [
+				"Knowledge"
+			],
+			"replacements": {
+				"Subject": "Arcane Powers"
+			},
+			"specialization": "@Subject@",
+			"difficulty": "iq/a",
+			"points": 1,
+			"calc": {
+				"level": 11,
+				"rsl": "IQ-1"
+			}
+		},
+		{
+			"id": "sKpEsaTLrw2kli6-l",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sa4xUKRmFe81nvpnd"
+			},
+			"name": "Occultism",
+			"reference": "B212",
 			"tags": [
 				"Magical",
-				"Natural Science",
+				"Occult"
+			],
+			"difficulty": "iq/a",
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -5
+				}
+			],
+			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -5,
+				"level": 7,
+				"adjusted_level": 7,
+				"points": -7
+			},
+			"calc": {
+				"level": 11,
+				"rsl": "IQ-1"
+			}
+		},
+		{
+			"id": "sz3ExJRQ8b8anEvI4",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Skills.skl",
+				"id": "sGkpZOHz0g5ARAcej"
+			},
+			"name": "Thaumatology",
+			"reference": "B225",
+			"tags": [
+				"Magical",
 				"Occult"
 			],
 			"difficulty": "iq/vh",
-			"tech_level": "3",
+			"defaults": [
+				{
+					"type": "iq",
+					"modifier": -7
+				}
+			],
 			"points": 1,
+			"defaulted_from": {
+				"type": "iq",
+				"modifier": -7,
+				"level": 5,
+				"adjusted_level": 5,
+				"points": -5
+			},
 			"calc": {
-				"level": 9,
-				"rsl": "IQ-3"
+				"level": 11,
+				"rsl": "IQ-1"
 			}
 		},
 		{
@@ -1882,29 +2070,6 @@
 			}
 		},
 		{
-			"id": "s-XvKinH2-35Fwk7X",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Skills.skl",
-				"id": "sIGnp4W_M8XBodpEH"
-			},
-			"name": "Hidden Lore",
-			"reference": "B199,MA57",
-			"tags": [
-				"Knowledge"
-			],
-			"replacements": {
-				"Subject": "Arcane Powers"
-			},
-			"specialization": "@Subject@",
-			"difficulty": "iq/a",
-			"points": 1,
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			}
-		},
-		{
 			"id": "soVYhCA2lPsC-H9sI",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -1942,46 +2107,6 @@
 			}
 		},
 		{
-			"id": "spxoLKhXA-AEkY5zI",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Skills.skl",
-				"id": "sJvwPKtI422-KNEiv"
-			},
-			"name": "Innate Attack",
-			"reference": "B201",
-			"tags": [
-				"Combat",
-				"Ranged Combat",
-				"Weapon"
-			],
-			"specialization": "Projectile",
-			"difficulty": "dx/e",
-			"defaults": [
-				{
-					"type": "dx",
-					"modifier": -4
-				},
-				{
-					"type": "skill",
-					"name": "Innate Attack",
-					"modifier": -2
-				}
-			],
-			"points": 4,
-			"defaulted_from": {
-				"type": "dx",
-				"modifier": -4,
-				"level": 7,
-				"adjusted_level": 7,
-				"points": -7
-			},
-			"calc": {
-				"level": 13,
-				"rsl": "DX+2"
-			}
-		},
-		{
 			"id": "sLJEihhi9yqUZCpmE",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -2016,113 +2141,25 @@
 			}
 		},
 		{
-			"id": "sKpEsaTLrw2kli6-l",
+			"id": "sJbzV1c8B_yALu2uA",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
 				"path": "Basic Set/Basic Set Skills.skl",
-				"id": "sa4xUKRmFe81nvpnd"
+				"id": "sa_ZE2rnayiRCI376"
 			},
-			"name": "Occultism",
-			"reference": "B212",
+			"name": "Alchemy",
+			"reference": "B174",
 			"tags": [
 				"Magical",
-				"Occult"
-			],
-			"difficulty": "iq/a",
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -5
-				}
-			],
-			"points": 1,
-			"defaulted_from": {
-				"type": "iq",
-				"modifier": -5,
-				"level": 7,
-				"adjusted_level": 7,
-				"points": -7
-			},
-			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
-			}
-		},
-		{
-			"id": "sjk4fyvk2eaZosOIf",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Skills.skl",
-				"id": "soilUSeitMyIlPAtg"
-			},
-			"name": "Staff",
-			"reference": "DFA81",
-			"tags": [
-				"Combat",
-				"Melee Combat",
-				"Weapon"
-			],
-			"difficulty": "dx/a",
-			"defaults": [
-				{
-					"type": "dx",
-					"modifier": -5
-				},
-				{
-					"type": "skill",
-					"name": "Polearm",
-					"modifier": -4
-				},
-				{
-					"type": "skill",
-					"name": "Spear",
-					"modifier": -2
-				}
-			],
-			"points": 4,
-			"defaulted_from": {
-				"type": "dx",
-				"modifier": -5,
-				"level": 6,
-				"adjusted_level": 6,
-				"points": -6
-			},
-			"calc": {
-				"level": 12,
-				"rsl": "DX+1"
-			}
-		},
-		{
-			"id": "sz3ExJRQ8b8anEvI4",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Skills.skl",
-				"id": "sGkpZOHz0g5ARAcej"
-			},
-			"name": "Thaumatology",
-			"reference": "B225",
-			"tags": [
-				"Magical",
+				"Natural Science",
 				"Occult"
 			],
 			"difficulty": "iq/vh",
-			"defaults": [
-				{
-					"type": "iq",
-					"modifier": -7
-				}
-			],
+			"tech_level": "3",
 			"points": 1,
-			"defaulted_from": {
-				"type": "iq",
-				"modifier": -7,
-				"level": 5,
-				"adjusted_level": 5,
-				"points": -5
-			},
 			"calc": {
-				"level": 11,
-				"rsl": "IQ-1"
+				"level": 9,
+				"rsl": "IQ-3"
 			}
 		}
 	],
@@ -4170,7 +4207,7 @@
 		}
 	],
 	"created_date": "2026-03-21T15:57:49Z",
-	"modified_date": "2026-06-19T14:02:17+01:00",
+	"modified_date": "2026-06-26T19:02:29+01:00",
 	"calc": {
 		"swing": "1d-1",
 		"thrust": "1d-2",

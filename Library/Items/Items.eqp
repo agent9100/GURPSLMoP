@@ -2088,6 +2088,168 @@
 			}
 		},
 		{
+			"id": "eObSsPgtdbtzujJZf",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "ezUsY06LxChQRA_qQ"
+			},
+			"description": "Composite Longbow",
+			"tech_level": "1",
+			"tags": [
+				"Missile Weapon",
+				"UsesAmmoType:Arrow"
+			],
+			"base_value": "1800",
+			"base_weight": "5 lb",
+			"weapons": [
+				{
+					"id": "WVQqW3HCpIu3ryYU3",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "4"
+					},
+					"strength": "11†",
+					"accuracy": "3",
+					"range": "220/275",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-8",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Bow"
+						}
+					],
+					"calc": {
+						"damage": "thr+4 imp"
+					}
+				}
+			],
+			"rated_strength": 11,
+			"quantity": 1,
+			"calc": {
+				"value": 1800,
+				"extended_value": 1800,
+				"weight": "5 lb",
+				"extended_weight": "5 lb"
+			}
+		},
+		{
+			"id": "eh_cF1E1A5syiMGJR",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "ezUsY06LxChQRA_qQ"
+			},
+			"description": "Tanstorm",
+			"tech_level": "1",
+			"tags": [
+				"Missile Weapon",
+				"UsesAmmoType:Arrow"
+			],
+			"base_value": "235",
+			"base_weight": "4",
+			"weapons": [
+				{
+					"id": "Wux9VCfD6q7-fVOn7",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "3"
+					},
+					"strength": "12†",
+					"accuracy": "3",
+					"range": "180/240",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-9",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Bow"
+						}
+					],
+					"calc": {
+						"damage": "thr+3 imp"
+					}
+				}
+			],
+			"rated_strength": 12,
+			"quantity": 1,
+			"calc": {
+				"value": 235,
+				"extended_value": 235,
+				"weight": "4 lb",
+				"extended_weight": "4 lb"
+			}
+		},
+		{
+			"id": "eVS8J3KHBNEq3el6-",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "ezUsY06LxChQRA_qQ"
+			},
+			"description": "Composite Tanstorm",
+			"tech_level": "1",
+			"tags": [
+				"Missile Weapon",
+				"UsesAmmoType:Arrow"
+			],
+			"base_value": "2115",
+			"base_weight": "6",
+			"weapons": [
+				{
+					"id": "WukSfJQtVORAwS5pE",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "5"
+					},
+					"strength": "12†",
+					"accuracy": "3",
+					"range": "240/300",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-9",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Bow"
+						}
+					],
+					"calc": {
+						"damage": "thr+5 imp"
+					}
+				}
+			],
+			"rated_strength": 12,
+			"quantity": 1,
+			"calc": {
+				"value": 2115,
+				"extended_value": 2115,
+				"weight": "6 lb",
+				"extended_weight": "6 lb"
+			}
+		},
+		{
 			"id": "enUYdbrx90kuAN7TV",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
