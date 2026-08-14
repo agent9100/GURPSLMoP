@@ -2088,6 +2088,254 @@
 			}
 		},
 		{
+			"id": "eXLMlopgrmRNFTaRF",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Low Tech/Low Tech Equipment.eqp",
+				"id": "eN_f8tX490hHeJC52"
+			},
+			"description": "Brass Knuckles, Fists of Furry",
+			"reference": "LT55",
+			"local_notes": "Attack receives damage bonuses for whichever of Boxing (p. B182), Brawling (p. B182), or Karate (p. B203) is used to deliver it",
+			"tech_level": "1",
+			"tags": [
+				"Melee Weapon"
+			],
+			"base_value": "10",
+			"base_weight": "0.25 lb",
+			"weapons": [
+				{
+					"id": "wyb10IUgiKpIg8C85",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					],
+					"calc": {
+						"damage": "thr cr"
+					}
+				}
+			],
+			"modifiers": [
+				{
+					"id": "Fm2EunhUwbPAf2htJ",
+					"source": {
+						"library": "/gcs_user_library",
+						"path": "Library/Items/Enchantments.eqm",
+						"id": "FuJdM-KTBEosZJV08"
+					},
+					"name": "+1 Weapon",
+					"children": [
+						{
+							"id": "fmPI02qofRQaoxctm",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fKjyFElgjrJAsvLYl"
+							},
+							"name": "Accuracy 1",
+							"reference": "DFA118",
+							"tags": [
+								"Magic",
+								"Weapons"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+50 CF",
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"amount": 1
+								}
+							]
+						},
+						{
+							"id": "fMm9A0Z3X46c-o5KZ",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fIYmX0InF7_DM_oGw"
+							},
+							"name": "Puissance 1",
+							"reference": "DFA118",
+							"tags": [
+								"Magic"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+50 CF",
+							"features": [
+								{
+									"type": "weapon_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"level": {
+										"compare": "at_least"
+									},
+									"amount": 1
+								}
+							]
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 1010,
+				"extended_value": 1010,
+				"weight": "0.25 lb",
+				"extended_weight": "0.25 lb"
+			}
+		},
+		{
+			"id": "e-VUDwAs-JZ8vxMIX",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Low Tech/Low Tech Equipment.eqp",
+				"id": "eN_f8tX490hHeJC52"
+			},
+			"description": "Brass Knuckles, Fists of Furry",
+			"reference": "LT55",
+			"local_notes": "Attack receives damage bonuses for whichever of Boxing (p. B182), Brawling (p. B182), or Karate (p. B203) is used to deliver it",
+			"tech_level": "1",
+			"tags": [
+				"Melee Weapon"
+			],
+			"base_value": "10",
+			"base_weight": "0.25 lb",
+			"weapons": [
+				{
+					"id": "wphbwsrgxXgePDPGy",
+					"sv": 1,
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					],
+					"calc": {
+						"damage": "thr cr"
+					}
+				}
+			],
+			"modifiers": [
+				{
+					"id": "FOJq2j0THU4n_ILkK",
+					"source": {
+						"library": "/gcs_user_library",
+						"path": "Library/Items/Enchantments.eqm",
+						"id": "FkSb64_4PHqjyyWZb"
+					},
+					"name": "+2 Weapon",
+					"children": [
+						{
+							"id": "fNB6P5iqWZ8ZmiZkP",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fanaxnpvnua-CcF6H"
+							},
+							"name": "Accuracy 2",
+							"reference": "DFE78",
+							"tags": [
+								"Magic",
+								"Weapons"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+200 CF",
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"amount": 2
+								}
+							]
+						},
+						{
+							"id": "fj6SEqk2BVTnCfFDb",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fRJF469WFHTl3aTWU"
+							},
+							"name": "Puissance 2",
+							"reference": "DFX79",
+							"tags": [
+								"Magic"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+200 CF",
+							"features": [
+								{
+									"type": "weapon_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"level": {
+										"compare": "at_least"
+									},
+									"amount": 2
+								}
+							]
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 4010,
+				"extended_value": 4010,
+				"weight": "0.25 lb",
+				"extended_weight": "0.25 lb"
+			}
+		},
+		{
 			"id": "enUYdbrx90kuAN7TV",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -2395,337 +2643,6 @@
 				"extended_value": 2115,
 				"weight": "6 lb",
 				"extended_weight": "6 lb"
-			}
-		},
-		{
-			"id": "e_bla0_cPt0gI-xPE",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "e6qjxZtOg7lCt_TE5"
-			},
-			"description": "Daran's Trusty Spear",
-			"reference": "B273",
-			"tech_level": "0",
-			"tags": [
-				"Melee Weapon",
-				"Missile Weapon"
-			],
-			"base_value": "40",
-			"base_weight": "4 lb",
-			"weapons": [
-				{
-					"id": "wuczExwepSbCsz7d5",
-					"sv": 1,
-					"damage": {
-						"type": "imp",
-						"st": "thr",
-						"base": "2"
-					},
-					"strength": "9",
-					"usage": "Thrust",
-					"reach": "1*",
-					"parry": "0",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Spear"
-						},
-						{
-							"type": "skill",
-							"name": "Polearm",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Staff",
-							"modifier": -2
-						}
-					],
-					"calc": {
-						"damage": "thr+2 imp"
-					}
-				},
-				{
-					"id": "wZ-jJ34o8OEb6mT9L",
-					"sv": 1,
-					"damage": {
-						"type": "imp",
-						"st": "thr",
-						"base": "3"
-					},
-					"strength": "9†",
-					"usage": "Thrust",
-					"reach": "1-2*",
-					"parry": "0",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Spear"
-						},
-						{
-							"type": "skill",
-							"name": "Polearm",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Staff",
-							"modifier": -2
-						}
-					],
-					"calc": {
-						"damage": "thr+3 imp"
-					}
-				},
-				{
-					"id": "Ws8x5dokBI7tO5Uxg",
-					"sv": 1,
-					"damage": {
-						"type": "imp",
-						"st": "thr",
-						"base": "3"
-					},
-					"strength": "9",
-					"usage": "Thrown",
-					"accuracy": "2",
-					"range": "x1/x1.5",
-					"rate_of_fire": "1",
-					"shots": "T",
-					"bulk": "-6",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Thrown Weapon",
-							"specialization": "Spear"
-						},
-						{
-							"type": "skill",
-							"name": "Spear Thrower",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Thrown Weapon",
-							"specialization": "Harpoon",
-							"modifier": -2
-						}
-					],
-					"calc": {
-						"damage": "thr+3 imp"
-					}
-				}
-			],
-			"modifiers": [
-				{
-					"id": "FdVxe0nbK9MGU-cdN",
-					"source": {
-						"library": "/gcs_user_library",
-						"path": "Library/Items/Enchantments.eqm",
-						"id": "FuJdM-KTBEosZJV08"
-					},
-					"name": "+1 Weapon",
-					"children": [
-						{
-							"id": "fAE_a5xL8hkz7lvHf",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
-								"id": "fKjyFElgjrJAsvLYl"
-							},
-							"name": "Accuracy 1",
-							"reference": "DFA118",
-							"tags": [
-								"Magic",
-								"Weapons"
-							],
-							"cost_type": "to_base_cost",
-							"cost": "+50 CF",
-							"features": [
-								{
-									"type": "skill_bonus",
-									"selection_type": "this_weapon",
-									"name": {
-										"compare": "is"
-									},
-									"amount": 1
-								}
-							]
-						},
-						{
-							"id": "fzJjU8_J8qvDLYJJt",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
-								"id": "fIYmX0InF7_DM_oGw"
-							},
-							"name": "Puissance 1",
-							"reference": "DFA118",
-							"tags": [
-								"Magic"
-							],
-							"cost_type": "to_base_cost",
-							"cost": "+50 CF",
-							"features": [
-								{
-									"type": "weapon_bonus",
-									"selection_type": "this_weapon",
-									"name": {
-										"compare": "is"
-									},
-									"level": {
-										"compare": "at_least"
-									},
-									"amount": 1
-								}
-							]
-						}
-					]
-				}
-			],
-			"quantity": 1,
-			"equipped": true,
-			"calc": {
-				"value": 4040,
-				"extended_value": 4040,
-				"weight": "4 lb",
-				"extended_weight": "4 lb"
-			}
-		},
-		{
-			"id": "e-VUDwAs-JZ8vxMIX",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Low Tech/Low Tech Equipment.eqp",
-				"id": "eN_f8tX490hHeJC52"
-			},
-			"description": "Fists of Furry",
-			"reference": "LT55",
-			"local_notes": "Attack receives damage bonuses for whichever of Boxing (p. B182), Brawling (p. B182), or Karate (p. B203) is used to deliver it",
-			"tech_level": "1",
-			"tags": [
-				"Melee Weapon"
-			],
-			"base_value": "10",
-			"base_weight": "0.25 lb",
-			"weapons": [
-				{
-					"id": "wuQt5hM_ElUPzKTm6",
-					"sv": 1,
-					"damage": {
-						"type": "cr",
-						"st": "thr"
-					},
-					"usage": "Punch",
-					"reach": "C",
-					"parry": "0",
-					"defaults": [
-						{
-							"type": "dx"
-						},
-						{
-							"type": "skill",
-							"name": "Boxing"
-						},
-						{
-							"type": "skill",
-							"name": "Brawling"
-						},
-						{
-							"type": "skill",
-							"name": "Karate"
-						}
-					],
-					"calc": {
-						"damage": "thr cr"
-					}
-				}
-			],
-			"modifiers": [
-				{
-					"id": "FaTJ9mcz2DxqxrUTG",
-					"source": {
-						"library": "/gcs_user_library",
-						"path": "Library/Items/Enchantments.eqm",
-						"id": "FkSb64_4PHqjyyWZb"
-					},
-					"name": "+2 Weapon",
-					"children": [
-						{
-							"id": "fGsP_3MnmD2919-EC",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
-								"id": "fanaxnpvnua-CcF6H"
-							},
-							"name": "Accuracy 2",
-							"reference": "DFE78",
-							"tags": [
-								"Magic",
-								"Weapons"
-							],
-							"cost_type": "to_base_cost",
-							"cost": "+200 CF",
-							"features": [
-								{
-									"type": "skill_bonus",
-									"selection_type": "this_weapon",
-									"name": {
-										"compare": "is"
-									},
-									"amount": 2
-								}
-							]
-						},
-						{
-							"id": "fLC1YfcaPHpSD3iN1",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
-								"id": "fRJF469WFHTl3aTWU"
-							},
-							"name": "Puissance 2",
-							"reference": "DFX79",
-							"tags": [
-								"Magic"
-							],
-							"cost_type": "to_base_cost",
-							"cost": "+200 CF",
-							"features": [
-								{
-									"type": "weapon_bonus",
-									"selection_type": "this_weapon",
-									"name": {
-										"compare": "is"
-									},
-									"level": {
-										"compare": "at_least"
-									},
-									"amount": 2
-								}
-							]
-						}
-					]
-				}
-			],
-			"quantity": 1,
-			"calc": {
-				"value": 4010,
-				"extended_value": 4010,
-				"weight": "0.25 lb",
-				"extended_weight": "0.25 lb"
 			}
 		},
 		{
@@ -3663,6 +3580,213 @@
 				"extended_value": 100,
 				"weight": "0.25 lb",
 				"extended_weight": "0.25 lb"
+			}
+		},
+		{
+			"id": "e_bla0_cPt0gI-xPE",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "e6qjxZtOg7lCt_TE5"
+			},
+			"description": "Spear, Daran's Trusty",
+			"reference": "B273",
+			"tech_level": "0",
+			"tags": [
+				"Melee Weapon",
+				"Missile Weapon"
+			],
+			"base_value": "40",
+			"base_weight": "4 lb",
+			"weapons": [
+				{
+					"id": "wxxh8Yaokih4aoGsO",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "2"
+					},
+					"strength": "9",
+					"usage": "Thrust",
+					"reach": "1*",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Spear"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Staff",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "thr+2 imp"
+					}
+				},
+				{
+					"id": "wHBokvKrtpxS4sFR4",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "3"
+					},
+					"strength": "9†",
+					"usage": "Thrust",
+					"reach": "1-2*",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Spear"
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Staff",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "thr+3 imp"
+					}
+				},
+				{
+					"id": "WGrRsxF-0lutyaZam",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "3"
+					},
+					"strength": "9",
+					"usage": "Thrown",
+					"accuracy": "2",
+					"range": "x1/x1.5",
+					"rate_of_fire": "1",
+					"shots": "T",
+					"bulk": "-6",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Spear"
+						},
+						{
+							"type": "skill",
+							"name": "Spear Thrower",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Thrown Weapon",
+							"specialization": "Harpoon",
+							"modifier": -2
+						}
+					],
+					"calc": {
+						"damage": "thr+3 imp"
+					}
+				}
+			],
+			"modifiers": [
+				{
+					"id": "FBFsFyqaYF4zhcyE2",
+					"source": {
+						"library": "/gcs_user_library",
+						"path": "Library/Items/Enchantments.eqm",
+						"id": "FuJdM-KTBEosZJV08"
+					},
+					"name": "+1 Weapon",
+					"children": [
+						{
+							"id": "feYfeIfJLPuRRAAGF",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fKjyFElgjrJAsvLYl"
+							},
+							"name": "Accuracy 1",
+							"reference": "DFA118",
+							"tags": [
+								"Magic",
+								"Weapons"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+50 CF",
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"amount": 1
+								}
+							]
+						},
+						{
+							"id": "fvWWmXfTEC9M6_jVN",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fIYmX0InF7_DM_oGw"
+							},
+							"name": "Puissance 1",
+							"reference": "DFA118",
+							"tags": [
+								"Magic"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+50 CF",
+							"features": [
+								{
+									"type": "weapon_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"level": {
+										"compare": "at_least"
+									},
+									"amount": 1
+								}
+							]
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 4040,
+				"extended_value": 4040,
+				"weight": "4 lb",
+				"extended_weight": "4 lb"
 			}
 		},
 		{
