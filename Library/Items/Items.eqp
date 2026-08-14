@@ -2902,6 +2902,182 @@
 			}
 		},
 		{
+			"id": "eSAMKTTHA6x8oSDGF",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "ebrSfrMcJyO0OROH1"
+			},
+			"description": "Great Axe, 'Hew'",
+			"reference": "B274",
+			"local_notes": "Increased damage against wooden targets",
+			"tech_level": "1",
+			"tags": [
+				"Melee Weapon"
+			],
+			"base_value": "100",
+			"base_weight": "8 lb",
+			"weapons": [
+				{
+					"id": "wnUhdBQ5pfz2sbTo_",
+					"sv": 1,
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "3"
+					},
+					"strength": "12‡",
+					"usage": "Swung",
+					"reach": "1-2*",
+					"parry": "0U",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Axe/Mace"
+						},
+						{
+							"type": "skill",
+							"name": "Axe/Mace",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Flail",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"damage": "sw+3 cut"
+					}
+				},
+				{
+					"id": "wcQDx9444pRNiyWQL",
+					"sv": 1,
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"st_mul": 1.5,
+						"base": "3"
+					},
+					"strength": "12‡",
+					"usage": "Swung (wood target)",
+					"reach": "1-2*",
+					"parry": "0U",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Axe/Mace"
+						},
+						{
+							"type": "skill",
+							"name": "Axe/Mace",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Polearm",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Two-Handed Flail",
+							"modifier": -4
+						}
+					],
+					"calc": {
+						"damage": "sw+3 cut"
+					}
+				}
+			],
+			"modifiers": [
+				{
+					"id": "F5lOhCD9yA7exvdFw",
+					"source": {
+						"library": "/gcs_user_library",
+						"path": "Library/Items/Enchantments.eqm",
+						"id": "FuJdM-KTBEosZJV08"
+					},
+					"name": "+1 Weapon",
+					"children": [
+						{
+							"id": "fFat7N9yQjpMDOJo8",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fKjyFElgjrJAsvLYl"
+							},
+							"name": "Accuracy 1",
+							"reference": "DFA118",
+							"tags": [
+								"Magic",
+								"Weapons"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+50 CF",
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"amount": 1
+								}
+							]
+						},
+						{
+							"id": "fFUT3tkvs1DSbOU4t",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+								"id": "fIYmX0InF7_DM_oGw"
+							},
+							"name": "Puissance 1",
+							"reference": "DFA118",
+							"tags": [
+								"Magic"
+							],
+							"cost_type": "to_base_cost",
+							"cost": "+50 CF",
+							"features": [
+								{
+									"type": "weapon_bonus",
+									"selection_type": "this_weapon",
+									"name": {
+										"compare": "is"
+									},
+									"level": {
+										"compare": "at_least"
+									},
+									"amount": 1
+								}
+							]
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 10100,
+				"extended_value": 10100,
+				"weight": "8 lb",
+				"extended_weight": "8 lb"
+			}
+		},
+		{
 			"id": "e5ESnrbX9kDMvnMVs",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -3104,6 +3280,67 @@
 			}
 		},
 		{
+			"id": "eSo0NRviTgl_TyOA9",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "eqU-tdtIiaP--4L46"
+			},
+			"description": "Scroll of Blink (2 FP)",
+			"reference": "DFA117",
+			"local_notes": "Effective Skill 15",
+			"tags": [
+				"Magic Items",
+				"Scrolls"
+			],
+			"base_value": "40",
+			"base_weight": "0.05 lb",
+			"modifiers": [
+				{
+					"id": "fAj-2Tq2IP5Sn-MoO",
+					"name": "Charged",
+					"reference": "DFA117",
+					"cost_type": "to_base_cost",
+					"cost": "+1.5 CF"
+				},
+				{
+					"id": "Fbqg2oEqWaP7DaRpa",
+					"name": "Pick one:",
+					"children": [
+						{
+							"id": "fkfjCPKjNqWICkFaX",
+							"name": "Universal",
+							"reference": "DFA117",
+							"cost_type": "to_base_cost",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "f8dstCehQLucGIL3p",
+							"name": "Clerical",
+							"disabled": true
+						},
+						{
+							"id": "fpspWkyy0VJ8R1iDx",
+							"name": "Druidic",
+							"disabled": true
+						},
+						{
+							"id": "fnJeqy7x3C2aN3_n9",
+							"name": "Wizardly",
+							"disabled": true
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 140,
+				"extended_value": 140,
+				"weight": "0.05 lb",
+				"extended_weight": "0.05 lb"
+			}
+		},
+		{
 			"id": "e9mLBNt_4P0svrLUf",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -3160,6 +3397,67 @@
 			"calc": {
 				"value": 420,
 				"extended_value": 420,
+				"weight": "0.05 lb",
+				"extended_weight": "0.05 lb"
+			}
+		},
+		{
+			"id": "eoS6TDnhJe2SPhiId",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "eqU-tdtIiaP--4L46"
+			},
+			"description": "Scroll of Darkness (8 FP)",
+			"reference": "DFA117",
+			"local_notes": "Effective Skill 15",
+			"tags": [
+				"Magic Items",
+				"Scrolls"
+			],
+			"base_value": "160",
+			"base_weight": "0.05 lb",
+			"modifiers": [
+				{
+					"id": "fhsXXMWrPiNMhAK4p",
+					"name": "Charged",
+					"reference": "DFA117",
+					"cost_type": "to_base_cost",
+					"cost": "+1.5 CF"
+				},
+				{
+					"id": "F4Lo0Kxe3ImjE_WP7",
+					"name": "Pick one:",
+					"children": [
+						{
+							"id": "fog0GnO0vngE8BlHX",
+							"name": "Universal",
+							"reference": "DFA117",
+							"cost_type": "to_base_cost",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fkreSKlohdZbsA9cx",
+							"name": "Clerical",
+							"disabled": true
+						},
+						{
+							"id": "fJi1JP6yApQS0-S2i",
+							"name": "Druidic",
+							"disabled": true
+						},
+						{
+							"id": "fvxDynayq_V94UL_x",
+							"name": "Wizardly",
+							"disabled": true
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 560,
+				"extended_value": 560,
 				"weight": "0.05 lb",
 				"extended_weight": "0.05 lb"
 			}
@@ -3272,6 +3570,67 @@
 						},
 						{
 							"id": "f4t6rckU16gMEH_gi",
+							"name": "Wizardly",
+							"disabled": true
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 560,
+				"extended_value": 560,
+				"weight": "0.05 lb",
+				"extended_weight": "0.05 lb"
+			}
+		},
+		{
+			"id": "e50i7xQrkWfH12N8q",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "eqU-tdtIiaP--4L46"
+			},
+			"description": "Scroll of Explosive Lightning (8 FP)",
+			"reference": "DFA117",
+			"local_notes": "Effective Skill 15",
+			"tags": [
+				"Magic Items",
+				"Scrolls"
+			],
+			"base_value": "160",
+			"base_weight": "0.05 lb",
+			"modifiers": [
+				{
+					"id": "f5X0NFQaVRfMur3xe",
+					"name": "Charged",
+					"reference": "DFA117",
+					"cost_type": "to_base_cost",
+					"cost": "+1.5 CF"
+				},
+				{
+					"id": "FfUIB7Z6ZSfrGvx2M",
+					"name": "Pick one:",
+					"children": [
+						{
+							"id": "f5GZsbSZ1p7QPCysa",
+							"name": "Universal",
+							"reference": "DFA117",
+							"cost_type": "to_base_cost",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fflFF4e3xBOegzqvw",
+							"name": "Clerical",
+							"disabled": true
+						},
+						{
+							"id": "fVVSRuewwGC-yCnvo",
+							"name": "Druidic",
+							"disabled": true
+						},
+						{
+							"id": "fUvzcQSnzL2vpkzZ1",
 							"name": "Wizardly",
 							"disabled": true
 						}
