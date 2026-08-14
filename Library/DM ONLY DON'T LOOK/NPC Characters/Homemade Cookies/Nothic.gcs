@@ -483,10 +483,10 @@
 		},
 		{
 			"attr_id": "ht",
-			"adj": 2,
+			"adj": 3,
 			"calc": {
-				"value": 12,
-				"points": 20
+				"value": 13,
+				"points": 30
 			}
 		},
 		{
@@ -549,7 +549,7 @@
 			"attr_id": "basic_speed",
 			"adj": 0,
 			"calc": {
-				"value": 6,
+				"value": 6.25,
 				"points": 0
 			}
 		},
@@ -565,8 +565,8 @@
 			"attr_id": "fp",
 			"adj": 0,
 			"calc": {
-				"value": 12,
-				"current": 12,
+				"value": 13,
+				"current": 13,
 				"points": 0
 			}
 		},
@@ -992,7 +992,7 @@
 						}
 					],
 					"calc": {
-						"level": 12,
+						"level": 13,
 						"damage": "2d tox"
 					}
 				}
@@ -2666,7 +2666,7 @@
 		}
 	],
 	"created_date": "2026-02-27T21:43:26Z",
-	"modified_date": "2026-03-27T15:19:28Z",
+	"modified_date": "2026-07-24T18:55:59+01:00",
 	"calc": {
 		"swing": "1d+1",
 		"thrust": "1d-1",

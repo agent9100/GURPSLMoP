@@ -84,6 +84,66 @@
 			]
 		},
 		{
+			"id": "FkSb64_4PHqjyyWZb",
+			"name": "+2 Weapon",
+			"children": [
+				{
+					"id": "f8qIO1UmsevTEfKHL",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+						"id": "fanaxnpvnua-CcF6H"
+					},
+					"name": "Accuracy 2",
+					"reference": "DFE78",
+					"tags": [
+						"Magic",
+						"Weapons"
+					],
+					"cost_type": "to_base_cost",
+					"cost": "+200 CF",
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "this_weapon",
+							"name": {
+								"compare": "is"
+							},
+							"amount": 2
+						}
+					]
+				},
+				{
+					"id": "fHHG809FsNfYiIYVR",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment Modifiers.eqm",
+						"id": "fRJF469WFHTl3aTWU"
+					},
+					"name": "Puissance 2",
+					"reference": "DFX79",
+					"tags": [
+						"Magic"
+					],
+					"cost_type": "to_base_cost",
+					"cost": "+200 CF",
+					"features": [
+						{
+							"type": "weapon_bonus",
+							"selection_type": "this_weapon",
+							"name": {
+								"compare": "is"
+							},
+							"level": {
+								"compare": "at_least"
+							},
+							"amount": 2
+						}
+					]
+				}
+			]
+		},
+		{
 			"id": "fiwciQWjOJwb6IqvX",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
