@@ -116,7 +116,7 @@
 			{
 				"id": "taste_smell",
 				"type": "integer",
-				"name": "Taste \u0026 Smell",
+				"name": "Taste & Smell",
 				"base": "$per",
 				"cost_per_point": 2
 			},
@@ -1248,7 +1248,7 @@
 					"id": "mwO0chnC-T_xEiUmh",
 					"name": "Homogenous",
 					"reference": "B60",
-					"local_notes": "Altered wound modifiers: imp \u0026 pi++ are x1/2, pi+ is x1/3, pi is x1/5, pi- is x1/10",
+					"local_notes": "Altered wound modifiers: imp & pi++ are x1/2, pi+ is x1/3, pi is x1/5, pi- is x1/10",
 					"cost_adj": "40",
 					"disabled": true
 				},
@@ -1303,7 +1303,7 @@
 					"id": "mUAMEpbR6W5CtNM9Y",
 					"name": "Unliving",
 					"reference": "B61",
-					"local_notes": "Altered wound modifiers: imp \u0026 pi++ are x1, pi+ is x1/2, pi is x1/3, pi- is x1/5",
+					"local_notes": "Altered wound modifiers: imp & pi++ are x1, pi+ is x1/2, pi is x1/3, pi- is x1/5",
 					"cost_adj": "20"
 				}
 			],
@@ -2353,7 +2353,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Brawling"
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							}
 						}
 					],
 					"calc": {
@@ -2378,15 +2381,24 @@
 						},
 						{
 							"type": "skill",
-							"name": "Boxing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Boxing"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Brawling"
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Karate"
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
+							}
 						}
 					],
 					"calc": {
@@ -2411,16 +2423,25 @@
 						},
 						{
 							"type": "skill",
-							"name": "Brawling",
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							},
 							"modifier": -2
 						},
 						{
 							"type": "skill",
-							"name": "Kicking"
+							"name": {
+								"compare": "is",
+								"qualifier": "Kicking"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Karate",
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
+							},
 							"modifier": -2
 						}
 					],
@@ -2704,8 +2725,9 @@
 			}
 		}
 	],
+	"equipment": [],
 	"created_date": "2026-03-21T16:05:30Z",
-	"modified_date": "2026-03-27T15:14:33Z",
+	"modified_date": "2026-08-21T17:38:56+01:00",
 	"calc": {
 		"swing": "1d+1",
 		"thrust": "1d-1",
