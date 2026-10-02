@@ -32,7 +32,10 @@
 					"defaults": [
 						{
 							"type": "skill",
-							"name": "Throwing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Throwing"
+							}
 						},
 						{
 							"type": "dx",
@@ -40,7 +43,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Dropping",
+							"name": {
+								"compare": "is",
+								"qualifier": "Dropping"
+							},
 							"modifier": -4
 						}
 					],
@@ -85,13 +91,16 @@
 						"armor_divisor": 5
 					},
 					"usage": "Grenade (Direct Hit)",
-					"usage_notes": "Sticks to target and does listed damage every turn until target drops \u0026 rolls, jumps into water, etc.",
+					"usage_notes": "Sticks to target and does listed damage every turn until target drops & rolls, jumps into water, etc.",
 					"range": "x2",
 					"bulk": "-2",
 					"defaults": [
 						{
 							"type": "skill",
-							"name": "Throwing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Throwing"
+							}
 						},
 						{
 							"type": "dx",
@@ -99,7 +108,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Dropping",
+							"name": {
+								"compare": "is",
+								"qualifier": "Dropping"
+							},
 							"modifier": -4
 						}
 					],
@@ -123,7 +135,10 @@
 					"defaults": [
 						{
 							"type": "skill",
-							"name": "Throwing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Throwing"
+							}
 						},
 						{
 							"type": "dx",
@@ -131,7 +146,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Dropping",
+							"name": {
+								"compare": "is",
+								"qualifier": "Dropping"
+							},
 							"modifier": -4
 						}
 					],
@@ -2062,7 +2080,10 @@
 					"defaults": [
 						{
 							"type": "skill",
-							"name": "Throwing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Throwing"
+							}
 						},
 						{
 							"type": "dx",
@@ -2070,7 +2091,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Dropping",
+							"name": {
+								"compare": "is",
+								"qualifier": "Dropping"
+							},
 							"modifier": -4
 						}
 					],
@@ -2120,15 +2144,24 @@
 						},
 						{
 							"type": "skill",
-							"name": "Boxing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Boxing"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Brawling"
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Karate"
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
+							}
 						}
 					],
 					"calc": {
@@ -2244,15 +2277,24 @@
 						},
 						{
 							"type": "skill",
-							"name": "Boxing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Boxing"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Brawling"
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Karate"
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
+							}
 						}
 					],
 					"calc": {
@@ -2370,36 +2412,57 @@
 						},
 						{
 							"type": "skill",
-							"name": "Force Sword",
+							"name": {
+								"compare": "is",
+								"qualifier": "Force Sword"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Broadsword"
+							"name": {
+								"compare": "is",
+								"qualifier": "Broadsword"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Rapier",
+							"name": {
+								"compare": "is",
+								"qualifier": "Rapier"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Saber",
+							"name": {
+								"compare": "is",
+								"qualifier": "Saber"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Shortsword",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shortsword"
+							},
 							"modifier": -2
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Sword",
+							"name": {
+								"compare": "is",
+								"qualifier": "Two-Handed Sword"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Sword!"
+							"name": {
+								"compare": "is",
+								"qualifier": "Sword!"
+							}
 						}
 					],
 					"calc": {
@@ -2425,36 +2488,57 @@
 						},
 						{
 							"type": "skill",
-							"name": "Force Sword",
+							"name": {
+								"compare": "is",
+								"qualifier": "Force Sword"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Broadsword"
+							"name": {
+								"compare": "is",
+								"qualifier": "Broadsword"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Rapier",
+							"name": {
+								"compare": "is",
+								"qualifier": "Rapier"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Saber",
+							"name": {
+								"compare": "is",
+								"qualifier": "Saber"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Shortsword",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shortsword"
+							},
 							"modifier": -2
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Sword",
+							"name": {
+								"compare": "is",
+								"qualifier": "Two-Handed Sword"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Sword!"
+							"name": {
+								"compare": "is",
+								"qualifier": "Sword!"
+							}
 						}
 					],
 					"calc": {
@@ -2574,7 +2658,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Bow"
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
 						}
 					],
 					"calc": {
@@ -2628,7 +2715,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Bow"
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
 						}
 					],
 					"calc": {
@@ -2764,7 +2854,10 @@
 					"defaults": [
 						{
 							"type": "skill",
-							"name": "Throwing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Throwing"
+							}
 						},
 						{
 							"type": "dx",
@@ -2772,7 +2865,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Dropping",
+							"name": {
+								"compare": "is",
+								"qualifier": "Dropping"
+							},
 							"modifier": -4
 						}
 					],
@@ -2793,7 +2889,10 @@
 					"defaults": [
 						{
 							"type": "skill",
-							"name": "Throwing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Throwing"
+							}
 						},
 						{
 							"type": "dx",
@@ -2801,7 +2900,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Dropping",
+							"name": {
+								"compare": "is",
+								"qualifier": "Dropping"
+							},
 							"modifier": -4
 						}
 					],
@@ -2816,6 +2918,102 @@
 				"extended_value": 60,
 				"weight": "1 lb",
 				"extended_weight": "1 lb"
+			}
+		},
+		{
+			"id": "el9JCZ01IIlF3g7V_",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "eXUobxqqnRpnmw9Bc"
+			},
+			"description": "Goblin Bow",
+			"reference": "B275",
+			"local_notes": "SM-1",
+			"tech_level": "0",
+			"tags": [
+				"Missile Weapon",
+				"UsesAmmoType:Arrow"
+			],
+			"base_value": "65",
+			"base_weight": "1.3",
+			"weapons": [
+				{
+					"id": "WtKK0jqiRWtPv-p4c",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "1"
+					},
+					"strength": "9†",
+					"usage": "Normal",
+					"accuracy": "2",
+					"range": "x15/x20",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-7",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
+						}
+					],
+					"calc": {
+						"damage": "thr+1 imp",
+						"range": "135/180"
+					}
+				},
+				{
+					"id": "WnPX8k8aXj1JKQg6h",
+					"sv": 1,
+					"damage": {
+						"type": "pi",
+						"st": "thr",
+						"base": "1",
+						"armor_divisor": 2
+					},
+					"strength": "9†",
+					"usage": "Bodkin",
+					"accuracy": "2",
+					"range": "x15/x20",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-7",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
+						}
+					],
+					"calc": {
+						"damage": "thr+1(2) pi",
+						"range": "135/180"
+					}
+				}
+			],
+			"rated_strength": 9,
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 65,
+				"extended_value": 65,
+				"weight": "1.3 lb",
+				"extended_weight": "1.3 lb"
 			}
 		},
 		{
@@ -2854,21 +3052,33 @@
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Axe/Mace"
+							"name": {
+								"compare": "is",
+								"qualifier": "Two-Handed Axe/Mace"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Axe/Mace",
+							"name": {
+								"compare": "is",
+								"qualifier": "Axe/Mace"
+							},
 							"modifier": -3
 						},
 						{
 							"type": "skill",
-							"name": "Polearm",
+							"name": {
+								"compare": "is",
+								"qualifier": "Polearm"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Flail",
+							"name": {
+								"compare": "is",
+								"qualifier": "Two-Handed Flail"
+							},
 							"modifier": -4
 						}
 					],
@@ -2896,21 +3106,33 @@
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Axe/Mace"
+							"name": {
+								"compare": "is",
+								"qualifier": "Two-Handed Axe/Mace"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Axe/Mace",
+							"name": {
+								"compare": "is",
+								"qualifier": "Axe/Mace"
+							},
 							"modifier": -3
 						},
 						{
 							"type": "skill",
-							"name": "Polearm",
+							"name": {
+								"compare": "is",
+								"qualifier": "Polearm"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Two-Handed Flail",
+							"name": {
+								"compare": "is",
+								"qualifier": "Two-Handed Flail"
+							},
 							"modifier": -4
 						}
 					],
@@ -3132,6 +3354,101 @@
 				"extended_value": 3000,
 				"weight": "0.25 lb",
 				"extended_weight": "0.25 lb"
+			}
+		},
+		{
+			"id": "e8ISwdeGZkC8dTIo0",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "eXUobxqqnRpnmw9Bc"
+			},
+			"description": "Regular Bow",
+			"reference": "B275",
+			"tech_level": "0",
+			"tags": [
+				"Missile Weapon",
+				"UsesAmmoType:Arrow"
+			],
+			"base_value": "100",
+			"base_weight": "2 lb",
+			"weapons": [
+				{
+					"id": "WV6xKTDErlzbLprNl",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "1"
+					},
+					"strength": "10†",
+					"usage": "Normal",
+					"accuracy": "2",
+					"range": "x15/x20",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-7",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
+						}
+					],
+					"calc": {
+						"damage": "thr+1 imp",
+						"range": "150/200"
+					}
+				},
+				{
+					"id": "WyMYg1SHnqHTHPbkv",
+					"sv": 1,
+					"damage": {
+						"type": "pi",
+						"st": "thr",
+						"base": "1",
+						"armor_divisor": 2
+					},
+					"strength": "10†",
+					"usage": "Bodkin",
+					"accuracy": "2",
+					"range": "x15/x20",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-7",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
+						}
+					],
+					"calc": {
+						"damage": "thr+1(2) pi",
+						"range": "150/200"
+					}
+				}
+			],
+			"rated_strength": 10,
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 100,
+				"extended_value": 100,
+				"weight": "2 lb",
+				"extended_weight": "2 lb"
 			}
 		},
 		{
@@ -3563,6 +3880,99 @@
 			}
 		},
 		{
+			"id": "eqYE8OYN1qb0LgToR",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "eEkU3I9Vr5NFZ7o2m"
+			},
+			"description": "Short Bow",
+			"reference": "B275",
+			"tech_level": "0",
+			"tags": [
+				"Missile Weapon",
+				"UsesAmmoType:Arrow"
+			],
+			"base_value": "50",
+			"base_weight": "2 lb",
+			"weapons": [
+				{
+					"id": "WEMIxsY0PLt03Zk7e",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr"
+					},
+					"strength": "12†",
+					"usage": "Normal",
+					"accuracy": "1",
+					"range": "x10/x15",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-6",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
+						}
+					],
+					"calc": {
+						"damage": "thr imp",
+						"range": "70/105"
+					}
+				},
+				{
+					"id": "WPHRHufFoXc7DwR_p",
+					"sv": 1,
+					"damage": {
+						"type": "pi",
+						"st": "thr",
+						"armor_divisor": 2
+					},
+					"strength": "12†",
+					"usage": "Bodkin",
+					"accuracy": "1",
+					"range": "x10/x15",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-6",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
+						}
+					],
+					"calc": {
+						"damage": "thr(2) pi",
+						"range": "70/105"
+					}
+				}
+			],
+			"rated_strength": 7,
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 50,
+				"extended_value": 50,
+				"weight": "2 lb",
+				"extended_weight": "2 lb"
+			}
+		},
+		{
 			"id": "ef_Y31AspAb5ZrMUl",
 			"description": "Sister Garaele's Charm",
 			"local_notes": "Affects Swindlestones. If you play at the same table as an ally, once per table at the start of a round you both may reroll one die of your choosing from your hand.",
@@ -3618,16 +4028,25 @@
 						},
 						{
 							"type": "skill",
-							"name": "Spear"
+							"name": {
+								"compare": "is",
+								"qualifier": "Spear"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Polearm",
+							"name": {
+								"compare": "is",
+								"qualifier": "Polearm"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Staff",
+							"name": {
+								"compare": "is",
+								"qualifier": "Staff"
+							},
 							"modifier": -2
 						}
 					],
@@ -3654,16 +4073,25 @@
 						},
 						{
 							"type": "skill",
-							"name": "Spear"
+							"name": {
+								"compare": "is",
+								"qualifier": "Spear"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Polearm",
+							"name": {
+								"compare": "is",
+								"qualifier": "Polearm"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Staff",
+							"name": {
+								"compare": "is",
+								"qualifier": "Staff"
+							},
 							"modifier": -2
 						}
 					],
@@ -3693,18 +4121,33 @@
 						},
 						{
 							"type": "skill",
-							"name": "Thrown Weapon",
-							"specialization": "Spear"
+							"name": {
+								"compare": "is",
+								"qualifier": "Thrown Weapon"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Spear"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Spear Thrower",
+							"name": {
+								"compare": "is",
+								"qualifier": "Spear Thrower"
+							},
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Thrown Weapon",
-							"specialization": "Harpoon",
+							"name": {
+								"compare": "is",
+								"qualifier": "Thrown Weapon"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Harpoon"
+							},
 							"modifier": -2
 						}
 					],
@@ -3826,7 +4269,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Bow"
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
 						}
 					],
 					"calc": {
@@ -3918,7 +4364,10 @@
 					"defaults": [
 						{
 							"type": "skill",
-							"name": "Throwing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Throwing"
+							}
 						},
 						{
 							"type": "dx",
@@ -3926,7 +4375,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Dropping",
+							"name": {
+								"compare": "is",
+								"qualifier": "Dropping"
+							},
 							"modifier": -4
 						}
 					],

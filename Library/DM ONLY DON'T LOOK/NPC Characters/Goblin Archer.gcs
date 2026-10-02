@@ -29,16 +29,185 @@
 			"bottom_margin": "0.25 in",
 			"right_margin": "0.25 in"
 		},
-		"block_layout": [
-			"reactions conditional_modifiers",
-			"melee",
-			"ranged",
-			"traits skills",
-			"spells",
-			"equipment",
-			"other_equipment",
-			"notes"
-		],
+		"layout": {
+			"root": {
+				"type": "column",
+				"weight": 1,
+				"children": [
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "block",
+								"key": "portrait",
+								"weight": 1,
+								"square": true
+							},
+							{
+								"type": "column",
+								"weight": 4.3,
+								"children": [
+									{
+										"type": "row",
+										"weight": 1,
+										"children": [
+											{
+												"type": "block",
+												"key": "identity",
+												"weight": 1.6
+											},
+											{
+												"type": "block",
+												"key": "miscellaneous",
+												"weight": 1
+											}
+										]
+									},
+									{
+										"type": "block",
+										"key": "description",
+										"weight": 1
+									}
+								]
+							},
+							{
+								"type": "block",
+								"key": "points",
+								"weight": 1
+							}
+						]
+					},
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "column",
+								"weight": 1.6,
+								"children": [
+									{
+										"type": "row",
+										"weight": 1,
+										"children": [
+											{
+												"type": "column",
+												"weight": 1,
+												"children": [
+													{
+														"type": "block",
+														"key": "primary_attributes",
+														"weight": 1
+													},
+													{
+														"type": "block",
+														"key": "damage",
+														"weight": 1
+													}
+												]
+											},
+											{
+												"type": "block",
+												"key": "secondary_attributes",
+												"weight": 1
+											}
+										]
+									},
+									{
+										"type": "block",
+										"key": "point_pools",
+										"weight": 1
+									}
+								]
+							},
+							{
+								"type": "block",
+								"key": "body",
+								"weight": 1.25
+							},
+							{
+								"type": "column",
+								"weight": 1.3,
+								"children": [
+									{
+										"type": "block",
+										"key": "encumbrance",
+										"weight": 1
+									},
+									{
+										"type": "block",
+										"key": "lifting",
+										"weight": 1
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "block",
+								"key": "reactions",
+								"weight": 1
+							},
+							{
+								"type": "block",
+								"key": "conditional_modifiers",
+								"weight": 1
+							}
+						]
+					},
+					{
+						"type": "block",
+						"key": "melee",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "ranged",
+						"weight": 1
+					},
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "block",
+								"key": "traits",
+								"weight": 1
+							},
+							{
+								"type": "block",
+								"key": "skills",
+								"weight": 1
+							}
+						]
+					},
+					{
+						"type": "block",
+						"key": "spells",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "equipment",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "other_equipment",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "notes",
+						"weight": 1
+					}
+				]
+			}
+		},
 		"attributes": [
 			{
 				"id": "st",
@@ -112,7 +281,7 @@
 			{
 				"id": "taste_smell",
 				"type": "integer",
-				"name": "Taste \u0026 Smell",
+				"name": "Taste & Smell",
 				"base": "$per",
 				"cost_per_point": 2
 			},
@@ -680,7 +849,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Brawling"
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							}
 						}
 					],
 					"calc": {
@@ -705,15 +877,24 @@
 						},
 						{
 							"type": "skill",
-							"name": "Boxing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Boxing"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Brawling"
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Karate"
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
+							}
 						}
 					],
 					"calc": {
@@ -738,16 +919,25 @@
 						},
 						{
 							"type": "skill",
-							"name": "Brawling",
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							},
 							"modifier": -2
 						},
 						{
 							"type": "skill",
-							"name": "Kicking"
+							"name": {
+								"compare": "is",
+								"qualifier": "Kicking"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Karate",
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
+							},
 							"modifier": -2
 						}
 					],
@@ -1019,7 +1209,7 @@
 						"path": "Basic Set/Basic Set Traits.adq",
 						"id": "tAZ31tXG_HzDmVCRp"
 					},
-					"name": "Acute Taste \u0026 Smell",
+					"name": "Acute Taste & Smell",
 					"reference": "B35",
 					"tags": [
 						"Advantage",
@@ -1809,7 +1999,10 @@
 							"defaults": [
 								{
 									"type": "skill",
-									"name": "Brawling"
+									"name": {
+										"compare": "is",
+										"qualifier": "Brawling"
+									}
 								},
 								{
 									"type": "dx"
@@ -1987,7 +2180,10 @@
 				},
 				{
 					"type": "skill",
-					"name": "Survival",
+					"name": {
+						"compare": "is",
+						"qualifier": "Survival"
+					},
 					"modifier": -2
 				}
 			],
@@ -2081,17 +2277,26 @@
 			"defaults": [
 				{
 					"type": "skill",
-					"name": "Force Sword",
+					"name": {
+						"compare": "is",
+						"qualifier": "Force Sword"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Main-Gauche",
+					"name": {
+						"compare": "is",
+						"qualifier": "Main-Gauche"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Shortsword",
+					"name": {
+						"compare": "is",
+						"qualifier": "Shortsword"
+					},
 					"modifier": -3
 				},
 				{
@@ -2190,6 +2395,220 @@
 	],
 	"equipment": [
 		{
+			"id": "eb5MrLG291eoWj461",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "eLUoq82xnnC1U0cXM"
+			},
+			"description": "Leather Armor",
+			"reference": "B283",
+			"tech_level": "1",
+			"tags": [
+				"Body Armor"
+			],
+			"base_value": "65",
+			"base_weight": "6.5 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"groin",
+						"torso",
+						"vitals"
+					],
+					"amount": 2
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 65,
+				"extended_value": 65,
+				"weight": "6.5 lb",
+				"extended_weight": "6.5 lb"
+			}
+		},
+		{
+			"id": "eE-xVIJnsDul-uX_l",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "eXUobxqqnRpnmw9Bc"
+			},
+			"description": "Goblin Bow",
+			"reference": "B275",
+			"local_notes": "SM-1",
+			"tech_level": "0",
+			"tags": [
+				"Missile Weapon",
+				"UsesAmmoType:Arrow"
+			],
+			"base_value": "65",
+			"base_weight": "1.3",
+			"weapons": [
+				{
+					"id": "WzFsq9EdLHhMOGYq9",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "1"
+					},
+					"strength": "9†",
+					"usage": "Normal",
+					"accuracy": "2",
+					"range": "x15/x20",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-7",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
+						}
+					],
+					"calc": {
+						"level": 13,
+						"damage": "1d-1 imp",
+						"range": "135/180"
+					}
+				},
+				{
+					"id": "WiKHqDhMbF-OYC76q",
+					"sv": 1,
+					"damage": {
+						"type": "pi",
+						"st": "thr",
+						"base": "1",
+						"armor_divisor": 2
+					},
+					"strength": "9†",
+					"usage": "Bodkin",
+					"accuracy": "2",
+					"range": "x15/x20",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-7",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
+						}
+					],
+					"calc": {
+						"level": 13,
+						"damage": "1d-1(2) pi",
+						"range": "135/180"
+					}
+				}
+			],
+			"rated_strength": 9,
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 65,
+				"extended_value": 65,
+				"weight": "1.3 lb",
+				"extended_weight": "1.3 lb"
+			}
+		},
+		{
+			"id": "Et9Ld2XuMvnmtKLWv",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "EWdo_3qnvFlJpicOV"
+			},
+			"description": "Shoulder Quiver",
+			"reference": "B289",
+			"local_notes": "SM-1 Holds 12 arrows or bolts",
+			"tech_level": "0",
+			"tags": [
+				"Weapon and Combat Accessories"
+			],
+			"base_value": "6",
+			"base_weight": "0.32 lb",
+			"quantity": 1,
+			"equipped": true,
+			"children": [
+				{
+					"id": "eMZOz7jFyzovRG6FC",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Equipment.eqp",
+						"id": "ebV1idy_tjQEO1fu8"
+					},
+					"description": "Arrow, Bodkin",
+					"reference": "B277",
+					"local_notes": "Changes damage to piercing with armor divisor of (2).",
+					"tech_level": "3",
+					"tags": [
+						"AmmoType:Arrow",
+						"Ammunition",
+						"Missile Weapon"
+					],
+					"base_value": "2",
+					"base_weight": "0.1 lb",
+					"quantity": 6,
+					"equipped": true,
+					"calc": {
+						"value": 2,
+						"extended_value": 12,
+						"weight": "0.1 lb",
+						"extended_weight": "0.6 lb"
+					}
+				},
+				{
+					"id": "eyn5Rh2tBTg4aoh9m",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Equipment.eqp",
+						"id": "e63Ia0RA0wpWsFO7Y"
+					},
+					"description": "Arrow",
+					"reference": "B276",
+					"local_notes": "SM-1",
+					"tech_level": "0",
+					"tags": [
+						"AmmoType:Arrow",
+						"Ammunition",
+						"Missile Weapon"
+					],
+					"base_value": "1",
+					"base_weight": "0.065 lb",
+					"quantity": 6,
+					"equipped": true,
+					"calc": {
+						"value": 1,
+						"extended_value": 6,
+						"weight": "0.065 lb",
+						"extended_weight": "0.39 lb"
+					}
+				}
+			],
+			"calc": {
+				"value": 6,
+				"extended_value": 24,
+				"weight": "0.32 lb",
+				"extended_weight": "1.31 lb"
+			}
+		},
+		{
 			"id": "eFoHUDliH8JYiO3ew",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -2226,26 +2645,41 @@
 						},
 						{
 							"type": "skill",
-							"name": "Knife"
+							"name": {
+								"compare": "is",
+								"qualifier": "Knife"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Force Sword",
+							"name": {
+								"compare": "is",
+								"qualifier": "Force Sword"
+							},
 							"modifier": -3
 						},
 						{
 							"type": "skill",
-							"name": "Main-Gauche",
+							"name": {
+								"compare": "is",
+								"qualifier": "Main-Gauche"
+							},
 							"modifier": -3
 						},
 						{
 							"type": "skill",
-							"name": "Shortsword",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shortsword"
+							},
 							"modifier": -3
 						},
 						{
 							"type": "skill",
-							"name": "Sword!"
+							"name": {
+								"compare": "is",
+								"qualifier": "Sword!"
+							}
 						}
 					],
 					"calc": {
@@ -2275,8 +2709,14 @@
 						},
 						{
 							"type": "skill",
-							"name": "Thrown Weapon",
-							"specialization": "Knife"
+							"name": {
+								"compare": "is",
+								"qualifier": "Thrown Weapon"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Knife"
+							}
 						}
 					],
 					"calc": {
@@ -2294,158 +2734,10 @@
 				"weight": "0.2 lb",
 				"extended_weight": "0.2 lb"
 			}
-		},
-		{
-			"id": "eb5MrLG291eoWj461",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "eLUoq82xnnC1U0cXM"
-			},
-			"description": "Leather Armor",
-			"reference": "B283",
-			"tech_level": "1",
-			"tags": [
-				"Body Armor"
-			],
-			"base_value": "65",
-			"base_weight": "6.5 lb",
-			"features": [
-				{
-					"type": "dr_bonus",
-					"locations": [
-						"groin",
-						"torso",
-						"vitals"
-					],
-					"amount": 2
-				}
-			],
-			"quantity": 1,
-			"equipped": true,
-			"calc": {
-				"value": 65,
-				"extended_value": 65,
-				"weight": "6.5 lb",
-				"extended_weight": "6.5 lb"
-			}
-		},
-		{
-			"id": "eNQwIEgX7URLOFyz0",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "eXUobxqqnRpnmw9Bc"
-			},
-			"description": "Regular Bow",
-			"reference": "B275",
-			"local_notes": "SM-1",
-			"tech_level": "0",
-			"tags": [
-				"Missile Weapon",
-				"UsesAmmoType:Arrow"
-			],
-			"base_value": "65",
-			"base_weight": "1.3",
-			"weapons": [
-				{
-					"id": "WHuOmOYK0orUcmOWR",
-					"sv": 1,
-					"damage": {
-						"type": "imp",
-						"st": "thr",
-						"base": "1"
-					},
-					"strength": "9†",
-					"accuracy": "2",
-					"range": "x15/x20",
-					"rate_of_fire": "1",
-					"shots": "1(2)",
-					"bulk": "-7",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Bow"
-						}
-					],
-					"calc": {
-						"level": 13,
-						"damage": "1d-1 imp",
-						"range": "135/180"
-					}
-				}
-			],
-			"rated_strength": 9,
-			"quantity": 1,
-			"equipped": true,
-			"calc": {
-				"value": 65,
-				"extended_value": 65,
-				"weight": "1.3 lb",
-				"extended_weight": "1.3 lb"
-			}
-		},
-		{
-			"id": "Et9Ld2XuMvnmtKLWv",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "EWdo_3qnvFlJpicOV"
-			},
-			"description": "Shoulder Quiver",
-			"reference": "B289",
-			"local_notes": "SM-1 Holds 12 arrows or bolts",
-			"tech_level": "0",
-			"tags": [
-				"Weapon and Combat Accessories"
-			],
-			"base_value": "6",
-			"base_weight": "0.32 lb",
-			"quantity": 1,
-			"equipped": true,
-			"children": [
-				{
-					"id": "eyn5Rh2tBTg4aoh9m",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Equipment.eqp",
-						"id": "e63Ia0RA0wpWsFO7Y"
-					},
-					"description": "Arrow",
-					"reference": "B276",
-					"local_notes": "SM-1",
-					"tech_level": "0",
-					"tags": [
-						"AmmoType:Arrow",
-						"Ammunition",
-						"Missile Weapon"
-					],
-					"base_value": "1",
-					"base_weight": "0.065 lb",
-					"quantity": 12,
-					"equipped": true,
-					"calc": {
-						"value": 1,
-						"extended_value": 12,
-						"weight": "0.065 lb",
-						"extended_weight": "0.78 lb"
-					}
-				}
-			],
-			"calc": {
-				"value": 6,
-				"extended_value": 18,
-				"weight": "0.32 lb",
-				"extended_weight": "1.1 lb"
-			}
 		}
 	],
 	"created_date": "2026-02-27T12:37:20Z",
-	"modified_date": "2026-03-27T12:56:48Z",
+	"modified_date": "2026-10-02T14:28:34+01:00",
 	"calc": {
 		"swing": "1d-1",
 		"thrust": "1d-2",

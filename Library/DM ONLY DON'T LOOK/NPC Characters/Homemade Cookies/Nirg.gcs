@@ -29,16 +29,185 @@
 			"bottom_margin": "0.25 in",
 			"right_margin": "0.25 in"
 		},
-		"block_layout": [
-			"reactions conditional_modifiers",
-			"melee",
-			"ranged",
-			"traits skills",
-			"spells",
-			"equipment",
-			"other_equipment",
-			"notes"
-		],
+		"layout": {
+			"root": {
+				"type": "column",
+				"weight": 1,
+				"children": [
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "block",
+								"key": "portrait",
+								"weight": 1,
+								"square": true
+							},
+							{
+								"type": "column",
+								"weight": 4.3,
+								"children": [
+									{
+										"type": "row",
+										"weight": 1,
+										"children": [
+											{
+												"type": "block",
+												"key": "identity",
+												"weight": 1.6
+											},
+											{
+												"type": "block",
+												"key": "miscellaneous",
+												"weight": 1
+											}
+										]
+									},
+									{
+										"type": "block",
+										"key": "description",
+										"weight": 1
+									}
+								]
+							},
+							{
+								"type": "block",
+								"key": "points",
+								"weight": 1
+							}
+						]
+					},
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "column",
+								"weight": 1.6,
+								"children": [
+									{
+										"type": "row",
+										"weight": 1,
+										"children": [
+											{
+												"type": "column",
+												"weight": 1,
+												"children": [
+													{
+														"type": "block",
+														"key": "primary_attributes",
+														"weight": 1
+													},
+													{
+														"type": "block",
+														"key": "damage",
+														"weight": 1
+													}
+												]
+											},
+											{
+												"type": "block",
+												"key": "secondary_attributes",
+												"weight": 1
+											}
+										]
+									},
+									{
+										"type": "block",
+										"key": "point_pools",
+										"weight": 1
+									}
+								]
+							},
+							{
+								"type": "block",
+								"key": "body",
+								"weight": 1.25
+							},
+							{
+								"type": "column",
+								"weight": 1.3,
+								"children": [
+									{
+										"type": "block",
+										"key": "encumbrance",
+										"weight": 1
+									},
+									{
+										"type": "block",
+										"key": "lifting",
+										"weight": 1
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "block",
+								"key": "reactions",
+								"weight": 1
+							},
+							{
+								"type": "block",
+								"key": "conditional_modifiers",
+								"weight": 1
+							}
+						]
+					},
+					{
+						"type": "block",
+						"key": "melee",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "ranged",
+						"weight": 1
+					},
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "block",
+								"key": "traits",
+								"weight": 1
+							},
+							{
+								"type": "block",
+								"key": "skills",
+								"weight": 1
+							}
+						]
+					},
+					{
+						"type": "block",
+						"key": "spells",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "equipment",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "other_equipment",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "notes",
+						"weight": 1
+					}
+				]
+			}
+		},
 		"attributes": [
 			{
 				"id": "st",
@@ -2711,7 +2880,6 @@
 			}
 		}
 	],
-	"spells": [],
 	"equipment": [
 		{
 			"id": "eb5MrLG291eoWj461",
@@ -2749,13 +2917,13 @@
 			}
 		},
 		{
-			"id": "eNQwIEgX7URLOFyz0",
+			"id": "eUHv3pZqgoFOoAgcm",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
 				"path": "Basic Set/Basic Set Equipment.eqp",
 				"id": "eXUobxqqnRpnmw9Bc"
 			},
-			"description": "Regular Bow (Bodkin Arrows)",
+			"description": "Goblin Bow",
 			"reference": "B275",
 			"local_notes": "SM-1",
 			"tech_level": "0",
@@ -2767,7 +2935,41 @@
 			"base_weight": "1.3",
 			"weapons": [
 				{
-					"id": "W16L7jF664dO8KvD8",
+					"id": "WNIf77l_No37k2EQe",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "1"
+					},
+					"strength": "9†",
+					"usage": "Normal",
+					"accuracy": "2",
+					"range": "x15/x20",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-7",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
+						}
+					],
+					"calc": {
+						"level": 13,
+						"damage": "1d-1 imp",
+						"range": "135/180"
+					}
+				},
+				{
+					"id": "WD8HPBil0yOdEIp-4",
 					"sv": 1,
 					"damage": {
 						"type": "pi",
@@ -2776,6 +2978,7 @@
 						"armor_divisor": 2
 					},
 					"strength": "9†",
+					"usage": "Bodkin",
 					"accuracy": "2",
 					"range": "x15/x20",
 					"rate_of_fire": "1",
@@ -2831,6 +3034,32 @@
 			"equipped": true,
 			"children": [
 				{
+					"id": "eSQwe9Rvpecl-3y9Z",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Equipment.eqp",
+						"id": "e63Ia0RA0wpWsFO7Y"
+					},
+					"description": "Arrow",
+					"reference": "B276",
+					"tech_level": "0",
+					"tags": [
+						"AmmoType:Arrow",
+						"Ammunition",
+						"Missile Weapon"
+					],
+					"base_value": "2",
+					"base_weight": "0.1 lb",
+					"quantity": 6,
+					"equipped": true,
+					"calc": {
+						"value": 2,
+						"extended_value": 12,
+						"weight": "0.1 lb",
+						"extended_weight": "0.6 lb"
+					}
+				},
+				{
 					"id": "eVG8x0YHwNCILZabF",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
@@ -2848,13 +3077,13 @@
 					],
 					"base_value": "2",
 					"base_weight": "0.1 lb",
-					"quantity": 12,
+					"quantity": 6,
 					"equipped": true,
 					"calc": {
 						"value": 2,
-						"extended_value": 24,
+						"extended_value": 12,
 						"weight": "0.1 lb",
-						"extended_weight": "1.2 lb"
+						"extended_weight": "0.6 lb"
 					}
 				}
 			],
@@ -2994,7 +3223,7 @@
 		}
 	],
 	"created_date": "2026-02-27T12:37:20Z",
-	"modified_date": "2026-08-21T15:13:51+01:00",
+	"modified_date": "2026-10-02T14:40:58+01:00",
 	"calc": {
 		"swing": "1d-1",
 		"thrust": "1d-2",

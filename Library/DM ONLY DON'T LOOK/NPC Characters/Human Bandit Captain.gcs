@@ -29,16 +29,185 @@
 			"bottom_margin": "0.25 in",
 			"right_margin": "0.25 in"
 		},
-		"block_layout": [
-			"reactions conditional_modifiers",
-			"melee",
-			"ranged",
-			"traits skills",
-			"spells",
-			"equipment",
-			"other_equipment",
-			"notes"
-		],
+		"layout": {
+			"root": {
+				"type": "column",
+				"weight": 1,
+				"children": [
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "block",
+								"key": "portrait",
+								"weight": 1,
+								"square": true
+							},
+							{
+								"type": "column",
+								"weight": 4.3,
+								"children": [
+									{
+										"type": "row",
+										"weight": 1,
+										"children": [
+											{
+												"type": "block",
+												"key": "identity",
+												"weight": 1.6
+											},
+											{
+												"type": "block",
+												"key": "miscellaneous",
+												"weight": 1
+											}
+										]
+									},
+									{
+										"type": "block",
+										"key": "description",
+										"weight": 1
+									}
+								]
+							},
+							{
+								"type": "block",
+								"key": "points",
+								"weight": 1
+							}
+						]
+					},
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "column",
+								"weight": 1.6,
+								"children": [
+									{
+										"type": "row",
+										"weight": 1,
+										"children": [
+											{
+												"type": "column",
+												"weight": 1,
+												"children": [
+													{
+														"type": "block",
+														"key": "primary_attributes",
+														"weight": 1
+													},
+													{
+														"type": "block",
+														"key": "damage",
+														"weight": 1
+													}
+												]
+											},
+											{
+												"type": "block",
+												"key": "secondary_attributes",
+												"weight": 1
+											}
+										]
+									},
+									{
+										"type": "block",
+										"key": "point_pools",
+										"weight": 1
+									}
+								]
+							},
+							{
+								"type": "block",
+								"key": "body",
+								"weight": 1.25
+							},
+							{
+								"type": "column",
+								"weight": 1.3,
+								"children": [
+									{
+										"type": "block",
+										"key": "encumbrance",
+										"weight": 1
+									},
+									{
+										"type": "block",
+										"key": "lifting",
+										"weight": 1
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "block",
+								"key": "reactions",
+								"weight": 1
+							},
+							{
+								"type": "block",
+								"key": "conditional_modifiers",
+								"weight": 1
+							}
+						]
+					},
+					{
+						"type": "block",
+						"key": "melee",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "ranged",
+						"weight": 1
+					},
+					{
+						"type": "row",
+						"weight": 1,
+						"children": [
+							{
+								"type": "block",
+								"key": "traits",
+								"weight": 1
+							},
+							{
+								"type": "block",
+								"key": "skills",
+								"weight": 1
+							}
+						]
+					},
+					{
+						"type": "block",
+						"key": "spells",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "equipment",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "other_equipment",
+						"weight": 1
+					},
+					{
+						"type": "block",
+						"key": "notes",
+						"weight": 1
+					}
+				]
+			}
+		},
 		"attributes": [
 			{
 				"id": "st",
@@ -112,7 +281,7 @@
 			{
 				"id": "taste_smell",
 				"type": "integer",
-				"name": "Taste \u0026 Smell",
+				"name": "Taste & Smell",
 				"base": "$per",
 				"cost_per_point": 2
 			},
@@ -683,7 +852,10 @@
 						},
 						{
 							"type": "skill",
-							"name": "Brawling"
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							}
 						}
 					],
 					"calc": {
@@ -708,15 +880,24 @@
 						},
 						{
 							"type": "skill",
-							"name": "Boxing"
+							"name": {
+								"compare": "is",
+								"qualifier": "Boxing"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Brawling"
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Karate"
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
+							}
 						}
 					],
 					"calc": {
@@ -741,16 +922,25 @@
 						},
 						{
 							"type": "skill",
-							"name": "Brawling",
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							},
 							"modifier": -2
 						},
 						{
 							"type": "skill",
-							"name": "Kicking"
+							"name": {
+								"compare": "is",
+								"qualifier": "Kicking"
+							}
 						},
 						{
 							"type": "skill",
-							"name": "Karate",
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
+							},
 							"modifier": -2
 						}
 					],
@@ -1051,27 +1241,42 @@
 			"defaults": [
 				{
 					"type": "skill",
-					"name": "Force Sword",
+					"name": {
+						"compare": "is",
+						"qualifier": "Force Sword"
+					},
 					"modifier": -4
 				},
 				{
 					"type": "skill",
-					"name": "Rapier",
+					"name": {
+						"compare": "is",
+						"qualifier": "Rapier"
+					},
 					"modifier": -4
 				},
 				{
 					"type": "skill",
-					"name": "Saber",
+					"name": {
+						"compare": "is",
+						"qualifier": "Saber"
+					},
 					"modifier": -4
 				},
 				{
 					"type": "skill",
-					"name": "Shortsword",
+					"name": {
+						"compare": "is",
+						"qualifier": "Shortsword"
+					},
 					"modifier": -2
 				},
 				{
 					"type": "skill",
-					"name": "Two-Handed Sword",
+					"name": {
+						"compare": "is",
+						"qualifier": "Two-Handed Sword"
+					},
 					"modifier": -4
 				},
 				{
@@ -1082,7 +1287,13 @@
 			"points": 8,
 			"defaulted_from": {
 				"type": "skill",
-				"name": "Shortsword",
+				"name": {
+					"compare": "is",
+					"qualifier": "Shortsword"
+				},
+				"specialization": {
+					"compare": "is"
+				},
 				"modifier": -2,
 				"level": 10,
 				"adjusted_level": 10,
@@ -1116,7 +1327,10 @@
 				},
 				{
 					"type": "skill",
-					"name": "Acting",
+					"name": {
+						"compare": "is",
+						"qualifier": "Acting"
+					},
 					"modifier": -3
 				}
 			],
@@ -1151,17 +1365,26 @@
 			"defaults": [
 				{
 					"type": "skill",
-					"name": "Force Sword",
+					"name": {
+						"compare": "is",
+						"qualifier": "Force Sword"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Main-Gauche",
+					"name": {
+						"compare": "is",
+						"qualifier": "Main-Gauche"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Shortsword",
+					"name": {
+						"compare": "is",
+						"qualifier": "Shortsword"
+					},
 					"modifier": -3
 				},
 				{
@@ -1266,37 +1489,58 @@
 			"defaults": [
 				{
 					"type": "skill",
-					"name": "Broadsword",
+					"name": {
+						"compare": "is",
+						"qualifier": "Broadsword"
+					},
 					"modifier": -2
 				},
 				{
 					"type": "skill",
-					"name": "Force Sword",
+					"name": {
+						"compare": "is",
+						"qualifier": "Force Sword"
+					},
 					"modifier": -4
 				},
 				{
 					"type": "skill",
-					"name": "Jitte/Sai",
+					"name": {
+						"compare": "is",
+						"qualifier": "Jitte/Sai"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Knife",
+					"name": {
+						"compare": "is",
+						"qualifier": "Knife"
+					},
 					"modifier": -4
 				},
 				{
 					"type": "skill",
-					"name": "Saber",
+					"name": {
+						"compare": "is",
+						"qualifier": "Saber"
+					},
 					"modifier": -4
 				},
 				{
 					"type": "skill",
-					"name": "Smallsword",
+					"name": {
+						"compare": "is",
+						"qualifier": "Smallsword"
+					},
 					"modifier": -4
 				},
 				{
 					"type": "skill",
-					"name": "Tonfa",
+					"name": {
+						"compare": "is",
+						"qualifier": "Tonfa"
+					},
 					"modifier": -3
 				},
 				{
@@ -1307,7 +1551,13 @@
 			"points": 2,
 			"defaulted_from": {
 				"type": "skill",
-				"name": "Knife",
+				"name": {
+					"compare": "is",
+					"qualifier": "Knife"
+				},
+				"specialization": {
+					"compare": "is"
+				},
 				"modifier": -4,
 				"level": 9,
 				"adjusted_level": 9,
@@ -1415,49 +1665,94 @@
 				},
 				{
 					"type": "skill",
-					"name": "Naturalist",
+					"name": {
+						"compare": "is",
+						"qualifier": "Naturalist"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Survival",
-					"specialization": "Arctic",
+					"name": {
+						"compare": "is",
+						"qualifier": "Survival"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Arctic"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Survival",
-					"specialization": "Desert",
+					"name": {
+						"compare": "is",
+						"qualifier": "Survival"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Desert"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Survival",
-					"specialization": "Island/Beach",
+					"name": {
+						"compare": "is",
+						"qualifier": "Survival"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Island/Beach"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Survival",
-					"specialization": "Jungle",
+					"name": {
+						"compare": "is",
+						"qualifier": "Survival"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Jungle"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Survival",
-					"specialization": "Mountain",
+					"name": {
+						"compare": "is",
+						"qualifier": "Survival"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Mountain"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Survival",
-					"specialization": "Plains",
+					"name": {
+						"compare": "is",
+						"qualifier": "Survival"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Plains"
+					},
 					"modifier": -3
 				},
 				{
 					"type": "skill",
-					"name": "Survival",
-					"specialization": "Swampland",
+					"name": {
+						"compare": "is",
+						"qualifier": "Survival"
+					},
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Swampland"
+					},
 					"modifier": -3
 				}
 			],
@@ -1495,7 +1790,10 @@
 				},
 				{
 					"type": "skill",
-					"name": "Strategy",
+					"name": {
+						"compare": "is",
+						"qualifier": "Strategy"
+					},
 					"modifier": -6
 				}
 			],
@@ -1571,189 +1869,185 @@
 	],
 	"equipment": [
 		{
-			"id": "E-JVzNpOuhqJHUYyU",
+			"id": "eu9L7Jd3-g949uLkm",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
 				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "ESjtIfyzScVP49ity"
+				"id": "eK1y_K-KcOfjA2InY"
 			},
-			"description": "Backpack, Small",
-			"reference": "B288",
-			"tech_level": "1",
-			"tags": [
-				"Camping and Survival Gear"
-			],
-			"base_value": "60",
-			"base_weight": "3 lb",
-			"prereqs": {
-				"type": "prereq_list",
-				"all": true,
-				"prereqs": [
-					{
-						"type": "contained_weight_prereq",
-						"has": true,
-						"qualifier": {
-							"compare": "at_most",
-							"qualifier": "40 lb"
-						}
-					}
-				]
-			},
-			"quantity": 1,
-			"equipped": true,
-			"calc": {
-				"value": 60,
-				"extended_value": 60,
-				"weight": "3 lb",
-				"extended_weight": "3 lb"
-			}
-		},
-		{
-			"id": "e0QE827evSeGgPahT",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "e2aCum4Em-phMWpWS"
-			},
-			"description": "Boots",
-			"reference": "B284",
-			"local_notes": "Flexible; Concealable",
+			"description": "Thrusting Broadsword",
+			"reference": "B271",
 			"tech_level": "2",
 			"tags": [
-				"Footwear"
+				"Melee Weapon"
 			],
-			"base_value": "80",
+			"base_value": "600",
 			"base_weight": "3 lb",
-			"features": [
+			"weapons": [
 				{
-					"type": "dr_bonus",
-					"locations": [
-						"foot"
+					"id": "wdqFDVdZ0aLpTXVYq",
+					"sv": 1,
+					"damage": {
+						"type": "cut",
+						"st": "sw",
+						"base": "1"
+					},
+					"strength": "10",
+					"usage": "Swung",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Force Sword"
+							},
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Broadsword"
+							}
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Rapier"
+							},
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Saber"
+							},
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shortsword"
+							},
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Two-Handed Sword"
+							},
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Sword!"
+							}
+						}
 					],
-					"amount": 2
+					"calc": {
+						"level": 14,
+						"damage": "2d cut",
+						"parry": "11"
+					}
 				},
 				{
-					"type": "weapon_bonus",
-					"selection_type": "weapons_with_name",
-					"specialization": {
-						"compare": "is",
-						"qualifier": "Kick"
+					"id": "wVSeNK8jjHQ3FtZQ-",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "2"
 					},
-					"amount": 1
+					"strength": "10",
+					"usage": "Thrust",
+					"reach": "1",
+					"parry": "0",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Force Sword"
+							},
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Broadsword"
+							}
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Rapier"
+							},
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Saber"
+							},
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shortsword"
+							},
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Two-Handed Sword"
+							},
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Sword!"
+							}
+						}
+					],
+					"calc": {
+						"level": 14,
+						"damage": "1d+2 imp",
+						"parry": "11"
+					}
 				}
 			],
 			"quantity": 1,
 			"equipped": true,
 			"calc": {
-				"value": 80,
-				"extended_value": 80,
+				"value": 600,
+				"extended_value": 600,
 				"weight": "3 lb",
 				"extended_weight": "3 lb"
-			}
-		},
-		{
-			"id": "eX7suNbSe27lcbpeI",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "eSkpxAVUFdjWZpCaA"
-			},
-			"description": "Dagger",
-			"reference": "B272",
-			"tech_level": "1",
-			"tags": [
-				"Melee Weapon",
-				"Missile Weapon"
-			],
-			"base_value": "20",
-			"base_weight": "0.25 lb",
-			"weapons": [
-				{
-					"id": "wYHjgJspf3RvBcgRk",
-					"sv": 1,
-					"damage": {
-						"type": "imp",
-						"st": "thr",
-						"base": "-1"
-					},
-					"strength": "5",
-					"usage": "Thrust",
-					"reach": "C",
-					"parry": "-1",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Knife"
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Main-Gauche",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Shortsword",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					],
-					"calc": {
-						"level": 13,
-						"damage": "1d-1 imp",
-						"parry": "9"
-					}
-				},
-				{
-					"id": "Wpu4oggEsMgyI4nLL",
-					"sv": 1,
-					"damage": {
-						"type": "imp",
-						"st": "thr",
-						"base": "-1"
-					},
-					"strength": "5",
-					"usage": "Thrown",
-					"range": "x0.5/x1",
-					"rate_of_fire": "1",
-					"shots": "T",
-					"bulk": "-1",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Thrown Weapon",
-							"specialization": "Knife"
-						}
-					],
-					"calc": {
-						"level": 12,
-						"damage": "1d-1 imp",
-						"range": "6/13"
-					}
-				}
-			],
-			"quantity": 2,
-			"equipped": true,
-			"calc": {
-				"value": 20,
-				"extended_value": 40,
-				"weight": "0.25 lb",
-				"extended_weight": "0.5 lb"
 			}
 		},
 		{
@@ -1828,7 +2122,88 @@
 			}
 		},
 		{
-			"id": "eAznAnAUPpFWnBhOe",
+			"id": "e0QE827evSeGgPahT",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "e2aCum4Em-phMWpWS"
+			},
+			"description": "Boots",
+			"reference": "B284",
+			"local_notes": "Flexible; Concealable",
+			"tech_level": "2",
+			"tags": [
+				"Footwear"
+			],
+			"base_value": "80",
+			"base_weight": "3 lb",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"foot"
+					],
+					"amount": 2
+				},
+				{
+					"type": "weapon_bonus",
+					"selection_type": "weapons_with_name",
+					"specialization": {
+						"compare": "is",
+						"qualifier": "Kick"
+					},
+					"amount": 1
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 80,
+				"extended_value": 80,
+				"weight": "3 lb",
+				"extended_weight": "3 lb"
+			}
+		},
+		{
+			"id": "E-JVzNpOuhqJHUYyU",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "ESjtIfyzScVP49ity"
+			},
+			"description": "Backpack, Small",
+			"reference": "B288",
+			"tech_level": "1",
+			"tags": [
+				"Camping and Survival Gear"
+			],
+			"base_value": "60",
+			"base_weight": "3 lb",
+			"prereqs": {
+				"type": "prereq_list",
+				"all": true,
+				"prereqs": [
+					{
+						"type": "contained_weight_prereq",
+						"has": true,
+						"qualifier": {
+							"compare": "at_most",
+							"qualifier": "40 lb"
+						}
+					}
+				]
+			},
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 60,
+				"extended_value": 60,
+				"weight": "3 lb",
+				"extended_weight": "3 lb"
+			}
+		},
+		{
+			"id": "eD8Hmm-oCzs9-BgBE",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
 				"path": "Basic Set/Basic Set Equipment.eqp",
@@ -1845,13 +2220,14 @@
 			"base_weight": "2 lb",
 			"weapons": [
 				{
-					"id": "WnASU2o91CNq3Q5p0",
+					"id": "WNwiPlZIi5b7EJoSS",
 					"sv": 1,
 					"damage": {
 						"type": "imp",
 						"st": "thr"
 					},
-					"strength": "13†",
+					"strength": "12†",
+					"usage": "Normal",
 					"accuracy": "1",
 					"range": "x10/x15",
 					"rate_of_fire": "1",
@@ -1864,12 +2240,49 @@
 						},
 						{
 							"type": "skill",
-							"name": "Bow"
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
 						}
 					],
 					"calc": {
 						"level": 14,
 						"damage": "1d imp",
+						"range": "130/195"
+					}
+				},
+				{
+					"id": "WFe4FM_F2corJylhv",
+					"sv": 1,
+					"damage": {
+						"type": "pi",
+						"st": "thr",
+						"armor_divisor": 2
+					},
+					"strength": "12†",
+					"usage": "Bodkin",
+					"accuracy": "1",
+					"range": "x10/x15",
+					"rate_of_fire": "1",
+					"shots": "1(2)",
+					"bulk": "-6",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Bow"
+							}
+						}
+					],
+					"calc": {
+						"level": 14,
+						"damage": "1d(2) pi",
 						"range": "130/195"
 					}
 				}
@@ -1882,6 +2295,132 @@
 				"extended_value": 50,
 				"weight": "2 lb",
 				"extended_weight": "2 lb"
+			}
+		},
+		{
+			"id": "eX7suNbSe27lcbpeI",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Basic Set/Basic Set Equipment.eqp",
+				"id": "eSkpxAVUFdjWZpCaA"
+			},
+			"description": "Dagger",
+			"reference": "B272",
+			"tech_level": "1",
+			"tags": [
+				"Melee Weapon",
+				"Missile Weapon"
+			],
+			"base_value": "20",
+			"base_weight": "0.25 lb",
+			"weapons": [
+				{
+					"id": "wYHjgJspf3RvBcgRk",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "-1"
+					},
+					"strength": "5",
+					"usage": "Thrust",
+					"reach": "C",
+					"parry": "-1",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Knife"
+							}
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Force Sword"
+							},
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Main-Gauche"
+							},
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shortsword"
+							},
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Sword!"
+							}
+						}
+					],
+					"calc": {
+						"level": 13,
+						"damage": "1d-1 imp",
+						"parry": "9"
+					}
+				},
+				{
+					"id": "Wpu4oggEsMgyI4nLL",
+					"sv": 1,
+					"damage": {
+						"type": "imp",
+						"st": "thr",
+						"base": "-1"
+					},
+					"strength": "5",
+					"usage": "Thrown",
+					"range": "x0.5/x1",
+					"rate_of_fire": "1",
+					"shots": "T",
+					"bulk": "-1",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Thrown Weapon"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Knife"
+							}
+						}
+					],
+					"calc": {
+						"level": 12,
+						"damage": "1d-1 imp",
+						"range": "6/13"
+					}
+				}
+			],
+			"quantity": 2,
+			"equipped": true,
+			"calc": {
+				"value": 20,
+				"extended_value": 40,
+				"weight": "0.25 lb",
+				"extended_weight": "0.5 lb"
 			}
 		},
 		{
@@ -1920,13 +2459,40 @@
 					],
 					"base_value": "2",
 					"base_weight": "0.1 lb",
-					"quantity": 12,
+					"quantity": 6,
 					"equipped": true,
 					"calc": {
 						"value": 2,
-						"extended_value": 24,
+						"extended_value": 12,
 						"weight": "0.1 lb",
-						"extended_weight": "1.2 lb"
+						"extended_weight": "0.6 lb"
+					}
+				},
+				{
+					"id": "eU6LvwIBC-G4gEVJ_",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Equipment.eqp",
+						"id": "ebV1idy_tjQEO1fu8"
+					},
+					"description": "Arrow, Bodkin",
+					"reference": "B277",
+					"local_notes": "Changes damage to piercing with armor divisor of (2).",
+					"tech_level": "3",
+					"tags": [
+						"AmmoType:Arrow",
+						"Ammunition",
+						"Missile Weapon"
+					],
+					"base_value": "2",
+					"base_weight": "0.1 lb",
+					"quantity": 6,
+					"equipped": true,
+					"calc": {
+						"value": 2,
+						"extended_value": 12,
+						"weight": "0.1 lb",
+						"extended_weight": "0.6 lb"
 					}
 				}
 			],
@@ -1936,150 +2502,10 @@
 				"weight": "0.5 lb",
 				"extended_weight": "1.7 lb"
 			}
-		},
-		{
-			"id": "eu9L7Jd3-g949uLkm",
-			"source": {
-				"library": "richardwilkes/gcs_master_library",
-				"path": "Basic Set/Basic Set Equipment.eqp",
-				"id": "eK1y_K-KcOfjA2InY"
-			},
-			"description": "Thrusting Broadsword",
-			"reference": "B271",
-			"tech_level": "2",
-			"tags": [
-				"Melee Weapon"
-			],
-			"base_value": "600",
-			"base_weight": "3 lb",
-			"weapons": [
-				{
-					"id": "wdqFDVdZ0aLpTXVYq",
-					"sv": 1,
-					"damage": {
-						"type": "cut",
-						"st": "sw",
-						"base": "1"
-					},
-					"strength": "10",
-					"usage": "Swung",
-					"reach": "1",
-					"parry": "0",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Broadsword"
-						},
-						{
-							"type": "skill",
-							"name": "Rapier",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Saber",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Shortsword",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Two-Handed Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					],
-					"calc": {
-						"level": 14,
-						"damage": "2d cut",
-						"parry": "11"
-					}
-				},
-				{
-					"id": "wVSeNK8jjHQ3FtZQ-",
-					"sv": 1,
-					"damage": {
-						"type": "imp",
-						"st": "thr",
-						"base": "2"
-					},
-					"strength": "10",
-					"usage": "Thrust",
-					"reach": "1",
-					"parry": "0",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Force Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Broadsword"
-						},
-						{
-							"type": "skill",
-							"name": "Rapier",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Saber",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Shortsword",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Two-Handed Sword",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Sword!"
-						}
-					],
-					"calc": {
-						"level": 14,
-						"damage": "1d+2 imp",
-						"parry": "11"
-					}
-				}
-			],
-			"quantity": 1,
-			"equipped": true,
-			"calc": {
-				"value": 600,
-				"extended_value": 600,
-				"weight": "3 lb",
-				"extended_weight": "3 lb"
-			}
 		}
 	],
 	"created_date": "2026-02-28T20:44:32Z",
-	"modified_date": "2026-03-27T15:31:48Z",
+	"modified_date": "2026-10-02T14:34:49+01:00",
 	"calc": {
 		"swing": "2d-1",
 		"thrust": "1d",
