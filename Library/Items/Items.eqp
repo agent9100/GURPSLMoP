@@ -3880,6 +3880,128 @@
 			}
 		},
 		{
+			"id": "eD6rv3-Oql_5wLOSF",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "eqU-tdtIiaP--4L46"
+			},
+			"description": "Scroll of Resurrection (300 FP)",
+			"reference": "DFA117",
+			"local_notes": "Effective Skill 15",
+			"tags": [
+				"Magic Items",
+				"Scrolls"
+			],
+			"base_value": "6000",
+			"base_weight": "0.05 lb",
+			"modifiers": [
+				{
+					"id": "fOYZ-rwawLriZvgOn",
+					"name": "Charged",
+					"reference": "DFA117",
+					"cost_type": "to_base_cost",
+					"cost": "+1.5 CF"
+				},
+				{
+					"id": "FKCkCvg7Bdy37jrBy",
+					"name": "Pick one:",
+					"children": [
+						{
+							"id": "fUcTJAoguI78way68",
+							"name": "Universal",
+							"reference": "DFA117",
+							"cost_type": "to_base_cost",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fptkpVm9pvZqOrzmK",
+							"name": "Clerical",
+							"disabled": true
+						},
+						{
+							"id": "fo4vqztuzqxUEue7U",
+							"name": "Druidic",
+							"disabled": true
+						},
+						{
+							"id": "fp6twnhrnRx6Ofnfh",
+							"name": "Wizardly",
+							"disabled": true
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 21000,
+				"extended_value": 21000,
+				"weight": "0.05 lb",
+				"extended_weight": "0.05 lb"
+			}
+		},
+		{
+			"id": "e2p4tKEaZHSPzZCXz",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Dungeon Fantasy RPG/Dungeon Fantasy RPG Equipment.eqp",
+				"id": "eqU-tdtIiaP--4L46"
+			},
+			"description": "Scroll of Silence (6 FP)",
+			"reference": "DFA117",
+			"local_notes": "Effective Skill 15",
+			"tags": [
+				"Magic Items",
+				"Scrolls"
+			],
+			"base_value": "120",
+			"base_weight": "0.05 lb",
+			"modifiers": [
+				{
+					"id": "f7I_5mZ0k7FDopoZy",
+					"name": "Charged",
+					"reference": "DFA117",
+					"cost_type": "to_base_cost",
+					"cost": "+1.5 CF"
+				},
+				{
+					"id": "F7JL69rrPuFbLZ1Jc",
+					"name": "Pick one:",
+					"children": [
+						{
+							"id": "fP2Gj8_sDNMkQB35P",
+							"name": "Universal",
+							"reference": "DFA117",
+							"cost_type": "to_base_cost",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fXxJTqIYehFHPiukE",
+							"name": "Clerical",
+							"disabled": true
+						},
+						{
+							"id": "fbCBmepHhszgELwWr",
+							"name": "Druidic",
+							"disabled": true
+						},
+						{
+							"id": "fsyXqMxbO5BlbqW13",
+							"name": "Wizardly",
+							"disabled": true
+						}
+					]
+				}
+			],
+			"quantity": 1,
+			"calc": {
+				"value": 420,
+				"extended_value": 420,
+				"weight": "0.05 lb",
+				"extended_weight": "0.05 lb"
+			}
+		},
+		{
 			"id": "eqYE8OYN1qb0LgToR",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
